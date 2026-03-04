@@ -1,36 +1,51 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# bookmarkX
 
-## Getting Started
+A local app to organize, browse, and export your Twitter/X bookmarks. Auto-categorizes with Claude AI and visualizes as an interactive mindmap.
 
-First, run the development server:
+## Features
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+- **Import** — Upload a JSON export from the [twitter-web-exporter](https://github.com/prinsss/twitter-web-exporter) browser extension
+- **AI Categorization** — Auto-sorts bookmarks into categories (funny memes, AI resources, dev tools, etc.) using Claude Haiku
+- **Browse** — Search and filter by category, media type, or date
+- **Mindmap** — Interactive visual map of all your bookmarks by category
+- **Export** — Download images/videos, export categories as ZIP, export data as CSV/JSON
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Setup
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+1. **Install dependencies**
+   ```bash
+   npm install
+   ```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+2. **Set up the database**
+   ```bash
+   npx prisma db push
+   ```
 
-## Learn More
+3. **Configure environment**
+   ```bash
+   cp .env.example .env.local
+   # Add your Anthropic API key to .env.local
+   ```
 
-To learn more about Next.js, take a look at the following resources:
+4. **Run locally**
+   ```bash
+   npm run dev
+   ```
+   Open [http://localhost:3000](http://localhost:3000)
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Importing Bookmarks
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+1. Install the [twitter-web-exporter](https://github.com/prinsss/twitter-web-exporter) Chrome/Firefox extension
+2. Go to [twitter.com/bookmarks](https://twitter.com/bookmarks)
+3. Click the extension icon → **Export as JSON**
+4. Go to [localhost:3000/import](http://localhost:3000/import) and upload the JSON file
+5. Hit **Categorize with AI** to auto-sort bookmarks (requires Anthropic API key)
 
-## Deploy on Vercel
+## Stack
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Next.js 15 (App Router)
+- TypeScript + Tailwind CSS v4
+- Prisma 7 + SQLite (local, no setup required)
+- Claude Haiku API (for categorization)
+- React Flow (@xyflow/react) for mindmap

@@ -1,65 +1,196 @@
-import Image from "next/image";
+export const dynamic = 'force-dynamic'
 
-export default function Home() {
+import Link from 'next/link'
+import { BookmarkIcon, Tag, Image, Layers } from 'lucide-react'
+import prisma from '@/lib/db'
+import BookmarkCard from '@/components/bookmark-card'
+import type { BookmarkWithMedia } from '@/lib/types'
+
+const RECENT_QUERY = {
+  take: 6,
+  orderBy: { importedAt: 'desc' as const },
+  include: {
+    mediaItems: { select: { id: true, type: true, url: true, thumbnailUrl: true } },
+    categories: {
+      include: {
+        category: { select: { id: true, name: true, slug: true, color: true } },
+      },
+    },
+  },
+} as const
+
+const TOP_CATS_QUERY = {
+  include: { _count: { select: { bookmarks: true } } },
+  orderBy: { bookmarks: { _count: 'desc' as const } },
+  take: 8,
+} as const
+
+async function queryDashboard() {
+  return Promise.all([
+    prisma.bookmark.count(),
+    prisma.category.count(),
+    prisma.mediaItem.count(),
+    prisma.bookmark.count({ where: { categories: { none: {} } } }),
+    prisma.bookmark.findMany(RECENT_QUERY),
+    prisma.category.findMany(TOP_CATS_QUERY),
+  ])
+}
+
+type QueryResult = Awaited<ReturnType<typeof queryDashboard>>
+
+function buildDashboardData(result: QueryResult) {
+  const [totalBookmarks, totalCategories, totalMedia, uncategorizedCount, recentRaw, catsRaw] = result
+
+  const recentBookmarks: BookmarkWithMedia[] = recentRaw.map((b) => ({
+    id: b.id,
+    tweetId: b.tweetId,
+    text: b.text,
+    authorHandle: b.authorHandle,
+    authorName: b.authorName,
+    tweetCreatedAt: b.tweetCreatedAt?.toISOString() ?? null,
+    importedAt: b.importedAt.toISOString(),
+    mediaItems: b.mediaItems,
+    categories: b.categories.map((bc) => ({
+      id: bc.category.id,
+      name: bc.category.name,
+      slug: bc.category.slug,
+      color: bc.category.color,
+      confidence: null,
+    })),
+  }))
+
+  return {
+    totalBookmarks,
+    totalCategories,
+    totalMedia,
+    uncategorizedCount,
+    recentBookmarks,
+    topCategories: catsRaw.map((c) => ({
+      name: c.name,
+      slug: c.slug,
+      color: c.color,
+      count: c._count.bookmarks,
+    })),
+  }
+}
+
+const EMPTY_DASHBOARD = {
+  totalBookmarks: 0,
+  totalCategories: 0,
+  totalMedia: 0,
+  uncategorizedCount: 0,
+  recentBookmarks: [] as BookmarkWithMedia[],
+  topCategories: [] as { name: string; slug: string; color: string; count: number }[],
+}
+
+async function getDashboardData() {
+  try {
+    const result = await queryDashboard()
+    return buildDashboardData(result)
+  } catch {
+    return EMPTY_DASHBOARD
+  }
+}
+
+function StatCard({ label, value, icon: Icon, color }: {
+  label: string
+  value: number
+  icon: React.ComponentType<{ size?: number; className?: string }>
+  color: string
+}) {
   return (
-    <div className="flex min-h-screen items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex min-h-screen w-full max-w-3xl flex-col items-center justify-between py-32 px-16 bg-white dark:bg-black sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={100}
-          height={20}
-          priority
-        />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs text-3xl font-semibold leading-10 tracking-tight text-black dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg leading-8 text-zinc-600 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
-        </div>
-        <div className="flex flex-col gap-4 text-base font-medium sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] dark:hover:bg-[#ccc] md:w-[158px]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={16}
-              height={16}
-            />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-solid border-black/[.08] px-5 transition-colors hover:border-transparent hover:bg-black/[.04] dark:border-white/[.145] dark:hover:bg-[#1a1a1a] md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Documentation
-          </a>
-        </div>
-      </main>
+    <div className="bg-zinc-900 border border-zinc-800 rounded-xl p-5 flex items-center gap-4">
+      <div className={`p-2.5 rounded-lg ${color}`}>
+        <Icon size={20} />
+      </div>
+      <div>
+        <p className="text-2xl font-bold text-zinc-100">{value.toLocaleString()}</p>
+        <p className="text-sm text-zinc-400">{label}</p>
+      </div>
     </div>
-  );
+  )
+}
+
+export default async function DashboardPage() {
+  const data = await getDashboardData()
+
+  return (
+    <div className="p-8 max-w-7xl mx-auto">
+      <div className="mb-8">
+        <h1 className="text-3xl font-bold text-zinc-100">
+          bookmark<span className="text-indigo-400">X</span>
+        </h1>
+        <p className="text-zinc-400 mt-1">Your Twitter bookmarks, organized.</p>
+      </div>
+
+      {data.totalBookmarks === 0 && <EmptyState />}
+
+      <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mb-8">
+        <StatCard label="Total Bookmarks" value={data.totalBookmarks} icon={BookmarkIcon} color="bg-indigo-500/10 text-indigo-400" />
+        <StatCard label="Categories" value={data.totalCategories} icon={Tag} color="bg-emerald-500/10 text-emerald-400" />
+        <StatCard label="Media Items" value={data.totalMedia} icon={Image} color="bg-violet-500/10 text-violet-400" />
+        <StatCard label="Uncategorized" value={data.uncategorizedCount} icon={Layers} color="bg-amber-500/10 text-amber-400" />
+      </div>
+
+      {data.recentBookmarks.length > 0 && (
+        <section className="mb-8">
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-zinc-100">Recent Bookmarks</h2>
+            <Link href="/bookmarks" className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
+              View all →
+            </Link>
+          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+            {data.recentBookmarks.map((bookmark) => (
+              <BookmarkCard key={bookmark.id} bookmark={bookmark} />
+            ))}
+          </div>
+        </section>
+      )}
+
+      {data.topCategories.length > 0 && (
+        <section>
+          <div className="flex items-center justify-between mb-4">
+            <h2 className="text-lg font-semibold text-zinc-100">Top Categories</h2>
+            <Link href="/categories" className="text-sm text-indigo-400 hover:text-indigo-300 transition-colors">
+              View all →
+            </Link>
+          </div>
+          <div className="flex flex-wrap gap-2">
+            {data.topCategories.map((cat) => (
+              <Link
+                key={cat.slug}
+                href={`/categories/${cat.slug}`}
+                className="flex items-center gap-2 px-3 py-1.5 rounded-full bg-zinc-900 border border-zinc-800 hover:border-zinc-700 transition-all text-sm"
+              >
+                <div className="w-2 h-2 rounded-full" style={{ backgroundColor: cat.color }} />
+                <span className="text-zinc-100">{cat.name}</span>
+                <span className="text-zinc-500 text-xs">{cat.count}</span>
+              </Link>
+            ))}
+          </div>
+        </section>
+      )}
+    </div>
+  )
+}
+
+function EmptyState() {
+  return (
+    <div className="mb-8 bg-zinc-900 border border-dashed border-zinc-700 rounded-2xl p-10 text-center">
+      <div className="flex items-center justify-center w-14 h-14 rounded-2xl bg-indigo-500/10 mx-auto mb-4">
+        <BookmarkIcon size={28} className="text-indigo-400" />
+      </div>
+      <h2 className="text-xl font-semibold text-zinc-100 mb-2">No bookmarks yet</h2>
+      <p className="text-zinc-400 mb-6 max-w-sm mx-auto">
+        Import your Twitter bookmarks to get started with organizing and exploring them.
+      </p>
+      <Link
+        href="/import"
+        className="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl bg-indigo-600 hover:bg-indigo-500 text-white font-medium text-sm transition-colors"
+      >
+        Import bookmarks
+      </Link>
+    </div>
+  )
 }
