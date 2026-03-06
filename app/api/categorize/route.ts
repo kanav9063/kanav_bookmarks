@@ -278,14 +278,18 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
             for (const media of bm.mediaItems) {
               if (shouldAbort()) return
               if (media.imageTags !== null) continue
-              await analyzeItem(
-                { id: media.id, url: media.url, thumbnailUrl: media.thumbnailUrl, type: media.type },
-                client,
-                model,
-              )
-              anyVisionRan = true
-              counts.visionTagged++
-              setState({ stageCounts: { ...counts } })
+              try {
+                await analyzeItem(
+                  { id: media.id, url: media.url, thumbnailUrl: media.thumbnailUrl, type: media.type },
+                  client,
+                  model,
+                )
+                anyVisionRan = true
+                counts.visionTagged++
+                setState({ stageCounts: { ...counts } })
+              } catch (err) {
+                console.warn('[parallel] vision failed for', media.id, err instanceof Error ? err.message : err)
+              }
             }
 
             // Enrichment: generate semantic tags if not already done
@@ -314,25 +318,29 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
                     entities = JSON.parse(bm.entities) as BookmarkForEnrichment['entities']
                   } catch { /* ignore */ }
                 }
-                const results = await enrichBatchSemanticTags(
-                  [{ id: bm.id, text: bm.text, imageTags, entities }],
-                  client,
-                )
-                const result = results[0]
-                if (result?.tags.length) {
-                  await prisma.bookmark.update({
-                    where: { id: bm.id },
-                    data: {
-                      semanticTags: JSON.stringify(result.tags),
-                      enrichmentMeta: JSON.stringify({
-                        sentiment: result.sentiment,
-                        people: result.people,
-                        companies: result.companies,
-                      }),
-                    },
-                  })
-                  counts.enriched++
-                  setState({ stageCounts: { ...counts } })
+                try {
+                  const results = await enrichBatchSemanticTags(
+                    [{ id: bm.id, text: bm.text, imageTags, entities }],
+                    client,
+                  )
+                  const result = results[0]
+                  if (result?.tags.length) {
+                    await prisma.bookmark.update({
+                      where: { id: bm.id },
+                      data: {
+                        semanticTags: JSON.stringify(result.tags),
+                        enrichmentMeta: JSON.stringify({
+                          sentiment: result.sentiment,
+                          people: result.people,
+                          companies: result.companies,
+                        }),
+                      },
+                    })
+                    counts.enriched++
+                    setState({ stageCounts: { ...counts } })
+                  }
+                } catch (err) {
+                  console.warn('[parallel] enrichment failed for', bm.id, err instanceof Error ? err.message : err)
                 }
               }
             }
@@ -346,10 +354,12 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
 
           // Run all bookmark workers with bounded concurrency
           const tasks = bookmarkIdsToProcess.map((id) => () => processBookmark(id))
-          await runWithConcurrency(tasks, PIPELINE_WORKERS)
-
-          // Drain any remaining items in the categorization queue
-          await drainCategorizeQueue(true)
+          try {
+            await runWithConcurrency(tasks, PIPELINE_WORKERS)
+          } finally {
+            // Always drain remaining items even if some workers threw
+            await drainCategorizeQueue(true)
+          }
         }
       }
     } catch (err) {
