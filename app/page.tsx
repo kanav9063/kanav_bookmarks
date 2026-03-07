@@ -94,9 +94,9 @@ async function getDashboardData() {
 
 function getGreeting(): string {
   const hour = new Date().getHours()
-  if (hour < 12) return 'Good morning'
-  if (hour < 17) return 'Good afternoon'
-  return 'Good evening'
+  if (hour < 12) return 'Good morning, Kanav'
+  if (hour < 17) return 'Good afternoon, Kanav'
+  return 'Good evening, Kanav'
 }
 
 function formatDate(): string {
@@ -161,12 +161,12 @@ export default async function DashboardPage() {
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <div>
             <h1 className="text-3xl md:text-4xl font-bold text-zinc-100">
-              {getGreeting()} <span className="text-indigo-400">&#128075;</span>
+              {getGreeting()} <span className="text-blue-400">&#128075;</span>
             </h1>
             <p className="text-zinc-400 mt-1.5">
-              You have{' '}
+              Your brain has{' '}
               <span className="text-zinc-100 font-semibold">{data.totalBookmarks.toLocaleString()}</span>{' '}
-              bookmarks saved and ready to explore.
+              bookmarks indexed. What are you looking for?
             </p>
           </div>
           {/* Quick Actions */}

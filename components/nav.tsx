@@ -15,9 +15,7 @@ import {
   ChevronRight,
   Command,
   Bookmark,
-  Copy,
-  Check,
-  Coffee,
+
 } from 'lucide-react'
 
 interface NavItem {
@@ -35,55 +33,21 @@ const NAV_ITEMS: NavItem[] = [
   { href: '/settings', label: 'Settings', icon: Settings },
 ]
 
-const DONATION_ADDRESS = '0xcF10B967a9e422753812004Cd59990f62E360760'
-const BUILDER_X = 'https://x.com/viperr'
-
-function SupportFooter() {
-  const [copied, setCopied] = useState(false)
-
-  function copyAddress() {
-    void navigator.clipboard.writeText(DONATION_ADDRESS).then(() => {
-      setCopied(true)
-      setTimeout(() => setCopied(false), 2000)
-    })
-  }
-
+function PersonalFooter() {
   return (
     <div className="mx-3 mt-auto mb-3 pt-3 border-t border-zinc-800/50">
-      {/* Builder credit */}
       <a
-        href={BUILDER_X}
+        href="https://x.com/kanavarora9063"
         target="_blank"
         rel="noopener noreferrer"
-        className="flex items-center gap-2 px-2 py-1.5 rounded-lg text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800/50 transition-all group mb-1"
+        className="flex items-center gap-2 px-2 py-1.5 rounded-lg text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800/50 transition-all group"
       >
         <span className="text-[13px]">𝕏</span>
-        <span className="text-[11px] font-medium">Built by @viperr</span>
+        <span className="text-[11px] font-medium">@kanavarora9063</span>
       </a>
-
-      {/* Donate card */}
-      <div className="rounded-xl bg-zinc-800/40 border border-zinc-700/30 p-3">
-        <div className="flex items-center gap-1.5 mb-2">
-          <Coffee size={12} className="text-amber-400 shrink-0" />
-          <span className="text-[11px] font-semibold text-zinc-300">Support Siftly</span>
-        </div>
-        <p className="text-[10px] text-zinc-600 mb-2 leading-relaxed">
-          If Siftly saves you time, consider leaving a tip ☕
-        </p>
-        <button
-          onClick={copyAddress}
-          title="Copy ETH address"
-          className="w-full flex items-center justify-between gap-1.5 px-2 py-1.5 rounded-lg bg-zinc-900/80 border border-zinc-700/40 hover:border-amber-500/40 hover:bg-zinc-900 transition-all group"
-        >
-          <span className="text-[9.5px] font-mono text-zinc-500 group-hover:text-zinc-300 transition-colors truncate">
-            {DONATION_ADDRESS.slice(0, 10)}…{DONATION_ADDRESS.slice(-6)}
-          </span>
-          {copied
-            ? <Check size={11} className="text-emerald-400 shrink-0" />
-            : <Copy size={11} className="text-zinc-600 group-hover:text-amber-400 shrink-0 transition-colors" />
-          }
-        </button>
-      </div>
+      <p className="px-2 mt-1 text-[10px] text-zinc-600">
+        Auto-synced nightly via OpenClaw
+      </p>
     </div>
   )
 }
@@ -181,9 +145,9 @@ export default function Nav() {
 
       {/* Brand */}
       <div className="flex items-center justify-center gap-3 px-4 py-3.5 border-b border-zinc-800/50">
-        <img src="/logo.svg" alt="Siftly" className="w-9 h-9 shrink-0" />
+        <span className="text-2xl shrink-0">🧠</span>
         <span className="text-zinc-100 font-bold text-[17px] tracking-tight">
-          Sift<span style={{ color: '#F5A623' }}>ly</span>
+          Kanav<span className="text-blue-400">&apos;s</span> <span className="text-zinc-400 font-normal text-[14px]">reads</span>
         </span>
         <div className="shrink-0 flex items-center">
           <ThemeToggle />
@@ -320,7 +284,7 @@ export default function Nav() {
         </div>
       )}
 
-      <SupportFooter />
+      <PersonalFooter />
     </aside>
   )
 }

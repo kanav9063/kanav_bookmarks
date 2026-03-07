@@ -11,8 +11,8 @@ const inter = Inter({
 })
 
 export const metadata: Metadata = {
-  title: 'Siftly',
-  description: 'Your Twitter bookmarks, organized and searchable.',
+  title: 'Kanav\'s Bookmarks',
+  description: 'Kanav\'s AI-organized X bookmark knowledge base.',
 }
 
 export default function RootLayout({

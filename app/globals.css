@@ -3,9 +3,9 @@
 :root {
   --background: #09090b;
   --foreground: #fafafa;
-  /* Siftly brand */
-  --brand-blue: #4A90D9;
-  --brand-orange: #F5A623;
+  /* Brand */
+  --brand-blue: #3B82F6;
+  --brand-accent: #60A5FA;
   --brand-navy: #1E3A6E;
   --color-indigo-600: #2563EB;
   --color-indigo-500: #3B82F6;
