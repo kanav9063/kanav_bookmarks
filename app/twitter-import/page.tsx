@@ -9,7 +9,7 @@ const BOOKMARKLET_CODE = `javascript:(async()=>{const csrf=document.cookie.match
 const STEPS = [
   { label: 'Copy the code', desc: 'Click the "Copy Bookmarklet" button below.' },
   { label: 'Create a new bookmark', desc: 'In Chrome: right-click the bookmarks bar → "Add page…". In Firefox: Bookmarks menu → "New Bookmark".' },
-  { label: 'Paste as the URL', desc: 'Set the Name to "Siftly Import" and paste the copied code as the URL/Location.' },
+  { label: 'Paste as the URL', desc: 'Set the Name to "Bookmark Import" and paste the copied code as the URL/Location.' },
   { label: 'Go to x.com/i/bookmarks', desc: 'Make sure you are logged in to X.' },
   { label: 'Click your new bookmark', desc: 'It fetches all your bookmarks and saves them here automatically. A popup will confirm when done.' },
 ]
@@ -72,7 +72,7 @@ export default function TwitterImportPage() {
             className="text-indigo-400 underline cursor-grab"
             onClick={(e) => e.preventDefault()}
           >
-            Siftly Import
+            Bookmark Import
           </a>{' '}
           to your bookmarks bar (may not work in all browsers).
         </p>
@@ -115,7 +115,7 @@ export default function TwitterImportPage() {
         <p className="text-sm text-zinc-400 leading-relaxed">
           The bookmarklet runs inside your browser on x.com, using your existing login session.
           It calls the same internal API Twitter's own website uses — no password, no API key, no extension required.
-          Your credentials never leave your browser. All data goes directly to your local Siftly instance.
+          Your credentials never leave your browser. All data goes directly to your local instance.
         </p>
       </div>
 

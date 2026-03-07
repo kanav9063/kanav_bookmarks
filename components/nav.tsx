@@ -15,6 +15,7 @@ import {
   ChevronRight,
   Command,
   Bookmark,
+  BookOpen,
 
 } from 'lucide-react'
 
@@ -27,7 +28,7 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/ai-search', label: 'AI Search', icon: Sparkles },
-  { href: '/bookmarks', label: 'Browse', icon: Search },
+  { href: '/bookmarks', label: 'Bookmarks', icon: BookOpen },
   { href: '/mindmap', label: 'Mindmap', icon: GitBranch },
   { href: '/import', label: 'Import', icon: Upload },
   { href: '/settings', label: 'Settings', icon: Settings },
@@ -107,8 +108,8 @@ export default function Nav() {
       setCategories([])
       setTotalBookmarks(0)
     }
-    window.addEventListener('siftly:cleared', handleCleared)
-    return () => window.removeEventListener('siftly:cleared', handleCleared)
+    window.addEventListener('app:cleared', handleCleared)
+    return () => window.removeEventListener('app:cleared', handleCleared)
   }, [])
 
   useEffect(() => {

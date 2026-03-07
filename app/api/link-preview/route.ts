@@ -31,7 +31,7 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   try {
     const res = await fetch(url, {
       headers: {
-        'User-Agent': 'Mozilla/5.0 (compatible; Siftly/1.0; +https://github.com/viperrcrypto/Siftly)',
+        'User-Agent': 'Mozilla/5.0 (compatible; KanavBookmarks/1.0)',
         Accept: 'text/html,application/xhtml+xml',
         'Accept-Language': 'en-US,en;q=0.9',
       },

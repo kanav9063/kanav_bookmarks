@@ -136,7 +136,7 @@ const BOOKMARKLET_SCRIPT = `(async function(){
     var url=URL.createObjectURL(blob);
     var a=document.createElement('a');a.href=url;a.download='bookmarks.json';a.click();
     setTimeout(function(){URL.revokeObjectURL(url);},1000);
-    showToast('\u2705 Downloaded '+all.length+' bookmarks! Upload to Siftly.','#14532d');
+    showToast('\u2705 Downloaded '+all.length+' bookmarks! Upload bookmarks.','#14532d');
   }
   btn.onclick=doExport;
   autoBtn.textContent='\u25b6 Auto-scroll';
