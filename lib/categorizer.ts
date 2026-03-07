@@ -1,8 +1,11 @@
 import Anthropic from '@anthropic-ai/sdk'
+import OpenAI from 'openai'
 import prisma from '@/lib/db'
 import { buildImageContext } from '@/lib/image-context'
 import { createCliAnthropicClient } from '@/lib/claude-cli-auth'
 import { getAnthropicModel } from '@/lib/vision-analyzer'
+
+type AIProvider = { type: 'anthropic'; client: Anthropic } | { type: 'openai'; client: OpenAI; model: string }
 
 const BATCH_SIZE = 20
 
@@ -162,33 +165,48 @@ export async function seedDefaultCategories(): Promise<void> {
  * CLI auth is intentionally checked before the env var so that users with
  * Claude Code CLI signed in are never blocked by a placeholder in .env.
  */
-async function resolveAnthropicClient(overrideKey?: string): Promise<Anthropic> {
+async function resolveAIProvider(overrideKey?: string): Promise<AIProvider> {
   const baseURL = process.env.ANTHROPIC_BASE_URL
 
+  // Try Anthropic first
   if (overrideKey && overrideKey.trim() !== '') {
-    return new Anthropic({ apiKey: overrideKey.trim(), ...(baseURL ? { baseURL } : {}) })
+    return { type: 'anthropic', client: new Anthropic({ apiKey: overrideKey.trim(), ...(baseURL ? { baseURL } : {}) }) }
   }
 
   const setting = await prisma.setting.findUnique({ where: { key: 'anthropicApiKey' } })
   if (setting?.value && setting.value.trim() !== '') {
-    return new Anthropic({ apiKey: setting.value.trim(), ...(baseURL ? { baseURL } : {}) })
+    return { type: 'anthropic', client: new Anthropic({ apiKey: setting.value.trim(), ...(baseURL ? { baseURL } : {}) }) }
   }
 
-  // Try CLI auth before env var — prevents .env placeholders from blocking CLI users
   const cliClient = createCliAnthropicClient(baseURL)
-  if (cliClient) return cliClient
+  if (cliClient) return { type: 'anthropic', client: cliClient }
 
   const envKey = process.env.ANTHROPIC_API_KEY
   if (envKey && envKey.trim() !== '') {
-    return new Anthropic({ apiKey: envKey.trim(), ...(baseURL ? { baseURL } : {}) })
+    return { type: 'anthropic', client: new Anthropic({ apiKey: envKey.trim(), ...(baseURL ? { baseURL } : {}) }) }
   }
 
-  // Local proxy handles auth
-  if (baseURL) return new Anthropic({ apiKey: 'proxy', baseURL })
+  if (baseURL) return { type: 'anthropic', client: new Anthropic({ apiKey: 'proxy', baseURL }) }
+
+  // Fallback: try OpenAI
+  const openaiSetting = await prisma.setting.findUnique({ where: { key: 'openaiApiKey' } })
+  const openaiKey = openaiSetting?.value?.trim() || process.env.OPENAI_API_KEY?.trim()
+  if (openaiKey) {
+    const openaiModelSetting = await prisma.setting.findUnique({ where: { key: 'openaiModel' } })
+    const model = openaiModelSetting?.value || 'gpt-4o-mini'
+    return { type: 'openai', client: new OpenAI({ apiKey: openaiKey }), model }
+  }
 
   throw new Error(
-    'No Anthropic API key found. Add your key in Settings, or log in with the Claude CLI.',
+    'No AI API key found. Add an Anthropic or OpenAI key in Settings.',
   )
+}
+
+// Keep backward compat
+async function resolveAnthropicClient(overrideKey?: string): Promise<Anthropic> {
+  const provider = await resolveAIProvider(overrideKey)
+  if (provider.type === 'anthropic') return provider.client
+  throw new Error('No Anthropic client available')
 }
 
 
@@ -272,25 +290,36 @@ function parseCategorizationResponse(text: string, validSlugs: Set<string>): Cat
 
 export async function categorizeBatch(
   bookmarks: BookmarkForCategorization[],
-  client: Anthropic,
+  provider: AIProvider,
   categoryDescriptions: Record<string, string> = {},
   allSlugs: string[] = DEFAULT_SLUGS,
 ): Promise<CategorizationResult[]> {
   if (bookmarks.length === 0) return []
 
-  const model = await getAnthropicModel()
   const prompt = buildCategorizationPrompt(bookmarks, categoryDescriptions, allSlugs)
 
-  const message = await client.messages.create({
-    model,
-    max_tokens: 2048,
-    messages: [{ role: 'user', content: prompt }],
-  })
+  let responseText: string
 
-  const textBlock = message.content.find((b) => b.type === 'text')
-  if (!textBlock || textBlock.type !== 'text') throw new Error('No text content in Claude response')
+  if (provider.type === 'anthropic') {
+    const model = await getAnthropicModel()
+    const message = await provider.client.messages.create({
+      model,
+      max_tokens: 2048,
+      messages: [{ role: 'user', content: prompt }],
+    })
+    const textBlock = message.content.find((b) => b.type === 'text')
+    if (!textBlock || textBlock.type !== 'text') throw new Error('No text content in Claude response')
+    responseText = textBlock.text
+  } else {
+    const completion = await provider.client.chat.completions.create({
+      model: provider.model,
+      max_tokens: 2048,
+      messages: [{ role: 'user', content: prompt }],
+    })
+    responseText = completion.choices[0]?.message?.content ?? ''
+  }
 
-  return parseCategorizationResponse(textBlock.text, new Set(allSlugs))
+  return parseCategorizationResponse(responseText, new Set(allSlugs))
 }
 
 export async function writeCategoryResults(results: CategorizationResult[]): Promise<void> {
@@ -401,7 +430,7 @@ export async function categorizeAll(
   await seedDefaultCategories()
 
   // Resolve auth once — avoids re-resolving inside every batch call
-  const client = await resolveAnthropicClient()
+  const provider = await resolveAIProvider()
 
   // Load ALL categories (default + custom) for the prompt
   const dbCategories = await prisma.category.findMany({ select: { slug: true, name: true, description: true } })
@@ -433,7 +462,7 @@ export async function categorizeAll(
       })
       const batch = rows.map(mapBookmarkForCategorization)
       try {
-        const results = await categorizeBatch(batch, client, categoryDescriptions, allSlugs)
+        const results = await categorizeBatch(batch, provider, categoryDescriptions, allSlugs)
         await writeCategoryResults(results)
       } catch (err) {
         console.error(`Error categorizing batch at index ${i}:`, err)
@@ -461,7 +490,7 @@ export async function categorizeAll(
 
       const batch = rows.map(mapBookmarkForCategorization)
       try {
-        const results = await categorizeBatch(batch, client, categoryDescriptions, allSlugs)
+        const results = await categorizeBatch(batch, provider, categoryDescriptions, allSlugs)
         await writeCategoryResults(results)
       } catch (err) {
         console.error('Error categorizing batch:', err)

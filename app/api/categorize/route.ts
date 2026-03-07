@@ -1,5 +1,6 @@
 import { NextRequest, NextResponse } from 'next/server'
 import Anthropic from '@anthropic-ai/sdk'
+import OpenAI from 'openai'
 import prisma from '@/lib/db'
 import { createCliAnthropicClient } from '@/lib/claude-cli-auth'
 import {
@@ -18,6 +19,8 @@ import {
 } from '@/lib/vision-analyzer'
 import { backfillEntities } from '@/lib/rawjson-extractor'
 import { rebuildFts } from '@/lib/fts'
+
+type AIProvider = { type: 'anthropic'; client: Anthropic } | { type: 'openai'; client: OpenAI; model: string }
 
 type Stage = 'vision' | 'entities' | 'enrichment' | 'categorize' | 'parallel'
 
@@ -152,16 +155,34 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
     const counts = { visionTagged: 0, entitiesExtracted: 0, enriched: 0, categorized: 0 }
 
     try {
-      // CLI auth is tried before env var so .env placeholders don't block CLI users
-      const resolvedClient = dbApiKey
-        ? new Anthropic({ apiKey: dbApiKey, ...(baseURL ? { baseURL } : {}) })
-        : (createCliAnthropicClient(baseURL) ?? (anthropicApiKey ? new Anthropic({ apiKey: anthropicApiKey, ...(baseURL ? { baseURL } : {}) }) : null))
+      // Resolve AI provider: Anthropic first, then OpenAI fallback
+      let provider: AIProvider | null = null
+      if (dbApiKey) {
+        provider = { type: 'anthropic', client: new Anthropic({ apiKey: dbApiKey, ...(baseURL ? { baseURL } : {}) }) }
+      } else {
+        const cliClient = createCliAnthropicClient(baseURL)
+        if (cliClient) {
+          provider = { type: 'anthropic', client: cliClient }
+        } else if (anthropicApiKey) {
+          provider = { type: 'anthropic', client: new Anthropic({ apiKey: anthropicApiKey, ...(baseURL ? { baseURL } : {}) }) }
+        } else {
+          // Try OpenAI fallback
+          const openaiSetting = await prisma.setting.findUnique({ where: { key: 'openaiApiKey' } })
+          const openaiKey = openaiSetting?.value?.trim() || process.env.OPENAI_API_KEY?.trim()
+          if (openaiKey) {
+            const openaiModelSetting = await prisma.setting.findUnique({ where: { key: 'openaiModel' } })
+            const oModel = openaiModelSetting?.value || 'gpt-4o-mini'
+            provider = { type: 'openai', client: new OpenAI({ apiKey: openaiKey }), model: oModel }
+          }
+        }
+      }
 
-      if (!resolvedClient) {
-        setState({ lastError: 'No Anthropic API key configured. Go to Settings to add one, or log in with Claude CLI.' })
+      if (!provider) {
+        setState({ lastError: 'No AI API key configured. Go to Settings to add an Anthropic or OpenAI key.' })
         console.error('No API key or CLI auth — skipping pipeline')
       } else {
-        const client: Anthropic = resolvedClient
+        // For Anthropic-only functions, extract the client (or null for OpenAI)
+        const client: Anthropic | null = provider.type === 'anthropic' ? provider.client : null
 
         await seedDefaultCategories()
 
@@ -240,7 +261,7 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
                 })
                 const batch = rows.map(mapBookmarkForCategorization)
                 try {
-                  const results = await categorizeBatch(batch, client, categoryDescriptions, allSlugs)
+                  const results = await categorizeBatch(batch, provider!, categoryDescriptions, allSlugs)
                   await writeCategoryResults(results)
                   counts.categorized += ids.length
                   setState({ stageCounts: { ...counts } })
@@ -273,27 +294,29 @@ export async function POST(request: NextRequest): Promise<NextResponse> {
             })
             if (!bm) return
 
-            // Vision: analyze any untagged media items
+            // Vision: analyze any untagged media items (Anthropic only)
             let anyVisionRan = false
-            for (const media of bm.mediaItems) {
-              if (shouldAbort()) return
-              if (media.imageTags !== null) continue
-              try {
-                await analyzeItem(
-                  { id: media.id, url: media.url, thumbnailUrl: media.thumbnailUrl, type: media.type },
-                  client,
-                  model,
-                )
-                anyVisionRan = true
-                counts.visionTagged++
-                setState({ stageCounts: { ...counts } })
-              } catch (err) {
-                console.warn('[parallel] vision failed for', media.id, err instanceof Error ? err.message : err)
+            if (client) {
+              for (const media of bm.mediaItems) {
+                if (shouldAbort()) return
+                if (media.imageTags !== null) continue
+                try {
+                  await analyzeItem(
+                    { id: media.id, url: media.url, thumbnailUrl: media.thumbnailUrl, type: media.type },
+                    client,
+                    model,
+                  )
+                  anyVisionRan = true
+                  counts.visionTagged++
+                  setState({ stageCounts: { ...counts } })
+                } catch (err) {
+                  console.warn('[parallel] vision failed for', media.id, err instanceof Error ? err.message : err)
+                }
               }
             }
 
-            // Enrichment: generate semantic tags if not already done
-            if (!bm.semanticTags) {
+            // Enrichment: generate semantic tags if not already done (Anthropic only for now)
+            if (!bm.semanticTags && client) {
               // Re-fetch image tags from DB after vision (or use initial fetch if no vision ran)
               const imageTags = anyVisionRan
                 ? (

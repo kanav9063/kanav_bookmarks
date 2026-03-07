@@ -1,6 +1,12 @@
 import type { NextConfig } from 'next'
 
 const nextConfig: NextConfig = {
+  // Ensure better-sqlite3 native module is bundled for serverless
+  serverExternalPackages: ['better-sqlite3'],
+  outputFileTracingIncludes: {
+    '/api/**': ['./prisma/seed.db'],
+    '/**': ['./prisma/seed.db'],
+  },
   images: {
     remotePatterns: [
       {

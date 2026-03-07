@@ -50,7 +50,9 @@ prisma/dev.db
 prisma/dev.db-journal
 dev.db
 dev.db-journal
+# Ignore all .db except seed.db
 *.db
+!prisma/seed.db
 *.db-journal
 
 # OS
