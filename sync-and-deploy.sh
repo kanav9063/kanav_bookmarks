@@ -57,7 +57,7 @@ if [ "$NEW_COUNT" -gt 0 ]; then
   echo "Updating seed.db and redeploying to Vercel..."
   cp prisma/dev.db prisma/seed.db
   export VERCEL_TOKEN="KjYqQOAj538m59jQ2jR55pfW"
-  DEPLOY_URL=$(vercel --prod --yes --token "$VERCEL_TOKEN" 2>&1 | grep "https://siftly" | tail -1 | tr -d ' ')
+  DEPLOY_URL=$(vercel --prod --yes --token "$VERCEL_TOKEN" 2>&1 | grep "https://kanav-bookmarks" | tail -1 | tr -d ' ')
   echo "Deployed: $DEPLOY_URL"
 else
   echo "No new bookmarks — skipping redeploy."
@@ -73,10 +73,10 @@ if [ "$ACTUALLY_NEW" -gt 0 ]; then
   echo "Top categories:"
   echo "$CATS"
   echo ""
-  echo "🔗 https://siftly-two.vercel.app"
+  echo "🔗 https://kanav-bookmarks.vercel.app"
 else
   echo "📚 Siftly sync: no new bookmarks today. Still at ${AFTER} total."
-  echo "🔗 https://siftly-two.vercel.app"
+  echo "🔗 https://kanav-bookmarks.vercel.app"
 fi
 echo ""
 echo "Finished: $(date)"
