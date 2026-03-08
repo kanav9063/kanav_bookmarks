@@ -1,5 +1,128 @@
 [
   {
+    "id_str": "2030431180341039444",
+    "full_text": "let claude and codex view their own (and each other's!) histories. catch up on a project after you hit the context limit and start a new session. search all the old conversations on your disk. \n\nuv tool install agent-history\nagent-history install-skill https://t.co/3PWELCoelt",
+    "created_at": "2026-03-07T23:51:31.000Z",
+    "user": {
+      "screen_name": "andersonbcdefg",
+      "name": "Ben (no treats)"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/andersonbcdefg/status/2030431180341039444/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HC2KH1Pa8AAvfTW.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HC2KH1Pa8AAvfTW.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2030452390345036030",
+    "full_text": "@karpathy Very inspiring as always! We are also open sourcing part of our infra on automated research for Gemini to evolve itself at https://t.co/WH7JBEEm9h More complex than the nanochat setup but closer to SOTA LLM pre/post-training while staying as minimal as possible. More on the way.",
+    "created_at": "2026-03-08T01:15:48.000Z",
+    "user": {
+      "screen_name": "crazydonkey200",
+      "name": "Chen Liang"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/google-deepmind/simply"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2030180572702617945",
+    "full_text": "Sites on the internet for design inspiration.\n\nWeb Design → https://t.co/vy0wk4V0be\nLanding Pages → https://t.co/vTfMGSgYtS\nSaas Websites → https://t.co/IW20suy7rd\nNavbar → https://t.co/0ADfKyDrQ5\nCTA Sections → https://t.co/N0p5xQYR0K\nAnimation → https://t.co/LZaaK4dbEA https://t.co/UIWKEVvbi4",
+    "created_at": "2026-03-07T07:15:42.000Z",
+    "user": {
+      "screen_name": "UiSavior",
+      "name": "UI/UX Savior"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://curated.design"
+        },
+        {
+          "expanded_url": "http://landing.love"
+        },
+        {
+          "expanded_url": "http://saaspo.com"
+        },
+        {
+          "expanded_url": "http://navbar.gallery"
+        },
+        {
+          "expanded_url": "http://cta.gallery"
+        },
+        {
+          "expanded_url": "http://appmotion.design"
+        },
+        {
+          "expanded_url": "https://x.com/UiSavior/status/2030180572702617945/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCymdfXXMAA89ai.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCymdfXXMAA89ai.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2030257917262451096",
+    "full_text": "System Design was hard until I watched these videos",
+    "created_at": "2026-03-07T12:23:02.000Z",
+    "user": {
+      "screen_name": "_jaydeepkarale",
+      "name": "Jaydeep"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2030215079023817145",
+    "full_text": "Everything you need to know for coding interviews in one roadmap.\n\nCoding Interviews\n│\n├── 1. Data Structures\n│   ├── Arrays\n│   ├── Strings\n│   ├── Hashmaps\n│   ├── Linked Lists\n│   │   ├── Singly\n│   │   └── Doubly\n│   ├── Stacks\n│   ├──",
+    "created_at": "2026-03-07T09:32:49.000Z",
+    "user": {
+      "screen_name": "RodmanAi",
+      "name": "Leonard Rodman"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
     "id_str": "2030376933410673114",
     "full_text": "OpenClaw Operator repo: https://t.co/HxtOt5TllP",
     "created_at": "2026-03-07T20:15:58.000Z",
@@ -2915,163 +3038,6 @@
       "urls": [
         {
           "expanded_url": "http://x.com/i/article/2027070316661653504"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2027409021914026093",
-    "full_text": "https://t.co/yBTu0Rho2t",
-    "created_at": "2026-02-27T15:42:32.000Z",
-    "user": {
-      "screen_name": "sawyerhood",
-      "name": "Sawyer Hood"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "http://x.com/i/article/2027230637158219776"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2026758489276821655",
-    "full_text": "https://t.co/WW2UGWXIhk",
-    "created_at": "2026-02-25T20:37:33.000Z",
-    "user": {
-      "screen_name": "LindsayCasale",
-      "name": "Lindsay Casale π²"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "http://x.com/i/article/2026444412944003074"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2027245195872620960",
-    "full_text": "I built an AI Agents army with OpenClaw to make $1M/year 🦞\n\n0:00 Intro \n1:01 Feather ($250K Exit)\n1:41 What is Mission Control HQ? \n2:48 One Agent Wasn't Enough \n5:51 The Lead Agent System\n7:42 First 24 Hours with OpenClaw \n9:11 How to Get Started with OpenClaw \n10:33 Don't https://t.co/0sb5CIkKnO",
-    "created_at": "2026-02-27T04:51:33.000Z",
-    "user": {
-      "screen_name": "profitfounder",
-      "name": "Profitable Founder Podcast"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "https://x.com/profitfounder/status/2027245195872620960/video/1"
-        }
-      ],
-      "media": [
-        {
-          "type": "video",
-          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027225638105702400/img/KNYb2kGps2DbM8gX.jpg",
-          "video_info": {
-            "variants": [
-              {
-                "content_type": "application/x-mpegURL",
-                "bitrate": 0,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/pl/uRoAJIo2s4Njvl4x.m3u8?v=223"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 832000,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/640x360/C14a8HCxOS-TGAqm.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 10368000,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/1920x1080/2wZqa_6vEkyM8XVD.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 256000,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/480x270/0HATHBdkrpBfg6lM.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 2176000,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/1280x720/BHIYqo6oYD0OEcCq.mp4"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "type": "video",
-          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027225638105702400/img/KNYb2kGps2DbM8gX.jpg",
-          "video_info": {
-            "variants": [
-              {
-                "content_type": "application/x-mpegURL",
-                "bitrate": 0,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/pl/uRoAJIo2s4Njvl4x.m3u8?v=223"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 832000,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/640x360/C14a8HCxOS-TGAqm.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 10368000,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/1920x1080/2wZqa_6vEkyM8XVD.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 256000,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/480x270/0HATHBdkrpBfg6lM.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 2176000,
-                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/1280x720/BHIYqo6oYD0OEcCq.mp4"
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2026939346239254935",
-    "full_text": "The repo isnt open source (yet?), but this is the approach I took to building Junior, an internal slackbot as Sentry that leverages Skills.\n\nhttps://t.co/NZNsiaj8DP\n\n(I asked Claude to help me write up this one. It did... ok.)",
-    "created_at": "2026-02-26T08:36:13.000Z",
-    "user": {
-      "screen_name": "zeeg",
-      "name": "David Cramer"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "https://cra.mr/building-a-slack-agent-with-pi-on-vercel"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2027058780593123781",
-    "full_text": "https://t.co/3NEUXcgv3u",
-    "created_at": "2026-02-26T16:30:48.000Z",
-    "user": {
-      "screen_name": "lennypruss",
-      "name": "Lenny Pruss"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "http://x.com/i/article/2027047592593375232"
         }
       ]
     }

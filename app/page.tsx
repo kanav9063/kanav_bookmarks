@@ -1,7 +1,7 @@
 export const dynamic = 'force-dynamic'
 
 import Link from 'next/link'
-import { BookmarkIcon, Tag, Image, Layers, Upload, Sparkles, Search, ArrowRight, TrendingUp, Bookmark } from 'lucide-react'
+import { BookmarkIcon, Tag, Image, Layers, Upload, Sparkles, Search, ArrowRight, TrendingUp, Bookmark, Calendar } from 'lucide-react'
 import prisma from '@/lib/db'
 import BookmarkCard from '@/components/bookmark-card'
 import type { BookmarkWithMedia } from '@/lib/types'
@@ -25,7 +25,14 @@ const TOP_CATS_QUERY = {
   take: 10,
 } as const
 
+function startOfDay(date: Date): Date {
+  const d = new Date(date)
+  d.setHours(0, 0, 0, 0)
+  return d
+}
+
 async function queryDashboard() {
+  const todayStart = startOfDay(new Date())
   return Promise.all([
     prisma.bookmark.count(),
     prisma.category.count(),
@@ -33,13 +40,25 @@ async function queryDashboard() {
     prisma.bookmark.count({ where: { categories: { none: {} } } }),
     prisma.bookmark.findMany(RECENT_QUERY),
     prisma.category.findMany(TOP_CATS_QUERY),
+    prisma.bookmark.findMany({
+      where: { importedAt: { gte: todayStart } },
+      orderBy: [{ tweetCreatedAt: 'desc' as const }, { importedAt: 'desc' as const }],
+      include: {
+        mediaItems: { select: { id: true, type: true, url: true, thumbnailUrl: true } },
+        categories: {
+          include: {
+            category: { select: { id: true, name: true, slug: true, color: true } },
+          },
+        },
+      },
+    }),
   ])
 }
 
 type QueryResult = Awaited<ReturnType<typeof queryDashboard>>
 
 function buildDashboardData(result: QueryResult) {
-  const [totalBookmarks, totalCategories, totalMedia, uncategorizedCount, recentRaw, catsRaw] = result
+  const [totalBookmarks, totalCategories, totalMedia, uncategorizedCount, recentRaw, catsRaw, todayRaw] = result
 
   const recentBookmarks: BookmarkWithMedia[] = recentRaw.map((b) => ({
     id: b.id,
@@ -71,6 +90,23 @@ function buildDashboardData(result: QueryResult) {
       color: c.color,
       count: c._count.bookmarks,
     })),
+    todayBookmarks: (todayRaw ?? []).map((b) => ({
+      id: b.id,
+      tweetId: b.tweetId,
+      text: b.text,
+      authorHandle: b.authorHandle,
+      authorName: b.authorName,
+      tweetCreatedAt: b.tweetCreatedAt?.toISOString() ?? null,
+      importedAt: b.importedAt.toISOString(),
+      mediaItems: b.mediaItems,
+      categories: b.categories.map((bc) => ({
+        id: bc.category.id,
+        name: bc.category.name,
+        slug: bc.category.slug,
+        color: bc.category.color,
+        confidence: null,
+      })),
+    })),
   }
 }
 
@@ -81,6 +117,7 @@ const EMPTY_DASHBOARD = {
   uncategorizedCount: 0,
   recentBookmarks: [] as BookmarkWithMedia[],
   topCategories: [] as { name: string; slug: string; color: string; count: number }[],
+  todayBookmarks: [] as BookmarkWithMedia[],
 }
 
 async function getDashboardData() {
@@ -232,6 +269,35 @@ export default async function DashboardPage() {
           href="/bookmarks?uncategorized=true"
         />
       </div>
+
+      {/* Today */}
+      {data.todayBookmarks.length > 0 && (
+        <section>
+          <div className="flex items-center justify-between mb-5">
+            <div>
+              <p className="text-xs text-zinc-500 uppercase tracking-widest font-medium mb-0.5">Today</p>
+              <h2 className="text-xl font-semibold text-zinc-100">
+                <span className="text-blue-400">{data.todayBookmarks.length}</span> new today
+              </h2>
+            </div>
+            <Link
+              href="/bookmarks?date=today"
+              className="flex items-center gap-1.5 text-sm text-indigo-400 hover:text-indigo-300 transition-colors font-medium"
+            >
+              <Calendar size={14} />
+              View by date
+              <ArrowRight size={14} />
+            </Link>
+          </div>
+          <div className="masonry-grid">
+            {data.todayBookmarks.slice(0, 6).map((bookmark) => (
+              <div key={bookmark.id} className="masonry-item">
+                <BookmarkCard bookmark={bookmark} />
+              </div>
+            ))}
+          </div>
+        </section>
+      )}
 
       {/* Recently Added */}
       {data.recentBookmarks.length > 0 && (

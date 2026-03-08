@@ -65,6 +65,34 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
     }
   }
 
+  // Date filter: ?date=today | ?date=YYYY-MM-DD | ?dateFrom=...&dateTo=...
+  const dateParam = searchParams.get('date')?.trim() ?? ''
+  const dateFrom = searchParams.get('dateFrom')?.trim() ?? ''
+  const dateTo = searchParams.get('dateTo')?.trim() ?? ''
+
+  if (dateParam === 'today') {
+    const start = new Date()
+    start.setHours(0, 0, 0, 0)
+    where.importedAt = { gte: start }
+  } else if (dateParam) {
+    const start = new Date(dateParam + 'T00:00:00')
+    const end = new Date(dateParam + 'T23:59:59.999')
+    if (!isNaN(start.getTime())) {
+      where.importedAt = { gte: start, lte: end }
+    }
+  } else if (dateFrom || dateTo) {
+    const dateFilter: Record<string, Date> = {}
+    if (dateFrom) {
+      const d = new Date(dateFrom + 'T00:00:00')
+      if (!isNaN(d.getTime())) dateFilter.gte = d
+    }
+    if (dateTo) {
+      const d = new Date(dateTo + 'T23:59:59.999')
+      if (!isNaN(d.getTime())) dateFilter.lte = d
+    }
+    if (Object.keys(dateFilter).length) where.importedAt = dateFilter
+  }
+
   try {
     const [bookmarks, total] = await Promise.all([
       prisma.bookmark.findMany({

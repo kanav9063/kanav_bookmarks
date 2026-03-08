@@ -12,6 +12,7 @@ import {
   X,
   ChevronDown,
   ArrowUpDown,
+  Calendar,
 } from 'lucide-react'
 import * as Select from '@radix-ui/react-select'
 import BookmarkCard from '@/components/bookmark-card'
@@ -26,6 +27,7 @@ interface Filters {
   sort: string
   page: number
   uncategorized: boolean
+  date: string
 }
 
 const DEFAULT_FILTERS: Filters = {
@@ -35,6 +37,7 @@ const DEFAULT_FILTERS: Filters = {
   sort: 'newest',
   page: 1,
   uncategorized: false,
+  date: '',
 }
 
 function buildUrl(filters: Filters): string {
@@ -46,6 +49,7 @@ function buildUrl(filters: Filters): string {
     params.set('category', filters.category)
   }
   if (filters.mediaType) params.set('mediaType', filters.mediaType)
+  if (filters.date) params.set('date', filters.date)
   params.set('sort', filters.sort)
   params.set('page', String(filters.page))
   params.set('limit', String(PAGE_SIZE))
@@ -201,6 +205,7 @@ function BookmarksPageInner() {
     category: searchParams.get('category') ?? '',
     mediaType: searchParams.get('mediaType') ?? '',
     q: searchParams.get('q') ?? '',
+    date: searchParams.get('date') ?? '',
   }))
   const [searchInput, setSearchInput] = useState('')
   const [bookmarks, setBookmarks] = useState<BookmarkWithMedia[]>([])
@@ -257,7 +262,7 @@ function BookmarksPageInner() {
     { label: 'Oldest first', value: 'oldest' },
   ]
 
-  const hasActiveFilters = !!(filters.q || filters.category || filters.mediaType || filters.sort !== 'newest' || filters.uncategorized)
+  const hasActiveFilters = !!(filters.q || filters.category || filters.mediaType || filters.sort !== 'newest' || filters.uncategorized || filters.date)
 
   const sortLabel = sortOptions.find((o) => o.value === filters.sort)?.label ?? 'Newest first'
 
@@ -296,6 +301,28 @@ function BookmarksPageInner() {
               options={mediaOptions}
               placeholder="All media"
             />
+
+            {/* Date filter */}
+            <div className="flex items-center gap-1 shrink-0">
+              <button
+                onClick={() => updateFilter('date', filters.date === 'today' ? '' : 'today')}
+                className={`flex items-center gap-1.5 px-3 py-2 rounded-xl text-sm transition-all border ${
+                  filters.date === 'today'
+                    ? 'bg-blue-500/15 border-blue-500/30 text-blue-300'
+                    : 'bg-zinc-900 border-zinc-800 text-zinc-400 hover:border-zinc-700 hover:text-zinc-200'
+                }`}
+              >
+                <Calendar size={13} />
+                <span className="hidden sm:inline">Today</span>
+              </button>
+              <input
+                type="date"
+                value={filters.date && filters.date !== 'today' ? filters.date : ''}
+                onChange={(e) => updateFilter('date', e.target.value)}
+                className="px-2 py-1.5 rounded-xl bg-zinc-900 border border-zinc-800 text-sm text-zinc-400 hover:border-zinc-700 transition-all cursor-pointer [color-scheme:dark]"
+                title="Filter by date"
+              />
+            </div>
 
             {/* Sort */}
             <button
@@ -350,6 +377,12 @@ function BookmarksPageInner() {
                 <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-indigo-500/10 border border-indigo-500/20 text-indigo-300 text-xs font-medium">
                   {mediaOptions.find((o) => o.value === filters.mediaType)?.label}
                   <button onClick={() => updateFilter('mediaType', '')} className="text-indigo-400 hover:text-indigo-200 transition-colors"><X size={10} /></button>
+                </span>
+              )}
+              {filters.date && (
+                <span className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-blue-500/10 border border-blue-500/20 text-blue-300 text-xs font-medium">
+                  {filters.date === 'today' ? 'Today' : filters.date}
+                  <button onClick={() => updateFilter('date', '')} className="text-blue-400 hover:text-blue-200 transition-colors"><X size={10} /></button>
                 </span>
               )}
               {filters.sort !== 'newest' && (
