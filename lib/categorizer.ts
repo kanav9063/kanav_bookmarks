@@ -11,6 +11,79 @@ const BATCH_SIZE = 20
 
 const DEFAULT_CATEGORIES = [
   {
+    name: 'AI Agents & Orchestration',
+    slug: 'ai-agents',
+    color: '#3B82F6',
+    description: 'AI coding agents, agent frameworks, orchestration dashboards, multi-agent systems, OpenClaw, Claude Code, Codex, Cursor, agentic workflows, agent architecture, tool use, MCP, sub-agents, AGENTS.md, SOUL.md',
+    isAiGenerated: false,
+  },
+  {
+    name: 'Open Source & Repos',
+    slug: 'open-source',
+    color: '#22C55E',
+    description: 'Open source projects, GitHub repos, new tool releases, self-hosted software, libraries, frameworks being shared or announced — someone sharing a repo link',
+    isAiGenerated: false,
+  },
+  {
+    name: 'AI Research & Models',
+    slug: 'ai-research',
+    color: '#A855F7',
+    description: 'Machine learning research, papers, model training, fine-tuning, RLHF, GRPO, DPO, post-training, LLMs, benchmarks, architecture, RAG, retrieval, embeddings, multimodal models, model comparisons',
+    isAiGenerated: false,
+  },
+  {
+    name: 'Dev Tools & CLI',
+    slug: 'dev-tools',
+    color: '#F59E0B',
+    description: 'Developer tools, terminal utilities, CLI apps, code editors, debugging, system design, databases, DevOps, CI/CD, Docker, deployment, Vercel, infrastructure — NOT AI agents (use ai-agents)',
+    isAiGenerated: false,
+  },
+  {
+    name: 'Learning & Resources',
+    slug: 'learning',
+    color: '#06B6D4',
+    description: 'Tutorials, educational content, coding interviews, roadmaps, courses, books, slides, study materials, how-to guides, knowledge sharing, curated lists of resources',
+    isAiGenerated: false,
+  },
+  {
+    name: 'Productivity & Workflows',
+    slug: 'productivity',
+    color: '#EC4899',
+    description: 'Productivity systems, note-taking, PKM, Obsidian, Notion, workflows, automation, task management, habits, prompt engineering tips, second brain',
+    isAiGenerated: false,
+  },
+  {
+    name: 'Projects & Demos',
+    slug: 'projects',
+    color: '#EF4444',
+    description: 'People showcasing what they built, side projects, demos, product launches, cool hacks, creative uses of technology, project walkthroughs',
+    isAiGenerated: false,
+  },
+  {
+    name: 'Career & Hiring',
+    slug: 'career',
+    color: '#14B8A6',
+    description: 'Job postings, hiring announcements, interview tips, career advice, salary discussions, company building, startup hiring, job search strategies',
+    isAiGenerated: false,
+  },
+  {
+    name: 'Design & UI',
+    slug: 'design',
+    color: '#F97316',
+    description: 'UI/UX design, web design, design inspiration, Figma, design systems, typography, landing pages, visual design',
+    isAiGenerated: false,
+  },
+  {
+    name: 'Startup & Business',
+    slug: 'startup',
+    color: '#8B5CF6',
+    description: 'Startup building, entrepreneurship, SaaS, fundraising, revenue, growth, business strategy, product-market fit, founder stories',
+    isAiGenerated: false,
+  },
+] as const
+
+const _OLD_DEFAULT_CATEGORIES = [
+  {
     name: 'AI & Machine Learning',
     slug: 'ai-resources',
     color: '#8b5cf6',
@@ -140,16 +213,27 @@ interface CategorizationResult {
 export async function seedDefaultCategories(): Promise<void> {
   const existing = await prisma.category.findMany({ select: { slug: true } })
   const existingSlugs = new Set(existing.map((c) => c.slug))
+  const defaultSlugs = new Set(DEFAULT_CATEGORIES.map((c) => c.slug)) as Set<string>
 
   for (const cat of DEFAULT_CATEGORIES) {
     if (existingSlugs.has(cat.slug)) {
-      // Sync name, color, and description so renames/updates propagate to existing DBs
       await prisma.category.update({
         where: { slug: cat.slug },
         data: { name: cat.name, color: cat.color, description: cat.description },
       })
     } else {
       await prisma.category.create({ data: { ...cat } })
+    }
+  }
+
+  // Remove old categories not in current defaults (clean up legacy)
+  for (const slug of existingSlugs) {
+    if (!defaultSlugs.has(slug as string)) {
+      // Only delete if no bookmarks are assigned
+      const count = await prisma.bookmarkCategory.count({ where: { category: { slug } } })
+      if (count === 0) {
+        await prisma.category.delete({ where: { slug } }).catch(() => {})
+      }
     }
   }
 }

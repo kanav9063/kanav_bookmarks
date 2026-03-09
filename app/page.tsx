@@ -25,14 +25,17 @@ const TOP_CATS_QUERY = {
   take: 10,
 } as const
 
-function startOfDay(date: Date): Date {
-  const d = new Date(date)
-  d.setHours(0, 0, 0, 0)
-  return d
+function todayStartPST(): Date {
+  const now = new Date()
+  const pstNow = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }))
+  const year = pstNow.getFullYear()
+  const month = String(pstNow.getMonth() + 1).padStart(2, '0')
+  const day = String(pstNow.getDate()).padStart(2, '0')
+  return new Date(`${year}-${month}-${day}T00:00:00-08:00`)
 }
 
 async function queryDashboard() {
-  const todayStart = startOfDay(new Date())
+  const todayStart = todayStartPST()
   return Promise.all([
     prisma.bookmark.count(),
     prisma.category.count(),
@@ -41,7 +44,7 @@ async function queryDashboard() {
     prisma.bookmark.findMany(RECENT_QUERY),
     prisma.category.findMany(TOP_CATS_QUERY),
     prisma.bookmark.findMany({
-      where: { importedAt: { gte: todayStart } },
+      where: { tweetCreatedAt: { gte: todayStart } },
       orderBy: [{ tweetCreatedAt: 'desc' as const }, { importedAt: 'desc' as const }],
       include: {
         mediaItems: { select: { id: true, type: true, url: true, thumbnailUrl: true } },

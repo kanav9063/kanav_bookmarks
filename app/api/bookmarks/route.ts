@@ -66,31 +66,38 @@ export async function GET(request: NextRequest): Promise<NextResponse> {
   }
 
   // Date filter: ?date=today | ?date=YYYY-MM-DD | ?dateFrom=...&dateTo=...
+  // Uses tweetCreatedAt (when the tweet was posted), with PST timezone offset
   const dateParam = searchParams.get('date')?.trim() ?? ''
   const dateFrom = searchParams.get('dateFrom')?.trim() ?? ''
   const dateTo = searchParams.get('dateTo')?.trim() ?? ''
+  const PST_OFFSET = '-08:00' // PST
 
   if (dateParam === 'today') {
-    const start = new Date()
-    start.setHours(0, 0, 0, 0)
-    where.importedAt = { gte: start }
+    const now = new Date()
+    // Get today in PST
+    const pstNow = new Date(now.toLocaleString('en-US', { timeZone: 'America/Los_Angeles' }))
+    const year = pstNow.getFullYear()
+    const month = String(pstNow.getMonth() + 1).padStart(2, '0')
+    const day = String(pstNow.getDate()).padStart(2, '0')
+    const start = new Date(`${year}-${month}-${day}T00:00:00${PST_OFFSET}`)
+    where.tweetCreatedAt = { gte: start }
   } else if (dateParam) {
-    const start = new Date(dateParam + 'T00:00:00')
-    const end = new Date(dateParam + 'T23:59:59.999')
+    const start = new Date(`${dateParam}T00:00:00${PST_OFFSET}`)
+    const end = new Date(`${dateParam}T23:59:59.999${PST_OFFSET}`)
     if (!isNaN(start.getTime())) {
-      where.importedAt = { gte: start, lte: end }
+      where.tweetCreatedAt = { gte: start, lte: end }
     }
   } else if (dateFrom || dateTo) {
     const dateFilter: Record<string, Date> = {}
     if (dateFrom) {
-      const d = new Date(dateFrom + 'T00:00:00')
+      const d = new Date(`${dateFrom}T00:00:00${PST_OFFSET}`)
       if (!isNaN(d.getTime())) dateFilter.gte = d
     }
     if (dateTo) {
-      const d = new Date(dateTo + 'T23:59:59.999')
+      const d = new Date(`${dateTo}T23:59:59.999${PST_OFFSET}`)
       if (!isNaN(d.getTime())) dateFilter.lte = d
     }
-    if (Object.keys(dateFilter).length) where.importedAt = dateFilter
+    if (Object.keys(dateFilter).length) where.tweetCreatedAt = dateFilter
   }
 
   try {
