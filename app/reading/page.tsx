@@ -191,7 +191,7 @@ function ItemCard({ item, onUpdate, onDelete }: { item: ReadingItem; onUpdate: (
   const tags: string[] = item.tags ? JSON.parse(item.tags) : []
 
   return (
-    <div className="group bg-zinc-900/50 border border-zinc-800/50 rounded-xl p-4 hover:border-zinc-700/50 transition-all">
+    <div className="group bg-zinc-900/40 border border-zinc-800/30 rounded-xl p-4 hover:border-zinc-700/40 hover:bg-zinc-900/60 transition-all duration-200 card-hover">
       <div className="flex items-start gap-3">
         {/* Type icon */}
         <div className="mt-0.5 p-2 rounded-lg bg-zinc-800/50 text-zinc-400">
@@ -369,14 +369,16 @@ export default function ReadingPage() {
         <div className="flex items-center justify-between mb-8">
           <div>
             <h1 className="text-2xl font-bold tracking-tight flex items-center gap-3">
-              <BookOpen size={24} className="text-blue-400" />
+              <div className="p-2 bg-gradient-to-br from-blue-500/20 to-violet-500/20 rounded-xl">
+                <BookOpen size={20} className="text-blue-400" />
+              </div>
               Reading List
             </h1>
-            <p className="text-sm text-zinc-500 mt-1">Articles, books, and stuff worth reading</p>
+            <p className="text-sm text-zinc-500 mt-1.5">Articles, books, and stuff worth reading</p>
           </div>
           <button
             onClick={() => setShowAdd(true)}
-            className="flex items-center gap-2 px-4 py-2 bg-blue-600 hover:bg-blue-500 text-white text-sm font-medium rounded-lg transition-colors"
+            className="flex items-center gap-2 px-4 py-2.5 bg-gradient-to-r from-blue-600 to-violet-600 hover:from-blue-500 hover:to-violet-500 text-white text-sm font-medium rounded-xl transition-all shadow-lg shadow-blue-500/20"
           >
             <Plus size={14} />
             Add
@@ -392,9 +394,9 @@ export default function ReadingPage() {
               { label: 'Reading', value: stats.reading, color: 'text-amber-400' },
               { label: 'Finished', value: stats.finished, color: 'text-emerald-400' },
             ].map(s => (
-              <div key={s.label} className="bg-zinc-900/50 border border-zinc-800/50 rounded-xl p-3 text-center">
-                <div className={`text-xl font-bold ${s.color}`}>{s.value}</div>
-                <div className="text-[11px] text-zinc-600 mt-0.5">{s.label}</div>
+              <div key={s.label} className="bg-zinc-900/50 border border-zinc-800/30 rounded-xl p-3.5 text-center card-hover">
+                <div className={`text-2xl font-bold ${s.color}`}>{s.value}</div>
+                <div className="text-[11px] text-zinc-500 mt-1 font-medium">{s.label}</div>
               </div>
             ))}
           </div>

@@ -63,7 +63,9 @@ export default function InsightsPage() {
         {/* Header */}
         <div className="mb-8">
           <h1 className="text-2xl font-bold tracking-tight flex items-center gap-3">
-            <Lightbulb size={24} className="text-amber-400" />
+            <div className="p-2 bg-gradient-to-br from-amber-500/20 to-orange-500/20 rounded-xl">
+              <Lightbulb size={20} className="text-amber-400" />
+            </div>
             Insights
           </h1>
           <p className="text-sm text-zinc-500 mt-1">
@@ -100,7 +102,7 @@ export default function InsightsPage() {
                   {dateInsights.map(insight => (
                     <div
                       key={insight.id}
-                      className="group bg-zinc-900/50 border border-zinc-800/50 rounded-xl p-4 hover:border-zinc-700/50 transition-all"
+                      className="group bg-zinc-900/40 border border-zinc-800/30 rounded-xl p-4 hover:border-zinc-700/40 hover:bg-zinc-900/60 transition-all duration-200 card-hover"
                     >
                       <div className="flex gap-3 items-start">
                         <span className="text-sm mt-0.5 shrink-0">

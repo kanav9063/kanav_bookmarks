@@ -200,7 +200,7 @@ export default async function DashboardPage() {
         <p className="text-sm text-zinc-500 mb-1 uppercase tracking-widest font-medium">{formatDate()}</p>
         <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-4">
           <div>
-            <h1 className="text-3xl md:text-4xl font-bold text-zinc-100">
+            <h1 className="text-3xl md:text-4xl font-bold bg-gradient-to-r from-zinc-100 to-zinc-300 bg-clip-text text-transparent">
               {getGreeting()} <span className="text-blue-400">&#128075;</span>
             </h1>
             <p className="text-zinc-400 mt-1.5">
@@ -213,7 +213,7 @@ export default async function DashboardPage() {
           <div className="flex items-center gap-2 flex-wrap">
             <Link
               href="/import"
-              className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium bg-indigo-600 hover:bg-indigo-500 text-white rounded-xl transition-colors"
+              className="flex items-center gap-2 px-4 py-2.5 text-sm font-medium bg-gradient-to-r from-indigo-600 to-violet-600 hover:from-indigo-500 hover:to-violet-500 text-white rounded-xl transition-all shadow-lg shadow-indigo-500/20"
             >
               <Upload size={15} />
               Import More

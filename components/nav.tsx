@@ -40,7 +40,7 @@ const NAV_ITEMS: NavItem[] = [
 
 function PersonalFooter() {
   return (
-    <div className="mx-3 mt-auto mb-3 pt-3 border-t border-zinc-800/50">
+    <div className="mx-3 mt-auto mb-3 pt-3 border-t border-zinc-800/20">
       <a
         href="https://x.com/kanavarora9063"
         target="_blank"
@@ -155,13 +155,13 @@ export default function Nav() {
   const visibleCats = showAllCats ? categories : categories.slice(0, 8)
 
   return (
-    <aside className="flex flex-col bg-zinc-900 border-r border-zinc-800/50 shrink-0 sticky top-0 h-screen overflow-y-auto" style={{ width: '228px' }}>
+    <aside className="flex flex-col bg-zinc-950/95 border-r border-zinc-800/30 shrink-0 sticky top-0 h-screen overflow-y-auto backdrop-blur-xl" style={{ width: '228px' }}>
 
       {/* Brand */}
-      <div className="flex items-center justify-center gap-3 px-4 py-3.5 border-b border-zinc-800/50">
-        <span className="text-2xl shrink-0">🧠</span>
+      <div className="flex items-center justify-center gap-3 px-4 py-4 border-b border-zinc-800/30 bg-gradient-to-b from-zinc-800/30 to-transparent">
+        <span className="text-2xl shrink-0">📖</span>
         <span className="text-zinc-100 font-bold text-[17px] tracking-tight">
-          Kanav<span className="text-blue-400">&apos;s</span> <span className="text-zinc-400 font-normal text-[14px]">reads</span>
+          Kanav<span className="bg-gradient-to-r from-blue-400 to-violet-400 bg-clip-text text-transparent">&apos;s</span> <span className="text-zinc-500 font-normal text-[14px]">reads</span>
         </span>
         <div className="shrink-0 flex items-center">
           <ThemeToggle />
@@ -192,7 +192,7 @@ export default function Nav() {
       <div className="px-3 pt-3 pb-1">
         <button
           onClick={openSearch}
-          className="w-full flex items-center gap-2 px-3 py-2 rounded-lg bg-zinc-800/50 border border-zinc-700/40 text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800 hover:border-zinc-600/60 transition-all text-xs"
+          className="w-full flex items-center gap-2 px-3 py-2 rounded-xl bg-zinc-800/30 border border-zinc-700/20 text-zinc-500 hover:text-zinc-300 hover:bg-zinc-800/50 hover:border-zinc-600/40 transition-all text-xs"
         >
           <Search size={12} className="shrink-0" />
           <span className="flex-1 text-left">Search…</span>
@@ -212,8 +212,8 @@ export default function Nav() {
               href={href}
               className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-[13px] font-medium transition-all ${
                 active
-                  ? 'bg-blue-500/12 text-blue-400'
-                  : 'text-zinc-500 hover:bg-zinc-800/70 hover:text-zinc-200'
+                  ? 'bg-gradient-to-r from-blue-500/15 to-transparent text-blue-400 border-l-2 border-blue-400'
+                  : 'text-zinc-500 hover:bg-zinc-800/40 hover:text-zinc-300'
               }`}
             >
               <Icon size={14} className="shrink-0" />
@@ -275,7 +275,7 @@ export default function Nav() {
                       <Bookmark
                         size={12}
                         className="flex-shrink-0 transition-colors"
-                        style={{ color: cat.color, fill: cat.color }}
+                        style={{ color: cat.color }}
                       />
                       <span className="truncate flex-1">{cat.name}</span>
                       <span className="text-[11px] text-zinc-600 group-hover:text-zinc-500 tabular-nums font-normal">

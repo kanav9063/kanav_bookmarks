@@ -102,7 +102,9 @@ export default function WhatsNewPage() {
         <div className="flex items-center justify-between mb-6">
           <div>
             <h1 className="text-2xl font-bold tracking-tight flex items-center gap-3">
-              <Sparkles size={24} className="text-blue-400" />
+              <div className="p-2 bg-gradient-to-br from-blue-500/20 to-cyan-500/20 rounded-xl">
+                <Sparkles size={20} className="text-blue-400" />
+              </div>
               What&apos;s New
             </h1>
             <p className="text-sm text-zinc-500 mt-1">
@@ -113,7 +115,7 @@ export default function WhatsNewPage() {
             <button
               onClick={markAllSeen}
               disabled={markingAll}
-              className="flex items-center gap-2 px-3 py-2 text-[12px] font-medium text-zinc-400 hover:text-zinc-100 bg-zinc-900/50 border border-zinc-800/50 rounded-lg hover:border-zinc-700/50 transition-all disabled:opacity-40"
+              className="flex items-center gap-2 px-3.5 py-2 text-[12px] font-medium text-zinc-400 hover:text-emerald-400 bg-zinc-900/50 border border-zinc-800/30 rounded-xl hover:border-emerald-500/30 hover:bg-emerald-500/5 transition-all disabled:opacity-40"
             >
               <CheckCheck size={14} />
               Mark all seen
@@ -138,8 +140,8 @@ export default function WhatsNewPage() {
           </div>
         ) : feed.length === 0 ? (
           <div className="text-center py-20">
-            <div className="w-16 h-16 mx-auto mb-4 bg-zinc-900 rounded-2xl flex items-center justify-center">
-              <Check size={28} className="text-emerald-400" />
+            <div className="w-20 h-20 mx-auto mb-5 bg-gradient-to-br from-emerald-500/10 to-cyan-500/10 rounded-2xl flex items-center justify-center border border-emerald-500/20">
+              <Check size={32} className="text-emerald-400" />
             </div>
             <p className="text-zinc-300 font-medium">You&apos;re all caught up!</p>
             <p className="text-zinc-600 text-sm mt-1">New bookmarks and reading items will show up here</p>
@@ -153,7 +155,7 @@ export default function WhatsNewPage() {
               return (
                 <div
                   key={item.id}
-                  className={`group bg-zinc-900/50 border border-zinc-800/50 rounded-xl p-3.5 hover:border-zinc-700/50 transition-all duration-300 ${
+                  className={`group bg-zinc-900/40 border border-zinc-800/30 rounded-xl p-3.5 hover:border-zinc-700/40 hover:bg-zinc-900/60 transition-all duration-300 card-hover ${
                     isMarking ? 'opacity-30 scale-[0.98] translate-x-4' : ''
                   }`}
                 >
