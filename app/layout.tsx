@@ -3,6 +3,7 @@ import { Inter } from 'next/font/google'
 import './globals.css'
 import Nav from '@/components/nav'
 import CommandPalette from '@/components/command-palette'
+import { MobileShell } from '@/components/mobile-shell'
 
 const inter = Inter({
   subsets: ['latin'],
@@ -22,15 +23,14 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en" className={inter.variable} suppressHydrationWarning>
-      {/* Anti-flash: apply stored theme before React hydrates */}
       <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
         <script dangerouslySetInnerHTML={{ __html: `(function(){try{var t=localStorage.getItem('theme');if(t==='light')document.documentElement.classList.add('light');}catch(e){}})()` }} />
       </head>
       <body className="flex min-h-screen bg-zinc-950 text-zinc-100 antialiased">
-        <Nav />
-        <main className="flex-1 min-w-0 overflow-auto">
+        <MobileShell nav={<Nav />}>
           {children}
-        </main>
+        </MobileShell>
         <CommandPalette />
       </body>
     </html>

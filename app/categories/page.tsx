@@ -253,7 +253,7 @@ export default function CategoriesPage() {
   }
 
   return (
-    <div className="p-6 md:p-8 max-w-7xl mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 pt-14 lg:pt-8 max-w-7xl mx-auto">
 
       {/* Page Header */}
       <div className="flex items-start justify-between mb-8">

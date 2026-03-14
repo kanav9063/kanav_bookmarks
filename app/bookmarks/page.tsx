@@ -271,7 +271,7 @@ function BookmarksPageInner() {
 
       {/* ── Sticky top bar ── */}
       <div className="sticky top-0 z-20 bg-zinc-950/90 backdrop-blur-lg border-b border-zinc-800/60">
-        <div className="px-6 md:px-8 py-4">
+        <div className="px-4 sm:px-6 md:px-8 py-4 pl-14 lg:pl-4">
           <div className="flex items-center gap-3">
 
             {/* Search */}

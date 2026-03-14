@@ -67,7 +67,7 @@ export default async function AuthorPage({ params }: { params: { handle: string 
   const authorName = bookmarks[0].authorName
 
   return (
-    <div className="p-6 md:p-8 max-w-6xl mx-auto space-y-6">
+    <div className="p-4 sm:p-6 md:p-8 pt-14 lg:pt-8 max-w-6xl mx-auto space-y-6">
       <div className="flex items-start justify-between gap-4">
         <div className="flex items-center gap-3">
           <div

@@ -33,7 +33,7 @@ export default function TwitterImportPage() {
   }
 
   return (
-    <div className="p-8 max-w-2xl mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 pt-14 lg:pt-8 max-w-2xl mx-auto">
       <div className="mb-8">
         <h1 className="text-2xl font-bold text-zinc-100">Import All Bookmarks — Free</h1>
         <p className="text-zinc-400 mt-1">

@@ -193,7 +193,7 @@ export default async function DashboardPage() {
   const categorizedCount = data.totalBookmarks - data.uncategorizedCount
 
   return (
-    <div className="p-6 md:p-8 max-w-7xl mx-auto space-y-8">
+    <div className="p-4 sm:p-6 md:p-8 pt-14 lg:pt-8 max-w-7xl mx-auto space-y-6 sm:space-y-8">
 
       {/* Hero Section */}
       <div>
@@ -371,7 +371,7 @@ export default async function DashboardPage() {
 
 function EmptyState() {
   return (
-    <div className="p-6 md:p-8 min-h-screen flex items-center justify-center">
+    <div className="p-4 sm:p-6 md:p-8 pt-14 lg:pt-8 min-h-screen flex items-center justify-center">
       <div className="text-center max-w-md mx-auto">
         <div className="flex items-center justify-center w-20 h-20 rounded-3xl bg-indigo-500/10 mx-auto mb-6">
           <BookmarkIcon size={36} className="text-indigo-400 opacity-80" />

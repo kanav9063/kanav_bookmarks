@@ -21,7 +21,7 @@ export default async function AuthorsPage() {
   })
 
   return (
-    <div className="p-6 md:p-8 max-w-6xl mx-auto space-y-6">
+    <div className="p-4 sm:p-6 md:p-8 pt-14 lg:pt-8 max-w-6xl mx-auto space-y-6">
       <div>
         <p className="text-xs text-zinc-500 uppercase tracking-widest font-medium mb-0.5">Authors</p>
         <h1 className="text-2xl font-bold text-zinc-100">{authors.length} authors bookmarked</h1>

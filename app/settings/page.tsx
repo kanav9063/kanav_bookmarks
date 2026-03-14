@@ -649,7 +649,7 @@ export default function SettingsPage() {
   }
 
   return (
-    <div className="p-6 md:p-8 max-w-2xl mx-auto">
+    <div className="p-4 sm:p-6 md:p-8 pt-14 lg:pt-8 max-w-2xl mx-auto">
 
       {/* Page Header */}
       <div className="mb-8">

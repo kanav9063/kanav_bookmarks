@@ -97,14 +97,14 @@ function AddItemModal({ onClose, onAdd }: { onClose: () => void; onAdd: (item: P
 
   return (
     <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" onClick={onClose}>
-      <div className="bg-zinc-900 border border-zinc-800 rounded-xl w-full max-w-lg mx-4 p-6" onClick={e => e.stopPropagation()}>
+      <div className="bg-zinc-900 border border-zinc-800 rounded-xl w-full max-w-lg mx-4 p-4 sm:p-6 max-h-[90vh] overflow-y-auto" onClick={e => e.stopPropagation()}>
         <div className="flex items-center justify-between mb-5">
           <h2 className="text-lg font-semibold text-zinc-100">Add to Reading List</h2>
           <button onClick={onClose} className="text-zinc-500 hover:text-zinc-300"><X size={18} /></button>
         </div>
         <form onSubmit={handleSubmit} className="space-y-4">
           {/* Type selector */}
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             {TYPE_OPTIONS.map(opt => (
               <button
                 key={opt.value}
@@ -150,7 +150,7 @@ function AddItemModal({ onClose, onAdd }: { onClose: () => void; onAdd: (item: P
           />
 
           {/* Status */}
-          <div className="flex gap-2">
+          <div className="flex gap-2 flex-wrap">
             {STATUS_OPTIONS.map(opt => (
               <button
                 key={opt.value}
@@ -360,7 +360,7 @@ export default function ReadingPage() {
 
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
-      <div className="max-w-4xl mx-auto px-6 py-8">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 py-6 sm:py-8 pt-14 lg:pt-8">
         {/* Header */}
         <div className="flex items-center justify-between mb-8">
           <div>
@@ -381,7 +381,7 @@ export default function ReadingPage() {
 
         {/* Stats */}
         {stats && stats.total > 0 && (
-          <div className="grid grid-cols-4 gap-3 mb-6">
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 mb-6">
             {[
               { label: 'Total', value: stats.total, color: 'text-zinc-300' },
               { label: 'Want to Read', value: stats.wantToRead, color: 'text-blue-400' },
@@ -397,7 +397,7 @@ export default function ReadingPage() {
         )}
 
         {/* Filters */}
-        <div className="flex items-center gap-3 mb-6 flex-wrap">
+        <div className="flex flex-col sm:flex-row items-stretch sm:items-center gap-3 mb-6">
           {/* Search */}
           <div className="relative flex-1 min-w-[200px]">
             <Search size={14} className="absolute left-3 top-1/2 -translate-y-1/2 text-zinc-600" />
