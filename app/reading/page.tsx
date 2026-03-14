@@ -1,4 +1,5 @@
 'use client'
+import InsightsPanel from "@/components/insights-panel"
 
 import { useState, useEffect, useCallback } from 'react'
 import {
@@ -304,6 +305,9 @@ function ItemCard({ item, onUpdate, onDelete }: { item: ReadingItem; onUpdate: (
               )}
             </div>
           )}
+
+          {/* Insights */}
+          <InsightsPanel readingItemId={item.id} compact />
         </div>
       </div>
     </div>

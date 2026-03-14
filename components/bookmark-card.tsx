@@ -2,6 +2,7 @@
 
 import React, { useRef, useEffect, useState } from 'react'
 import { ExternalLink, Download, Play, Pencil, X, Check, ImageOff, Bookmark, Globe } from 'lucide-react'
+import InsightsPanel from '@/components/insights-panel'
 import type { BookmarkWithMedia, Category } from '@/lib/types'
 
 // ── URL helpers ────────────────────────────────────────────────────────────────
@@ -687,6 +688,9 @@ export default function BookmarkCard({ bookmark }: BookmarkCardProps) {
               onClose={() => setEditingCategories(false)}
             />
           )}
+
+          {/* Insights */}
+          <InsightsPanel bookmarkId={bookmark.id} compact />
         </div>
 
       </div>

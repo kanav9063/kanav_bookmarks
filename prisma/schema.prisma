@@ -22,6 +22,7 @@ model Bookmark {
   enrichmentMeta  String?   // JSON: {sentiment, people[], companies[]} from batch enrichment
   mediaItems    MediaItem[]
   categories    BookmarkCategory[]
+  insights    Insight[]
 
   @@index([authorHandle])
   @@index([tweetCreatedAt])
@@ -93,8 +94,24 @@ model ReadingItem {
   status      String    @default("want-to-read") // "want-to-read" | "reading" | "finished"
   addedAt     DateTime  @default(now())
   finishedAt  DateTime?
+  insights    Insight[]
 
   @@index([type])
   @@index([status])
   @@index([addedAt])
+}
+
+model Insight {
+  id            String    @id @default(cuid())
+  content       String    // the distilled insight/takeaway
+  source        String    @default("discussion") // "discussion" | "manual" | "highlight"
+  bookmarkId    String?
+  readingItemId String?
+  bookmark      Bookmark?     @relation(fields: [bookmarkId], references: [id], onDelete: Cascade)
+  readingItem   ReadingItem?  @relation(fields: [readingItemId], references: [id], onDelete: Cascade)
+  createdAt     DateTime  @default(now())
+
+  @@index([bookmarkId])
+  @@index([readingItemId])
+  @@index([createdAt])
 }
