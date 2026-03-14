@@ -80,11 +80,7 @@ export default function InsightsPanel({ bookmarkId, readingItemId, compact = fal
     return (
       <button
         onClick={() => setExpanded(true)}
-        className={`flex items-center gap-1.5 text-[11px] transition-colors ${
-          insights.length > 0
-            ? 'text-amber-500/80 hover:text-amber-400'
-            : 'text-zinc-600 hover:text-zinc-400'
-        }`}
+        className="flex items-center gap-1 px-2 py-1 text-[11px] text-amber-400/70 hover:text-amber-400 bg-amber-500/5 hover:bg-amber-500/10 border border-amber-500/20 rounded-lg transition-all"
       >
         <Lightbulb size={11} />
         {insights.length > 0 ? `${insights.length} insight${insights.length > 1 ? 's' : ''}` : 'Add insight'}

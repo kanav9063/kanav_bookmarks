@@ -191,7 +191,7 @@ function AuthorAvatar({ name, handle, avatarUrl }: { name: string; handle: strin
       <img
         src={src}
         alt={name}
-        className="flex-shrink-0 w-8 h-8 rounded-full object-cover select-none"
+        className="flex-shrink-0 w-9 h-9 rounded-full object-cover select-none"
         loading="lazy"
         onError={() => setImgFailed(true)}
       />
@@ -200,7 +200,7 @@ function AuthorAvatar({ name, handle, avatarUrl }: { name: string; handle: strin
 
   return (
     <div
-      className="flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center text-white text-xs font-bold select-none"
+      className="flex-shrink-0 w-9 h-9 rounded-full flex items-center justify-center text-white text-xs font-bold select-none"
       style={{ backgroundColor: bg }}
       aria-hidden="true"
     >
@@ -332,7 +332,7 @@ function CategoryChip({
 }) {
   return (
     <span
-      className="inline-flex items-center gap-1 px-2 py-0.5 rounded-full text-xs font-medium"
+      className="inline-flex items-center gap-1 px-2.5 py-1 rounded-full text-[11px] font-medium"
       style={{
         backgroundColor: `${category.color}18`,
         color: category.color,
@@ -560,8 +560,18 @@ export default function BookmarkCard({ bookmark }: BookmarkCardProps) {
   const isDownloadable = firstMedia !== null &&
     (firstMedia.type === 'photo' || isVideoUrl(firstMedia.url))
 
+  // Check if imported within last 24 hours
+  const isNew = bookmark.importedAt
+    ? Date.now() - new Date(bookmark.importedAt).getTime() < 24 * 60 * 60 * 1000
+    : false
+
   return (
-    <div className="group relative bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-zinc-700 hover:shadow-xl hover:shadow-black/30 transition-all duration-200 overflow-hidden flex flex-col flex-1">
+    <div className="group relative bg-zinc-900 border border-zinc-800 rounded-2xl hover:border-zinc-700 hover:shadow-xl hover:shadow-black/30 hover:shadow-blue-500/10 transition-all duration-200 overflow-hidden flex flex-col flex-1">
+
+      {/* "New" indicator dot in top-right corner */}
+      {isNew && (
+        <div className="absolute top-2.5 right-2.5 z-10 w-2 h-2 rounded-full bg-blue-400 shadow-[0_0_6px_rgba(96,165,250,0.8)]" />
+      )}
 
       {/* Top media — full bleed, no padding */}
       {firstMedia && (
@@ -689,8 +699,10 @@ export default function BookmarkCard({ bookmark }: BookmarkCardProps) {
             />
           )}
 
-          {/* Insights */}
-          <InsightsPanel bookmarkId={bookmark.id} compact />
+          {/* Insights — always visible amber-tinted trigger */}
+          <div className="mt-2">
+            <InsightsPanel bookmarkId={bookmark.id} compact />
+          </div>
         </div>
 
       </div>

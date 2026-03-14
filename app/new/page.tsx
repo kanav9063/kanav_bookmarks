@@ -5,7 +5,6 @@ import {
   Sparkles, Check, CheckCheck, ExternalLink, FileText,
   Book, Newspaper, Headphones, GraduationCap, Eye, Bookmark
 } from 'lucide-react'
-import Image from 'next/image'
 
 interface FeedItem {
   id: string
@@ -39,6 +38,50 @@ function TypeIcon({ type }: { type?: string }) {
     default: return <FileText size={12} />
   }
 }
+
+// Type badge colors for reading types
+const READING_TYPE_COLORS: Record<string, string> = {
+  article: 'bg-blue-500/15 text-blue-400 border-blue-500/20',
+  book: 'bg-violet-500/15 text-violet-400 border-violet-500/20',
+  paper: 'bg-indigo-500/15 text-indigo-400 border-indigo-500/20',
+  newsletter: 'bg-amber-500/15 text-amber-400 border-amber-500/20',
+  podcast: 'bg-emerald-500/15 text-emerald-400 border-emerald-500/20',
+}
+
+function TypeBadge({ itemType, readingType }: { itemType: 'bookmark' | 'reading'; readingType?: string }) {
+  if (itemType === 'bookmark') {
+    return (
+      <span className="inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium rounded-full border bg-blue-500/10 text-blue-400 border-blue-500/20">
+        <Bookmark size={9} />
+        Bookmark
+      </span>
+    )
+  }
+  const colorClass = READING_TYPE_COLORS[readingType || 'article'] || READING_TYPE_COLORS.article
+  return (
+    <span className={`inline-flex items-center gap-1 px-2 py-0.5 text-[10px] font-medium rounded-full border ${colorClass}`}>
+      <TypeIcon type={readingType} />
+      {readingType ? readingType.charAt(0).toUpperCase() + readingType.slice(1) : 'Article'}
+    </span>
+  )
+}
+
+// Group feed items by date label
+function getDateLabel(date: string): string {
+  const d = new Date(date)
+  const now = new Date()
+  const today = new Date(now.getFullYear(), now.getMonth(), now.getDate())
+  const yesterday = new Date(today.getTime() - 86400000)
+  const weekAgo = new Date(today.getTime() - 7 * 86400000)
+  const itemDay = new Date(d.getFullYear(), d.getMonth(), d.getDate())
+
+  if (itemDay.getTime() === today.getTime()) return 'Today'
+  if (itemDay.getTime() === yesterday.getTime()) return 'Yesterday'
+  if (itemDay > weekAgo) return 'This Week'
+  return 'Older'
+}
+
+const DATE_GROUP_ORDER = ['Today', 'Yesterday', 'This Week', 'Older']
 
 export default function WhatsNewPage() {
   const [feed, setFeed] = useState<FeedItem[]>([])
@@ -95,6 +138,16 @@ export default function WhatsNewPage() {
     return null
   }
 
+  // Group feed by date label
+  const grouped = feed.reduce<Record<string, FeedItem[]>>((acc, item) => {
+    const label = getDateLabel(item.date)
+    if (!acc[label]) acc[label] = []
+    acc[label].push(item)
+    return acc
+  }, {})
+
+  const groupKeys = DATE_GROUP_ORDER.filter(k => grouped[k] && grouped[k].length > 0)
+
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100">
       <div className="max-w-2xl mx-auto px-4 sm:px-6 py-6 sm:py-8 pt-14 lg:pt-8">
@@ -147,98 +200,116 @@ export default function WhatsNewPage() {
             <p className="text-zinc-600 text-sm mt-1">New bookmarks and reading items will show up here</p>
           </div>
         ) : (
-          <div className={`space-y-2 transition-opacity duration-300 ${markingAll ? 'opacity-30' : ''}`}>
-            {feed.map(item => {
-              const url = getItemUrl(item)
-              const isMarking = marking.has(item.id)
-
-              return (
-                <div
-                  key={item.id}
-                  className={`group bg-zinc-900/40 border border-zinc-800/30 rounded-xl p-3.5 hover:border-zinc-700/40 hover:bg-zinc-900/60 transition-all duration-300 card-hover ${
-                    isMarking ? 'opacity-30 scale-[0.98] translate-x-4' : ''
-                  }`}
-                >
-                  <div className="flex gap-3 items-start">
-                    {/* Thumbnail or type icon */}
-                    {item.thumbnail ? (
-                      <div className="w-12 h-12 rounded-lg overflow-hidden bg-zinc-800 shrink-0">
-                        <img
-                          src={item.thumbnail}
-                          alt=""
-                          className="w-full h-full object-cover"
-                        />
-                      </div>
-                    ) : (
-                      <div className={`w-12 h-12 rounded-lg flex items-center justify-center shrink-0 ${
-                        item.type === 'bookmark'
-                          ? 'bg-blue-500/10 text-blue-400'
-                          : 'bg-amber-500/10 text-amber-400'
-                      }`}>
-                        {item.type === 'bookmark' ? <Bookmark size={18} /> : <TypeIcon type={item.readingType} />}
-                      </div>
-                    )}
-
-                    {/* Content */}
-                    <div className="flex-1 min-w-0">
-                      <div className="flex items-start gap-2">
-                        <div className="flex-1 min-w-0">
-                          {url ? (
-                            <a
-                              href={url}
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="text-[13px] font-medium text-zinc-100 hover:text-blue-400 transition-colors line-clamp-2 leading-snug"
-                              onClick={() => markSeen(item)}
-                            >
-                              {item.title}
-                            </a>
-                          ) : (
-                            <p className="text-[13px] font-medium text-zinc-100 line-clamp-2 leading-snug">{item.title}</p>
-                          )}
-                          <div className="flex items-center gap-2 mt-1">
-                            {item.author && (
-                              <span className="text-[11px] text-zinc-500">
-                                {item.handle ? `@${item.handle}` : item.author}
-                              </span>
-                            )}
-                            <span className="text-[10px] text-zinc-700">{timeAgo(item.date)}</span>
-                          </div>
-                        </div>
-
-                        {/* Mark as seen button */}
-                        <button
-                          onClick={() => markSeen(item)}
-                          className="shrink-0 p-1.5 text-zinc-700 hover:text-emerald-400 hover:bg-emerald-500/10 rounded-lg transition-all"
-                          title="Mark as seen"
-                        >
-                          <Eye size={14} />
-                        </button>
-                      </div>
-
-                      {/* Categories */}
-                      {item.categories.length > 0 && (
-                        <div className="flex gap-1.5 mt-1.5 flex-wrap">
-                          {item.categories.slice(0, 3).map((cat, i) => (
-                            <span
-                              key={i}
-                              className="px-1.5 py-0.5 text-[10px] rounded-full border"
-                              style={{
-                                color: cat.color,
-                                borderColor: `${cat.color}30`,
-                                backgroundColor: `${cat.color}10`,
-                              }}
-                            >
-                              {cat.name}
-                            </span>
-                          ))}
-                        </div>
-                      )}
-                    </div>
-                  </div>
+          <div className={`space-y-6 transition-opacity duration-300 ${markingAll ? 'opacity-30' : ''}`}>
+            {groupKeys.map(groupLabel => (
+              <div key={groupLabel}>
+                {/* Sticky section header */}
+                <div className="sticky top-0 z-10 flex items-center gap-3 py-2 mb-2 bg-zinc-950/95 backdrop-blur-sm">
+                  <span className="text-[11px] text-zinc-500 uppercase tracking-widest font-semibold">{groupLabel}</span>
+                  <span className="text-[10px] text-zinc-700 bg-zinc-800/50 border border-zinc-700/30 rounded-full px-2 py-0.5">
+                    {grouped[groupLabel].length}
+                  </span>
                 </div>
-              )
-            })}
+
+                <div className="space-y-2">
+                  {grouped[groupLabel].map(item => {
+                    const url = getItemUrl(item)
+                    const isMarking = marking.has(item.id)
+
+                    return (
+                      <div
+                        key={item.id}
+                        className={`group flex gap-3 items-start bg-zinc-900/50 border border-zinc-800/30 border-l-2 border-l-blue-500/40 rounded-xl p-3.5 hover:border-zinc-700/40 hover:bg-zinc-900/70 hover:shadow-lg hover:shadow-blue-500/5 transition-all duration-300 ${
+                          isMarking ? 'opacity-30 scale-[0.98] translate-x-4' : ''
+                        }`}
+                      >
+                        {/* Blue dot indicator */}
+                        <div className="w-2 h-2 rounded-full bg-blue-400 shrink-0 mt-2 animate-pulse" />
+
+                        {/* Thumbnail or type icon */}
+                        {item.thumbnail ? (
+                          <div className="w-12 h-12 rounded-lg overflow-hidden bg-zinc-800 shrink-0">
+                            <img
+                              src={item.thumbnail}
+                              alt=""
+                              className="w-full h-full object-cover"
+                            />
+                          </div>
+                        ) : (
+                          <div className={`w-12 h-12 rounded-lg flex items-center justify-center shrink-0 ${
+                            item.type === 'bookmark'
+                              ? 'bg-blue-500/10 text-blue-400'
+                              : 'bg-amber-500/10 text-amber-400'
+                          }`}>
+                            {item.type === 'bookmark' ? <Bookmark size={18} /> : <TypeIcon type={item.readingType} />}
+                          </div>
+                        )}
+
+                        {/* Content */}
+                        <div className="flex-1 min-w-0">
+                          <div className="flex items-start gap-2">
+                            <div className="flex-1 min-w-0">
+                              {url ? (
+                                <a
+                                  href={url}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className="text-[13px] font-medium text-zinc-100 hover:text-blue-400 transition-colors line-clamp-2 leading-snug"
+                                  onClick={() => markSeen(item)}
+                                >
+                                  {item.title}
+                                </a>
+                              ) : (
+                                <p className="text-[13px] font-medium text-zinc-100 line-clamp-2 leading-snug">{item.title}</p>
+                              )}
+                              <div className="flex items-center gap-2 mt-1.5 flex-wrap">
+                                {item.author && (
+                                  <span className="text-[11px] text-zinc-500">
+                                    {item.handle ? `@${item.handle}` : item.author}
+                                  </span>
+                                )}
+                                {/* Type badge */}
+                                <TypeBadge itemType={item.type} readingType={item.readingType} />
+                                <span className="text-[10px] text-zinc-700">{timeAgo(item.date)}</span>
+                              </div>
+                            </div>
+
+                            {/* Mark as seen button — always visible */}
+                            <button
+                              onClick={() => markSeen(item)}
+                              className="shrink-0 flex items-center gap-1 px-2 py-1.5 text-[11px] font-medium text-zinc-500 hover:text-emerald-400 hover:bg-emerald-500/10 border border-transparent hover:border-emerald-500/20 rounded-lg transition-all"
+                              title="Mark as seen"
+                            >
+                              <Eye size={13} />
+                              <span className="hidden sm:inline">Seen</span>
+                            </button>
+                          </div>
+
+                          {/* Categories */}
+                          {item.categories.length > 0 && (
+                            <div className="flex gap-1.5 mt-1.5 flex-wrap">
+                              {item.categories.slice(0, 3).map((cat, i) => (
+                                <span
+                                  key={i}
+                                  className="px-1.5 py-0.5 text-[10px] rounded-full border"
+                                  style={{
+                                    color: cat.color,
+                                    borderColor: `${cat.color}30`,
+                                    backgroundColor: `${cat.color}10`,
+                                  }}
+                                >
+                                  {cat.name}
+                                </span>
+                              ))}
+                            </div>
+                          )}
+                        </div>
+                      </div>
+                    )
+                  })}
+                </div>
+              </div>
+            ))}
           </div>
         )}
       </div>

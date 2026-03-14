@@ -1,7 +1,7 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { Lightbulb, ExternalLink, MessageSquare, Pencil, BookOpen, FileText, Trash2 } from 'lucide-react'
+import { Lightbulb, MessageSquare, Pencil, BookOpen, FileText, Trash2 } from 'lucide-react'
 import Link from 'next/link'
 
 interface Insight {
@@ -22,10 +22,17 @@ function timeAgo(date: string): string {
   return new Date(date).toLocaleDateString('en-US', { month: 'short', day: 'numeric', year: 'numeric' })
 }
 
-const SOURCE_EMOJI: Record<string, string> = {
-  discussion: '💬',
-  manual: '✍️',
-  highlight: '🔖',
+function SourceIcon({ source }: { source: string }) {
+  switch (source) {
+    case 'discussion':
+      return <MessageSquare size={14} className="text-blue-400" />
+    case 'manual':
+      return <Pencil size={14} className="text-violet-400" />
+    case 'highlight':
+      return <BookOpen size={14} className="text-amber-400" />
+    default:
+      return <Lightbulb size={14} className="text-amber-400" />
+  }
 }
 
 export default function InsightsPage() {
@@ -83,10 +90,23 @@ export default function InsightsPage() {
             ))}
           </div>
         ) : insights.length === 0 ? (
-          <div className="text-center py-16">
-            <Lightbulb size={48} className="text-zinc-800 mx-auto mb-4" />
-            <p className="text-zinc-500 text-sm mb-2">No insights yet</p>
-            <p className="text-zinc-600 text-xs max-w-sm mx-auto">
+          <div className="text-center py-20">
+            <div className="relative w-24 h-24 mx-auto mb-6">
+              {/* Overlapping insight icons for empty state */}
+              <div className="absolute inset-0 flex items-center justify-center">
+                <div className="w-20 h-20 bg-gradient-to-br from-amber-500/10 to-orange-500/10 border border-amber-500/20 rounded-2xl flex items-center justify-center">
+                  <Lightbulb size={36} className="text-amber-500/40" />
+                </div>
+              </div>
+              <div className="absolute -top-2 -right-2 w-10 h-10 bg-zinc-800/80 border border-zinc-700/30 rounded-xl flex items-center justify-center">
+                <MessageSquare size={16} className="text-blue-400/40" />
+              </div>
+              <div className="absolute -bottom-1 -left-2 w-9 h-9 bg-zinc-800/80 border border-zinc-700/30 rounded-xl flex items-center justify-center">
+                <Pencil size={14} className="text-violet-400/40" />
+              </div>
+            </div>
+            <p className="text-zinc-400 font-medium mb-2">No insights yet</p>
+            <p className="text-zinc-600 text-xs max-w-sm mx-auto leading-relaxed">
               When you discuss articles or bookmarks, insights get captured here.
               You can also manually add them from any item.
             </p>
@@ -95,37 +115,45 @@ export default function InsightsPage() {
           <div className="space-y-8">
             {Object.entries(grouped).map(([date, dateInsights]) => (
               <div key={date}>
-                <h2 className="text-[12px] text-zinc-600 uppercase tracking-wider font-medium mb-3 px-1">
-                  {date}
-                </h2>
+                {/* Prominent date section header with line separator */}
+                <div className="flex items-center gap-3 mb-4">
+                  <h2 className="text-[12px] text-zinc-400 font-semibold tracking-wider uppercase whitespace-nowrap">
+                    {date}
+                  </h2>
+                  <div className="flex-1 h-px bg-zinc-800/60" />
+                  <span className="text-[10px] text-zinc-600 tabular-nums">{dateInsights.length}</span>
+                </div>
                 <div className="space-y-2">
                   {dateInsights.map(insight => (
                     <div
                       key={insight.id}
-                      className="group bg-zinc-900/40 border border-zinc-800/30 rounded-xl p-4 hover:border-zinc-700/40 hover:bg-zinc-900/60 transition-all duration-200 card-hover"
+                      className="group bg-zinc-900/40 border border-zinc-800/30 border-l-2 border-l-amber-500/30 rounded-xl p-4 hover:border-zinc-700/40 hover:bg-zinc-900/60 transition-all duration-200"
                     >
                       <div className="flex gap-3 items-start">
-                        <span className="text-sm mt-0.5 shrink-0">
-                          {SOURCE_EMOJI[insight.source] || '💡'}
+                        {/* Proper icon component instead of emoji */}
+                        <span className="mt-0.5 shrink-0">
+                          <SourceIcon source={insight.source} />
                         </span>
                         <div className="flex-1 min-w-0">
-                          <p className="text-[13px] text-zinc-200 leading-relaxed">{insight.content}</p>
+                          <p className="text-[15px] text-zinc-100 leading-relaxed">{insight.content}</p>
 
-                          {/* Source item */}
-                          <div className="flex items-center gap-3 mt-2">
+                          {/* Source item as proper preview card */}
+                          <div className="flex items-center gap-3 mt-2.5 flex-wrap">
                             {insight.readingItem && (
                               <Link
                                 href="/reading"
-                                className="flex items-center gap-1.5 text-[11px] text-zinc-500 hover:text-blue-400 transition-colors"
+                                className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-2.5 border border-zinc-700/30 hover:border-zinc-600/40 hover:bg-zinc-800/70 transition-colors"
                               >
-                                <BookOpen size={10} />
-                                {insight.readingItem.title}
+                                <BookOpen size={11} className="text-zinc-500 shrink-0" />
+                                <span className="text-[11px] text-zinc-400 hover:text-blue-400 transition-colors line-clamp-1">
+                                  {insight.readingItem.title}
+                                </span>
                               </Link>
                             )}
                             {insight.bookmark && (
-                              <span className="flex items-center gap-1.5 text-[11px] text-zinc-500">
-                                <FileText size={10} />
-                                @{insight.bookmark.authorHandle}
+                              <span className="flex items-center gap-2 bg-zinc-800/50 rounded-lg p-2.5 border border-zinc-700/30">
+                                <FileText size={11} className="text-zinc-500 shrink-0" />
+                                <span className="text-[11px] text-zinc-400">@{insight.bookmark.authorHandle}</span>
                               </span>
                             )}
                             <span className="text-[10px] text-zinc-700 ml-auto shrink-0">

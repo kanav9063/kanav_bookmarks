@@ -212,14 +212,14 @@ export default function Nav() {
               href={href}
               className={`flex items-center gap-2.5 px-3 py-2 rounded-lg text-[13px] font-medium transition-all ${
                 active
-                  ? 'bg-gradient-to-r from-blue-500/15 to-transparent text-blue-400 border-l-2 border-blue-400'
+                  ? 'bg-gradient-to-r from-blue-500/20 to-violet-500/5 text-blue-300 border-l-2 border-blue-400 shadow-sm'
                   : 'text-zinc-500 hover:bg-zinc-800/40 hover:text-zinc-300'
               }`}
             >
               <Icon size={14} className="shrink-0" />
               {label}
               {label === "What's New" && unseenCount > 0 && (
-                <span className="ml-auto px-1.5 py-0.5 text-[10px] font-bold bg-red-500 text-white rounded-full min-w-[18px] text-center leading-none">
+                <span className={`ml-auto px-1.5 py-0.5 text-[10px] font-bold bg-red-500 text-white rounded-full min-w-[18px] text-center leading-none ${unseenCount > 0 ? 'animate-pulse' : ''}`}>
                   {unseenCount > 99 ? '99+' : unseenCount}
                 </span>
               )}
@@ -268,14 +268,13 @@ export default function Nav() {
                       href={`/categories/${cat.slug}`}
                       className={`flex items-center gap-2.5 px-2 py-1.5 rounded-lg text-[13px] font-medium transition-all group ${
                         catActive
-                          ? 'bg-zinc-800 text-zinc-100'
+                          ? 'bg-zinc-800 text-zinc-100 border-l-2 border-zinc-500'
                           : 'text-zinc-400 hover:bg-zinc-800/60 hover:text-zinc-200'
                       }`}
                     >
-                      <Bookmark
-                        size={12}
-                        className="flex-shrink-0 transition-colors"
-                        style={{ color: cat.color }}
+                      <span
+                        className="w-2 h-2 rounded-full shrink-0"
+                        style={{ backgroundColor: cat.color }}
                       />
                       <span className="truncate flex-1">{cat.name}</span>
                       <span className="text-[11px] text-zinc-600 group-hover:text-zinc-500 tabular-nums font-normal">

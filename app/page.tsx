@@ -4,6 +4,7 @@ import Link from 'next/link'
 import { BookmarkIcon, Tag, Image, Layers, Upload, Sparkles, Search, ArrowRight, TrendingUp, Bookmark, Calendar } from 'lucide-react'
 import prisma from '@/lib/db'
 import BookmarkCard from '@/components/bookmark-card'
+import ContinueReadingSection from '@/components/continue-reading-section'
 import type { BookmarkWithMedia } from '@/lib/types'
 
 const RECENT_QUERY = {
@@ -154,14 +155,19 @@ interface StatCardProps {
   iconColor: string
   iconBg: string
   borderColor: string
+  barColor: string
   trend?: string
   href?: string
 }
 
-function StatCard({ label, value, icon: Icon, iconColor, iconBg, borderColor, trend, href }: StatCardProps) {
+const SPARKLINE_HEIGHTS = [40, 60, 45, 80, 100]
+
+function StatCard({ label, value, icon: Icon, iconColor, iconBg, borderColor, barColor, trend, href }: StatCardProps) {
   const inner = (
     <>
-      <div className="flex items-start justify-between mb-3">
+      {/* Subtle gradient overlay from border-top color into card */}
+      <div className="absolute inset-0 bg-gradient-to-b from-current/5 to-transparent opacity-20 pointer-events-none" style={{ color: 'inherit' }} />
+      <div className="flex items-start justify-between mb-3 relative">
         <div className={`p-2.5 rounded-xl ${iconBg}`}>
           <Icon size={18} className={iconColor} />
         </div>
@@ -172,8 +178,18 @@ function StatCard({ label, value, icon: Icon, iconColor, iconBg, borderColor, tr
           </span>
         )}
       </div>
-      <p className="text-3xl font-bold text-zinc-100 mb-1 tracking-tight">{value.toLocaleString()}</p>
-      <p className="text-sm text-zinc-500">{label}</p>
+      <p className="text-3xl font-bold text-zinc-100 mb-1 tracking-tight relative">{value.toLocaleString()}</p>
+      <p className="text-sm text-zinc-500 relative">{label}</p>
+      {/* Sparkline bar chart */}
+      <div className="flex items-end gap-0.5 mt-3 h-6 relative">
+        {SPARKLINE_HEIGHTS.map((h, i) => (
+          <div
+            key={i}
+            className={`flex-1 rounded-sm opacity-40 ${barColor}`}
+            style={{ height: `${h}%` }}
+          />
+        ))}
+      </div>
     </>
   )
   const cls = `bg-zinc-900 border border-zinc-800 rounded-2xl p-5 hover:border-zinc-700 transition-all duration-200 relative overflow-hidden border-t-2 ${borderColor} ${href ? 'cursor-pointer hover:bg-zinc-800/60' : ''}`
@@ -245,6 +261,7 @@ export default async function DashboardPage() {
           iconColor="text-indigo-400"
           iconBg="bg-indigo-500/10"
           borderColor="border-t-indigo-500"
+          barColor="bg-indigo-400"
         />
         <StatCard
           label="Categorized"
@@ -253,6 +270,7 @@ export default async function DashboardPage() {
           iconColor="text-emerald-400"
           iconBg="bg-emerald-500/10"
           borderColor="border-t-emerald-500"
+          barColor="bg-emerald-400"
         />
         <StatCard
           label="Media Items"
@@ -261,6 +279,7 @@ export default async function DashboardPage() {
           iconColor="text-violet-400"
           iconBg="bg-violet-500/10"
           borderColor="border-t-violet-500"
+          barColor="bg-violet-400"
         />
         <StatCard
           label="Uncategorized"
@@ -269,9 +288,13 @@ export default async function DashboardPage() {
           iconColor="text-amber-400"
           iconBg="bg-amber-500/10"
           borderColor="border-t-amber-500"
+          barColor="bg-amber-400"
           href="/bookmarks?uncategorized=true"
         />
       </div>
+
+      {/* Continue Reading — client component fetches its own data */}
+      <ContinueReadingSection />
 
       {/* Today */}
       {data.todayBookmarks.length > 0 && (
@@ -292,12 +315,15 @@ export default async function DashboardPage() {
               <ArrowRight size={14} />
             </Link>
           </div>
-          <div className="masonry-grid">
-            {data.todayBookmarks.slice(0, 6).map((bookmark) => (
-              <div key={bookmark.id} className="masonry-item">
-                <BookmarkCard bookmark={bookmark} />
-              </div>
-            ))}
+          {/* Timeline-style feed with left border */}
+          <div className="relative pl-4 border-l-2 border-blue-500/20">
+            <div className="masonry-grid">
+              {data.todayBookmarks.slice(0, 6).map((bookmark) => (
+                <div key={bookmark.id} className="masonry-item">
+                  <BookmarkCard bookmark={bookmark} />
+                </div>
+              ))}
+            </div>
           </div>
         </section>
       )}
