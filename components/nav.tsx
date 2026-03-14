@@ -17,6 +17,7 @@ import {
   Bookmark,
   BookOpen,
   Lightbulb,
+  BarChart3,
 
 } from 'lucide-react'
 
@@ -35,6 +36,7 @@ const NAV_ITEMS: NavItem[] = [
   { href: '/insights', label: 'Insights', icon: Lightbulb },
   { href: '/mindmap', label: 'Mindmap', icon: GitBranch },
   { href: '/import', label: 'Import', icon: Upload },
+  { href: '/stats', label: 'Stats', icon: BarChart3 },
   { href: '/settings', label: 'Settings', icon: Settings },
 ]
 
