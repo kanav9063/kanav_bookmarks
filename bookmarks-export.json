@@ -1,5 +1,56 @@
 [
   {
+    "id_str": "2032799978310025474",
+    "full_text": "Someone sent me a post titled \"enthusiast built a setup for 10x learning speed\"\n\nI wanted to laugh. Then I watched the video and couldn't stop thinking about it.\n\nThe guy understood something real. He just put it behind a paid course. So I spent a weekend reverse-engineering it https://t.co/WzQsdCddRm https://t.co/soMIguc3OS",
+    "created_at": "2026-03-14T12:44:17.000Z",
+    "user": {
+      "screen_name": "Atenov_D",
+      "name": "Atenov int."
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/Atenov_D/status/2032799978310025474/photo/1"
+        },
+        {
+          "expanded_url": "https://twitter.com/Atenov_D/status/2032528386745315553"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDX0NGKXMAAerPO.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDX0NGKXMAAerPO.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027980784754102726",
+    "full_text": "Early preview of ObsidianOS, Agentic Operating System for Thinkers: https://t.co/lt2xEXge66",
+    "created_at": "2026-03-01T05:34:31.000Z",
+    "user": {
+      "screen_name": "benoror",
+      "name": "Ben Orozco"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/benoror/obsidianos_work"
+        }
+      ]
+    }
+  },
+  {
     "id_str": "2032567729560105117",
     "full_text": "(1/n) Evolutionary frameworks like AlphaEvolve and GEPA use diversity and fitness to select which subset of past experiments to condition the next generation on. Why not let an agent choose instead? To this end, we introduce Coding Agents as Text Optimizers (CATO). We beat",
     "created_at": "2026-03-13T21:21:24.000Z",
@@ -5812,54 +5863,6 @@
       "urls": [
         {
           "expanded_url": "https://krausefx.com//blog/openclaw-my-automation-setup"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2025701861031121331",
-    "full_text": "unpopular (maybe?) opinion: MCP is dead in the water\n\n@openclaw has shown me that api &amp; cli will win. \n\nevery MCP server you connect loads its tool definitions into your context window. name, description, parameter schema, all of it. connect 10 servers with 5 tools each and https://t.co/jRjXJQBH3X",
-    "created_at": "2026-02-22T22:38:54.000Z",
-    "user": {
-      "screen_name": "chrysb",
-      "name": "Chrys Bader"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "https://x.com/chrysb/status/2025701861031121331/photo/1"
-        }
-      ],
-      "media": [
-        {
-          "type": "photo",
-          "media_url_https": "https://pbs.twimg.com/media/HBy4Itaa8AAK8Ut.jpg"
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "type": "photo",
-          "media_url_https": "https://pbs.twimg.com/media/HBy4Itaa8AAK8Ut.jpg"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2025920521871716562",
-    "full_text": "https://t.co/DotZ3V6XhJ",
-    "created_at": "2026-02-23T13:07:46.000Z",
-    "user": {
-      "screen_name": "elvissun",
-      "name": "Elvis"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "http://x.com/i/article/2025654698590748672"
         }
       ]
     }

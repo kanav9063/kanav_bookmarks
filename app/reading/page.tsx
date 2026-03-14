@@ -2,6 +2,7 @@
 import InsightsPanel from "@/components/insights-panel"
 
 import { useState, useEffect, useCallback } from 'react'
+import Link from 'next/link'
 import {
   BookOpen, Plus, ExternalLink, Star, Search, X, Check,
   Book, FileText, Newspaper, Headphones, GraduationCap, PlayCircle,
@@ -258,12 +259,14 @@ function ItemCard({ item, onUpdate, onDelete }: { item: ReadingItem; onUpdate: (
           {/* Title + link */}
           <div className="flex items-start gap-2">
             <h3 className="text-[14px] font-medium text-zinc-100 leading-snug flex-1">
-              {item.url ? (
-                <a href={item.url} target="_blank" rel="noopener noreferrer" className="hover:text-blue-400 transition-colors">
-                  {item.title}
-                  <ExternalLink size={11} className="inline ml-1.5 opacity-40" />
+              <Link href={`/reading/${item.id}`} className="hover:text-blue-400 transition-colors">
+                {item.title}
+              </Link>
+              {item.url && (
+                <a href={item.url} target="_blank" rel="noopener noreferrer" className="inline-block ml-1.5 opacity-40 hover:opacity-70">
+                  <ExternalLink size={11} />
                 </a>
-              ) : item.title}
+              )}
             </h3>
             <div className="flex items-center gap-1 opacity-0 group-hover:opacity-100 transition-opacity">
               <button onClick={() => onDelete(item.id)} className="p-1 text-zinc-600 hover:text-red-400 transition-colors">
