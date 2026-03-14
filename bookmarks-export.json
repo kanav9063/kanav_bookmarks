@@ -1,5 +1,1190 @@
 [
   {
+    "id_str": "2032527564774977703",
+    "full_text": "Atoms. \n\nhttps://t.co/nbCnIkI3RD",
+    "created_at": "2026-03-13T18:41:48.000Z",
+    "user": {
+      "screen_name": "travisk",
+      "name": "travis kalanick"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "Http://atoms.co/vision"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032464949952598152",
+    "full_text": "https://t.co/LeaTneJ9f5",
+    "created_at": "2026-03-13T14:33:00.000Z",
+    "user": {
+      "screen_name": "manthanguptaa",
+      "name": "Manthan Gupta"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2032398255095730177"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032528386745315553",
+    "full_text": "https://t.co/iCY5hMqxgI",
+    "created_at": "2026-03-13T18:45:04.000Z",
+    "user": {
+      "screen_name": "Atenov_D",
+      "name": "Atenov int."
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2032160760042758144"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032524875978650075",
+    "full_text": "in closing \n\n1) the tokens going into your harness (skill.md, claude.md, hook prompts) are SUPER HIGH LEVERAGE - they are worth painstaking over and writing by hand, or iterating on a lot w/ a model\n\n2) the best harness engineers are minimalists, start w/ defaults, work on real",
+    "created_at": "2026-03-13T18:31:07.000Z",
+    "user": {
+      "screen_name": "dexhorthy",
+      "name": "dex"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2032524855409873072",
+    "full_text": "harness engineering, coined by @Vtrivedy10 is about the things you build around the model to create a good agent - as @mitchellh puts it \n\n&gt; [it] is the idea that anytime you find an agent makes a mistake, you take the time to engineer a solution such that the agent never makes https://t.co/Qt3oLKSZhh",
+    "created_at": "2026-03-13T18:31:02.000Z",
+    "user": {
+      "screen_name": "dexhorthy",
+      "name": "dex"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/dexhorthy/status/2032524855409873072/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDT4qRFbIAAKnti.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDT4qRFbIAAKnti.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032431974703632754",
+    "full_text": "If You’re a Developer, Master These 15 Things\n\n1. Data Structures &amp; Algorithms\nArrays, HashMaps, Trees, Graphs, Recursion, Big-O.\n\n2. Git &amp; Version Control\nBranching, pull requests, rebasing, resolving conflicts.\n\n3. Debugging Skills\nReading logs &gt; guessing fixes.\n\n4. Clean Code",
+    "created_at": "2026-03-13T12:21:58.000Z",
+    "user": {
+      "screen_name": "ajay_2512x",
+      "name": "Ajay Bhakar"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2032487512694997357",
+    "full_text": "Built a full streaming AI chat UI 🤔 with reasoning tokens, live tool calls, and shimmer loading states 🤯 in under 50 lines of React‼️\n\n@langchain/react + AI Elements (https://t.co/GocoHoZvsT by @vercel) is the combo you didn't know you needed. 🧵 https://t.co/amSxXR686U",
+    "created_at": "2026-03-13T16:02:39.000Z",
+    "user": {
+      "screen_name": "LangChain_JS",
+      "name": "LangChain JS"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://elements.ai-sdk.dev/"
+        },
+        {
+          "expanded_url": "https://x.com/LangChain_JS/status/2032487512694997357/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "animated_gif",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/HDTU-xdbMAAiTdT.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/tweet_video/HDTU-xdbMAAiTdT.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "animated_gif",
+          "media_url_https": "https://pbs.twimg.com/tweet_video_thumb/HDTU-xdbMAAiTdT.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/tweet_video/HDTU-xdbMAAiTdT.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032232358561075631",
+    "full_text": "Agentic development of Power BI reports? You can do that with pbir-cli, yes. Here's an example; nothing fancy, just a simple report in a few minutes.\n\nThe tool also comes with a bunch of Power BI report skills to help with various practical tasks if you use agents. https://t.co/VYeZDfT5t2",
+    "created_at": "2026-03-12T23:08:45.000Z",
+    "user": {
+      "screen_name": "kurtbuhler",
+      "name": "Kurt Buhler"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/kurtbuhler/status/2032232358561075631/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2032231413458624512/img/xy-v1jYi_yjVSUbE.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/vid/avc1/640x360/VcyKAMn3VxTpuBK9.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/vid/avc1/1280x720/xkWvLNDC-meZEuU_.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/vid/avc1/1920x1080/6XgyfRyO4AMc0Lis.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/pl/gMvdrQ0ADG153B7y.m3u8?v=cfc"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/vid/avc1/480x270/P0-soM0vwW0mU1wS.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2032231413458624512/img/xy-v1jYi_yjVSUbE.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/vid/avc1/640x360/VcyKAMn3VxTpuBK9.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/vid/avc1/1280x720/xkWvLNDC-meZEuU_.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/vid/avc1/1920x1080/6XgyfRyO4AMc0Lis.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/pl/gMvdrQ0ADG153B7y.m3u8?v=cfc"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2032231413458624512/vid/avc1/480x270/P0-soM0vwW0mU1wS.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032229604618842257",
+    "full_text": "Markdown editor using an invisible textarea overlay\n\nhttps://t.co/oIg31u4mmQ https://t.co/kLiyQrDlqh",
+    "created_at": "2026-03-12T22:57:49.000Z",
+    "user": {
+      "screen_name": "tom_doerr",
+      "name": "Tom Dörr"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/panphora/overtype"
+        },
+        {
+          "expanded_url": "https://x.com/tom_doerr/status/2032229604618842257/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDPuDnJXsAA05PU.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDPuDnJXsAA05PU.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032260150564696171",
+    "full_text": "Claude Code interface in Obsidian sidebar\n\nhttps://t.co/XL1UBcV3bj https://t.co/bIcCr0UdEn",
+    "created_at": "2026-03-13T00:59:12.000Z",
+    "user": {
+      "screen_name": "tom_doerr",
+      "name": "Tom Dörr"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/derek-larson14/obsidian-claude-sidebar"
+        },
+        {
+          "expanded_url": "https://x.com/tom_doerr/status/2032260150564696171/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDQJ1k_bUAA17mT.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDQJ1k_bUAA17mT.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032212536716578932",
+    "full_text": "And the most important part: we open sourced the /autoresearch plugin for pi. Just tell it what you want, it will do the rest.  \n\nhttps://t.co/C2H6kxR7jG",
+    "created_at": "2026-03-12T21:50:00.000Z",
+    "user": {
+      "screen_name": "tobi",
+      "name": "tobi lutke"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/davebcn87/pi-autoresearch"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032234293775216860",
+    "full_text": "https://t.co/5YVaksPvXD is open for PRs - Check us out!\nhttps://t.co/5fPEzvulcv",
+    "created_at": "2026-03-12T23:16:27.000Z",
+    "user": {
+      "screen_name": "invisiblebags",
+      "name": "invisible"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://agentipedia.ai"
+        },
+        {
+          "expanded_url": "https://github.com/secretbuilds/agentipedia"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032224933837684932",
+    "full_text": "Autoskill: a distributed skill factory | v.2.6.5                                                                                                        \n                                                   \nWe're now applying the same @karpathy autoresearch pattern to an even https://t.co/8tEXz6RIi4 https://t.co/gEmL8R3jT3",
+    "created_at": "2026-03-12T22:39:15.000Z",
+    "user": {
+      "screen_name": "varun_mathur",
+      "name": "Varun"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/varun_mathur/status/2032224933837684932/photo/1"
+        },
+        {
+          "expanded_url": "https://twitter.com/varun_mathur/status/2031550020101480507"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDPonYUWEAAYBDm.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDPonYUWEAAYBDm.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032130868290953283",
+    "full_text": "A map of SF investors by stage.\nCurated from recommendations by SF founders, investors, and operators.\n\nTalent-first / pre-idea / pre-company\n&gt;Entrepreneurs First\n&gt;1517 Fund\n&gt;Bloomberg Beta\n&gt;Human Capital\n\nPre-seed / pre-product / first believers\n&gt;Afore Capital\n&gt;Abstract Ventures",
+    "created_at": "2026-03-12T16:25:28.000Z",
+    "user": {
+      "screen_name": "Tancrededib",
+      "name": "Tancrede"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2032123160536236461",
+    "full_text": "Defuddle now returns Youtube transcripts!\n\nPaste a YouTube link into defuddle.md to get a markdown transcript with timestamps, chapters, and pretty good diarization!\n\n...or if you just want to read it, try the new Reader mode in Obsidian Web Clipper powered by Defuddle. https://t.co/bOuPONj6yu",
+    "created_at": "2026-03-12T15:54:51.000Z",
+    "user": {
+      "screen_name": "kepano",
+      "name": "kepano"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/kepano/status/2032123160536236461/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2032121593703645186/img/WUtf8C662vNRNMB_.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 25128000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/2436x2160/f-MELjfkZpLAUuXa.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/812x720/Qdkf_nzOmtTqrhCL.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/406x360/gmeWymzbbBscIn9U.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/pl/MS857fTlvbXrQh2_.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/1218x1080/yi04g_PZyH_d1z6p.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/304x270/5cX7iuCQ_MPGh9ou.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2032121593703645186/img/WUtf8C662vNRNMB_.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 25128000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/2436x2160/f-MELjfkZpLAUuXa.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/812x720/Qdkf_nzOmtTqrhCL.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/406x360/gmeWymzbbBscIn9U.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/pl/MS857fTlvbXrQh2_.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/1218x1080/yi04g_PZyH_d1z6p.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2032121593703645186/vid/avc1/304x270/5cX7iuCQ_MPGh9ou.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031938863577645102",
+    "full_text": "The vibes at OpenAI are different than anything I’ve experience in my career.\n\nIf you like building things, this is where you want to be.\n\nWe are working on every important problem you could think of, because AI has the potential to transform every industry.\n\nWe are operating at",
+    "created_at": "2026-03-12T03:42:31.000Z",
+    "user": {
+      "screen_name": "rohanvarma",
+      "name": "Rohan Varma"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2015801049429196975",
+    "full_text": "This one is for couples who’ve been entangled in blanket wars for years. For women whose bodies spike and shift with cycles, pregnancy, and menopause. \n\nThis one’s about so much more than the science, the metrics, and the engineering. \n\nThis one’s about waking up and loving how https://t.co/rTcmq4Stn2",
+    "created_at": "2026-01-26T14:56:36.000Z",
+    "user": {
+      "screen_name": "eightsleep",
+      "name": "Eight Sleep"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/eightsleep/status/2015801049429196975/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2015800946069053440/img/1BBmZBYbTHS2fODP.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/vid/avc1/1920x1080/XYNF7VcGeTx8sKtA.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/vid/avc1/1280x720/QM9pHEEpY4yXf4Jt.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/vid/avc1/480x270/Gs2C0ZmPnZZd_VH4.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/vid/avc1/640x360/zTzkX89sO56J6kr7.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/pl/LhSzQKoyPYj1hCfs.m3u8"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2015800946069053440/img/1BBmZBYbTHS2fODP.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/vid/avc1/1920x1080/XYNF7VcGeTx8sKtA.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/vid/avc1/1280x720/QM9pHEEpY4yXf4Jt.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/vid/avc1/480x270/Gs2C0ZmPnZZd_VH4.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/vid/avc1/640x360/zTzkX89sO56J6kr7.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2015800946069053440/pl/LhSzQKoyPYj1hCfs.m3u8"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031838984813297748",
+    "full_text": "https://t.co/VldVH2APRu",
+    "created_at": "2026-03-11T21:05:38.000Z",
+    "user": {
+      "screen_name": "djfarrelly",
+      "name": "Dan Farrelly | Inngest.com"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2031834271158243328"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031822369732640957",
+    "full_text": "It's always energizing to do a podcast with Steve Yegge (@Steve_Yegge, engineer+author, formerly at Amazon+Google, creator of Gas Town). Timestamps:\n\n00:00 Intro\n01:43 Steve’s latest projects\n02:27 Important blog posts\n04:48 Shifts in what engineers need to know\n10:46 Steve’s https://t.co/orgCuFxksA",
+    "created_at": "2026-03-11T19:59:37.000Z",
+    "user": {
+      "screen_name": "GergelyOrosz",
+      "name": "Gergely Orosz"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/GergelyOrosz/status/2031822369732640957/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2031819842496397312/img/UgRf7b28MlOAPODM.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/vid/avc1/640x360/Rx8VBtkfduq15Raj.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/vid/avc1/480x270/KaNDHr_yegZtKVf0.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/pl/-CagK78zQfYhaVA0.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/vid/avc1/1280x720/gmRx5jgjsKe2jiXX.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/vid/avc1/1920x1080/GHjhsQ-lasBpo3W9.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2031819842496397312/img/UgRf7b28MlOAPODM.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/vid/avc1/640x360/Rx8VBtkfduq15Raj.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/vid/avc1/480x270/KaNDHr_yegZtKVf0.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/pl/-CagK78zQfYhaVA0.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/vid/avc1/1280x720/gmRx5jgjsKe2jiXX.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2031819842496397312/vid/avc1/1920x1080/GHjhsQ-lasBpo3W9.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031824244993302708",
+    "full_text": "what if coding agents had a /wrap command for when you're done with a session\n\nthe coding agent recaps what you did, what it learned about your preferences, what you'll likely be doing next session\n\noptionally also does a git add and commit https://t.co/Mw1gYkzEgI",
+    "created_at": "2026-03-11T20:07:04.000Z",
+    "user": {
+      "screen_name": "chrisbarber",
+      "name": "Chris Barber"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/chrisbarber/status/2031824244993302708/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDJ9Yifa4AAcOkO.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDJ9Yifa4AAcOkO.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031798630177251514",
+    "full_text": "https://t.co/UKPL14Eo9z",
+    "created_at": "2026-03-11T18:25:17.000Z",
+    "user": {
+      "screen_name": "masondrxy",
+      "name": "Mason Daugherty"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2031793610581311488"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031781762796515443",
+    "full_text": "Anyone who is interested in working at a frontier lab must read this tech report from Nvidia\n\nThe data engineering section is amazing and look at the amount of different models they used for synthetic data gen\n\nhttps://t.co/DHaArFTl10",
+    "created_at": "2026-03-11T17:18:15.000Z",
+    "user": {
+      "screen_name": "HarveenChadha",
+      "name": "Harveen Singh Chadha"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://research.nvidia.com/labs/nemotron/files/NVIDIA-Nemotron-3-Super-Technical-Report.pdf"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031477259689754734",
+    "full_text": "Claude Code teams with tmux is really cool \n\nWhen you run with team mode enabled in tmux, it automatically opens the additional terminal in pane \n\nI don't really get my main agent to orchestrate, I chat to them myself\n\nCLAUDE_CODE_EXPERIMENTAL_AGENT_TEAMS=true claude https://t.co/GRBKlA4XRd",
+    "created_at": "2026-03-10T21:08:16.000Z",
+    "user": {
+      "screen_name": "nummanali",
+      "name": "Numman Ali"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/nummanali/status/2031477259689754734/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDFBP10WwAAOo9Q.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDFBP10WwAAOo9Q.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031774631498273005",
+    "full_text": "Human orgs are not legible, the CEO can’t see/feel/zoom in on any activity in their company, with real time stats etc. I have no doubt that it will be possible to control orgs on mobile, with voice etc., but with this level of legibility will that be optimal? Not in principle and",
+    "created_at": "2026-03-11T16:49:55.000Z",
+    "user": {
+      "screen_name": "karpathy",
+      "name": "Andrej Karpathy"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2031420330099748995",
+    "full_text": "This might be interesting for teams running agents on the same codebase every day.\n\nMost agents start every session from scratch. No memory of yesterday. No knowledge of what other agents learned. No awareness of past mistakes.\n\nA team of ten engineers running five agent sessions https://t.co/f81wM8cfCI",
+    "created_at": "2026-03-10T17:22:03.000Z",
+    "user": {
+      "screen_name": "Siddhant_K_code",
+      "name": "Siddhant Khare"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/Siddhant_K_code/status/2031420330099748995/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDEN_xVaMAE5Ie7.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDEN_xVaMAE5Ie7.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031449569519870127",
+    "full_text": "A DSPy tutorial: learn the fundamentals while building a deep research agent. Covers Signatures &amp; Modules: what they are and why they matter.\n\nNo DSPy experience required. https://t.co/c4BAw44dc3",
+    "created_at": "2026-03-10T19:18:14.000Z",
+    "user": {
+      "screen_name": "dbreunig",
+      "name": "Drew Breunig"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://www.cmpnd.ai/blog/learn-dspy-deep-research.html"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031425984898207768",
+    "full_text": "This will be a canonical post on Agent Harnesses 🔥\n\n“Agent = Model + Harness” is a powerful mental model\n\nInnovation is emerging across the harness stack:\nFilesystems @archildata\nMemory @Letta_AI\nBrowsers @browser_use\nRouting @arena\nOrchestration @LangChain\nSandboxes @modal @e2b https://t.co/nIIdnFRMoG",
+    "created_at": "2026-03-10T17:44:31.000Z",
+    "user": {
+      "screen_name": "AstasiaMyers",
+      "name": "Astasia Myers"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/Vtrivedy10/status/2031408954517971368"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031412957473890368",
+    "full_text": "🚨BREAKING: Someone just built an open source Overleaf killer with AI built in. And it's free.\n\nIt's called Octree.\n\nAn AI-powered LaTeX editor where you write your paper, chat with Claude for help, and compile to PDF. All in one place.\n\nOverleaf charges $21/month for premium. https://t.co/U1GLIjgsES",
+    "created_at": "2026-03-10T16:52:45.000Z",
+    "user": {
+      "screen_name": "heynavtoor",
+      "name": "Nav Toor"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/heynavtoor/status/2031412957473890368/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDEHUZsaMAEdXl5.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDEHUZsaMAEdXl5.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031417353666441266",
+    "full_text": "https://t.co/3xw3NjttVd",
+    "created_at": "2026-03-10T17:10:13.000Z",
+    "user": {
+      "screen_name": "neural_avb",
+      "name": "AVB"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2031220938738642944"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031408954517971368",
+    "full_text": "https://t.co/Lb2gtM9SNs",
+    "created_at": "2026-03-10T16:36:51.000Z",
+    "user": {
+      "screen_name": "Vtrivedy10",
+      "name": "Viv"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2031387672686604289"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031054790130901211",
+    "full_text": "https://t.co/7lgNvCPzWF",
+    "created_at": "2026-03-09T17:09:31.000Z",
+    "user": {
+      "screen_name": "richzou",
+      "name": "Rich"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2031050349533179904"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031396200679878719",
+    "full_text": "OpenCode’s rules for fighting slop:\n\n- don’t ship features just because you can\n- leave the code better than you found it\n- fixing features &amp; process &gt; new features\n\nso well reasoned https://t.co/djrZxBiwSP",
+    "created_at": "2026-03-10T15:46:10.000Z",
+    "user": {
+      "screen_name": "swyx",
+      "name": "swyx"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/thdxr/status/2031377117007454421"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031376622931046402",
+    "full_text": "design-specific skills I'm using the most on Claude Code:\n\n• https://t.co/jRKTZnmAiy by @benjitaylor\n• DialKit from https://t.co/wViEKCaV8Q by @joshpuckett\n• design-lab by @0xDesigner\n\nany specific ones you're using?",
+    "created_at": "2026-03-10T14:28:22.000Z",
+    "user": {
+      "screen_name": "justinmfarrugia",
+      "name": "Justin Farrugia"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://agentation.dev"
+        },
+        {
+          "expanded_url": "http://intefacecraft.dev"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031311890752704790",
+    "full_text": "https://t.co/7TekidlEyl",
+    "created_at": "2026-03-10T10:11:09.000Z",
+    "user": {
+      "screen_name": "nvidia",
+      "name": "NVIDIA"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2027423520918310912"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031156997077479947",
+    "full_text": "+1. in ECC v1.8.0 we pushed evals closer to the harness path itself:\n\n/harness-audit\n\neval-driven quality gates\nrelease verification loops\n\nif you love to benchmark, create your own envs and run evals on them\n\nconsider opening up a PR!\n\nwill be pursuing this direction heavily https://t.co/BQgPoliBND",
+    "created_at": "2026-03-09T23:55:39.000Z",
+    "user": {
+      "screen_name": "affaanmustafa",
+      "name": "cogsec"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/HamelHusain/status/2028894099483578872"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031051115169808685",
+    "full_text": "https://t.co/2Da1cDjBkW",
+    "created_at": "2026-03-09T16:54:55.000Z",
+    "user": {
+      "screen_name": "hwchase17",
+      "name": "Harrison Chase"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2031049457031331841"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031237851300716888",
+    "full_text": "https://t.co/U0FI0I8T4i",
+    "created_at": "2026-03-10T05:16:56.000Z",
+    "user": {
+      "screen_name": "nyk_builderz",
+      "name": "Nyk 🌱"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2031069292641574912"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031218845222875451",
+    "full_text": "Collaborative markdown notes with real-time editing and diagram support\n\nhttps://t.co/wveINJADUC https://t.co/rth3SpDBUS",
+    "created_at": "2026-03-10T04:01:25.000Z",
+    "user": {
+      "screen_name": "tom_doerr",
+      "name": "Tom Dörr"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/hackmdio/codimd"
+        },
+        {
+          "expanded_url": "https://x.com/tom_doerr/status/2031218845222875451/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDBWxqrWAAEct2s.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDBWxqrWAAEct2s.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031234142394868043",
+    "full_text": "Meeting assistant for transcription and diarization on local hardware\n\nhttps://t.co/vTTFJwdSL7 https://t.co/t8cJXYkrCP",
+    "created_at": "2026-03-10T05:02:12.000Z",
+    "user": {
+      "screen_name": "tom_doerr",
+      "name": "Tom Dörr"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/ricardovinicius/bailiff"
+        },
+        {
+          "expanded_url": "https://x.com/tom_doerr/status/2031234142394868043/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDBksEHWAAEsEME.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDBksEHWAAEsEME.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031121107164467659",
+    "full_text": "I've realized I don't use Hooks in Claude Code as often as I should. \n\nI put together a table of 18 practical hook ideas from auto-formatting context files to quality gates that prevent Claude from stopping early.\n\nBut I wonder what hooks you're running? https://t.co/t163De6Uk1",
+    "created_at": "2026-03-09T21:33:03.000Z",
+    "user": {
+      "screen_name": "koylanai",
+      "name": "Muratcan Koylan"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/koylanai/status/2031121107164467659/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HC_9IReWkAAbSRO.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HC_9IReWkAAbSRO.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2031116639807447064",
+    "full_text": "https://t.co/lyyjCIM9aq",
+    "created_at": "2026-03-09T21:15:17.000Z",
+    "user": {
+      "screen_name": "NeelNanda5",
+      "name": "Neel Nanda"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://nicholas.carlini.com/writing/2026/how-to-win-a-best-paper-award.html"
+        }
+      ]
+    }
+  },
+  {
     "id_str": "2030883316165992772",
     "full_text": "Orchestrates AI agents via command line or Slack\n\nhttps://t.co/ZvCnO1mypi https://t.co/TvVgwhm9qx",
     "created_at": "2026-03-09T05:48:09.000Z",
@@ -2815,6 +4000,128 @@
     }
   },
   {
+    "id_str": "2027745057483460757",
+    "full_text": "I cant believe this guy just made a permanent solution to context bloat and open sourced it all!\n\nwhen we tested this tool (Context+) for solving an issue on the OpenCode repository, the agent using this tool used ~6.5k fewer tokens, found the code and fixed it in half the time! https://t.co/6lf0yl5Yug",
+    "created_at": "2026-02-28T13:57:50.000Z",
+    "user": {
+      "screen_name": "forloopcodes",
+      "name": "𝕱𝖔𝖗𝕷𝖔𝖔𝖕"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/forloopcodes/status/2027745057483460757/video/1"
+        },
+        {
+          "expanded_url": "https://x.com/forloopcodes/status/2027745057483460757/video/1"
+        },
+        {
+          "expanded_url": "https://x.com/forloopcodes/status/2027745057483460757/video/1"
+        },
+        {
+          "expanded_url": "https://x.com/forloopcodes/status/2027745057483460757/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCPwGO2bEAMNPZU.jpg"
+        },
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCPwGzQa0AALpZn.jpg"
+        },
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCPwn7GbEAMTWsC.png"
+        },
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027738597336772608/img/0Wfw8Djt-PZsSTen.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/vid/avc1/1920x1080/UA_7pKd9cO3iieis.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/vid/avc1/480x270/zEH1yTzI3hH48rxg.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/vid/avc1/640x360/yjyd5lNuHzIZl64I.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/pl/d4MMNHw1YOAc-2Yj.m3u8?v=c67"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/vid/avc1/1280x720/uH88nDydnM1MejYQ.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCPwGO2bEAMNPZU.jpg"
+        },
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCPwGzQa0AALpZn.jpg"
+        },
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCPwn7GbEAMTWsC.png"
+        },
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027738597336772608/img/0Wfw8Djt-PZsSTen.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/vid/avc1/1920x1080/UA_7pKd9cO3iieis.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/vid/avc1/480x270/zEH1yTzI3hH48rxg.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/vid/avc1/640x360/yjyd5lNuHzIZl64I.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/pl/d4MMNHw1YOAc-2Yj.m3u8?v=c67"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2027738597336772608/vid/avc1/1280x720/uH88nDydnM1MejYQ.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
     "id_str": "2027744530124951831",
     "full_text": "https://t.co/YbXzSpFE31",
     "created_at": "2026-02-28T13:55:44.000Z",
@@ -2899,6 +4206,1803 @@
     "user": {
       "screen_name": "ajay_2512x",
       "name": "Ajay Bhakar"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2027917087264674168",
+    "full_text": "https://t.co/OXzKnvSpPo",
+    "created_at": "2026-03-01T01:21:25.000Z",
+    "user": {
+      "screen_name": "reagan_hsu",
+      "name": "Reagan Hsu"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2027597419610050562"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027770787659464812",
+    "full_text": "AGENTS dot md files don't scale beyond modest codebases.\n\nLots of discussions on this lately.\n\nIf you're building serious software with Claude Code or any agentic tool, a single AGENTS dot md will eventually fail you. This paper shows what comes next.\n\nA 1,000-line prototype can https://t.co/6sFwSSTj1M",
+    "created_at": "2026-02-28T15:40:04.000Z",
+    "user": {
+      "screen_name": "omarsar0",
+      "name": "elvis"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/omarsar0/status/2027770787659464812/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCQWyK3bEAQ9rt_.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCQWyK3bEAQ9rt_.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027473676690665745",
+    "full_text": "my claude flow is so battle-tested that half the time i catch myself just hitting yes/no/enter, so i built myself a ralph that doesn’t suck. it follows swe best practices with quality gates (e.g., plankton), adopts best-in-class context engineering practices, and can handle https://t.co/pcg21cwisQ",
+    "created_at": "2026-02-27T19:59:27.000Z",
+    "user": {
+      "screen_name": "alxfazio",
+      "name": "alex fazio"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/alxfazio/status/2027473676690665745/photo/1"
+        },
+        {
+          "expanded_url": "https://x.com/alxfazio/status/2027473676690665745/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCMHmJaXYAAQ8I4.png"
+        },
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCMIQBlbEAEJq7l.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCMHmJaXYAAQ8I4.png"
+        },
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCMIQBlbEAEJq7l.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027809304116342846",
+    "full_text": "The \"holy shit\" moment when I realized agent-browser can control Slack\n\nnpx skills add vercel-labs/agent-browser --skill slack https://t.co/TytaOHe0xP",
+    "created_at": "2026-02-28T18:13:07.000Z",
+    "user": {
+      "screen_name": "ctatedev",
+      "name": "Chris Tate"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/ctatedev/status/2027809304116342846/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027809235107454976/img/mzwXXQmKJzp4W2o-.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/1728x1080/2ceU3vOjeU_tqrAQ.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/432x270/hokKh5MWjhTosImt.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/pl/Z01ubporUKYWH3-u.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/1152x720/ITpw8coBd6gb0j-j.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 25128000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/3456x2160/1oKgqZn2Wp7o-_Yj.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/576x360/vPVyLBPqIL3sin4U.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027809235107454976/img/mzwXXQmKJzp4W2o-.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/1728x1080/2ceU3vOjeU_tqrAQ.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/432x270/hokKh5MWjhTosImt.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/pl/Z01ubporUKYWH3-u.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/1152x720/ITpw8coBd6gb0j-j.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 25128000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/3456x2160/1oKgqZn2Wp7o-_Yj.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2027809235107454976/vid/avc1/576x360/vPVyLBPqIL3sin4U.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027767894000734322",
+    "full_text": "🚨 Microsoft just quietly dropped a tool that turns ANY document into LLM-ready data in seconds.\n\nIt's called MarkItDown, a lightweight Python library that converts PDFs, Word, Excel, PowerPoint, images, audio, and YouTube URLs into clean Markdown your LLM can actually use.\n\nNo https://t.co/97rD5Mplj6",
+    "created_at": "2026-02-28T15:28:34.000Z",
+    "user": {
+      "screen_name": "hasantoxr",
+      "name": "Hasan Toor"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/hasantoxr/status/2027767894000734322/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCQUJ0xaYAAjQMp.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCQUJ0xaYAAjQMp.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027237170323607609",
+    "full_text": "This prompt improves your @openclaw SOUL .md based on Peter Steinberger’s exact recommendations + some of my own improvements mixed in.\n\nIt’ll make your main agent sharper with fewer unsafe overreach incidents.\n\nPrompt:    \n\nSurgically edit our SOUL .md with these edits ensuring",
+    "created_at": "2026-02-27T04:19:40.000Z",
+    "user": {
+      "screen_name": "kloss_xyz",
+      "name": "klöss"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2009529865511555506",
+    "full_text": "https://t.co/IQi5DOZILJ",
+    "created_at": "2026-01-09T07:37:09.000Z",
+    "user": {
+      "screen_name": "dhasandev",
+      "name": "danialhasan"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2009497314013138947"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027521323275325622",
+    "full_text": "I had the same thought so I've been playing with it in nanochat. E.g. here's 8 agents (4 claude, 4 codex), with 1 GPU each running nanochat experiments (trying to delete logit softcap without regression). The TLDR is that it doesn't work and it's a mess... but it's still very https://t.co/62amH4yQNp https://t.co/n7L2MXZoUF",
+    "created_at": "2026-02-27T23:08:47.000Z",
+    "user": {
+      "screen_name": "karpathy",
+      "name": "Andrej Karpathy"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/karpathy/status/2027521323275325622/video/1"
+        },
+        {
+          "expanded_url": "https://twitter.com/Thom_Wolf/status/2027421947999506722"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027513601536438272/img/HbJnPPemlT0ssZZf.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/640x360/rBM_6HoEpq1g7JeY.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/480x270/ej8F-MWeGdFt0lsi.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/1280x720/r6Xb2wDBnVJr5fVX.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 25128000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/3840x2160/ggcM3CM7Oq8UrYK1.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/pl/jSempdmIScLS1hfw.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/1920x1080/X3yEB4eD5uvgiXKT.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027513601536438272/img/HbJnPPemlT0ssZZf.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/640x360/rBM_6HoEpq1g7JeY.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/480x270/ej8F-MWeGdFt0lsi.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/1280x720/r6Xb2wDBnVJr5fVX.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 25128000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/3840x2160/ggcM3CM7Oq8UrYK1.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/pl/jSempdmIScLS1hfw.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2027513601536438272/vid/avc1/1920x1080/X3yEB4eD5uvgiXKT.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027501331125239822",
+    "full_text": "Cool chart showing the ratio of Tab complete requests to Agent requests in Cursor. With improving capability, every point in time has an optimal setup that keeps changing and evolving and the community average tracks the point. None -&gt; Tab -&gt; Agent -&gt; Parallel agents -&gt; Agent https://t.co/FeNAdIFFUw https://t.co/EASUP1vdSx",
+    "created_at": "2026-02-27T21:49:21.000Z",
+    "user": {
+      "screen_name": "karpathy",
+      "name": "Andrej Karpathy"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/karpathy/status/2027501331125239822/photo/1"
+        },
+        {
+          "expanded_url": "https://twitter.com/mntruell/status/2026736314272591924"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCMha-2bEAA1itr.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCMha-2bEAA1itr.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027463795355095314",
+    "full_text": "https://t.co/nKTDfC7zMm",
+    "created_at": "2026-02-27T19:20:11.000Z",
+    "user": {
+      "screen_name": "trq212",
+      "name": "Thariq"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2027446899310313472"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027450018513490419",
+    "full_text": "https://t.co/U5jwqltf6Q",
+    "created_at": "2026-02-27T18:25:27.000Z",
+    "user": {
+      "screen_name": "RLanceMartin",
+      "name": "Lance Martin"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2027070316661653504"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027409021914026093",
+    "full_text": "https://t.co/yBTu0Rho2t",
+    "created_at": "2026-02-27T15:42:32.000Z",
+    "user": {
+      "screen_name": "sawyerhood",
+      "name": "Sawyer Hood"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2027230637158219776"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026758489276821655",
+    "full_text": "https://t.co/WW2UGWXIhk",
+    "created_at": "2026-02-25T20:37:33.000Z",
+    "user": {
+      "screen_name": "LindsayCasale",
+      "name": "Lindsay Casale π²"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2026444412944003074"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027245195872620960",
+    "full_text": "I built an AI Agents army with OpenClaw to make $1M/year 🦞\n\n0:00 Intro \n1:01 Feather ($250K Exit)\n1:41 What is Mission Control HQ? \n2:48 One Agent Wasn't Enough \n5:51 The Lead Agent System\n7:42 First 24 Hours with OpenClaw \n9:11 How to Get Started with OpenClaw \n10:33 Don't https://t.co/0sb5CIkKnO",
+    "created_at": "2026-02-27T04:51:33.000Z",
+    "user": {
+      "screen_name": "profitfounder",
+      "name": "Profitable Founder Podcast"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/profitfounder/status/2027245195872620960/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027225638105702400/img/KNYb2kGps2DbM8gX.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/pl/uRoAJIo2s4Njvl4x.m3u8?v=223"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/640x360/C14a8HCxOS-TGAqm.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/1920x1080/2wZqa_6vEkyM8XVD.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/480x270/0HATHBdkrpBfg6lM.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/1280x720/BHIYqo6oYD0OEcCq.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2027225638105702400/img/KNYb2kGps2DbM8gX.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/pl/uRoAJIo2s4Njvl4x.m3u8?v=223"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/640x360/C14a8HCxOS-TGAqm.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/1920x1080/2wZqa_6vEkyM8XVD.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/480x270/0HATHBdkrpBfg6lM.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2027225638105702400/vid/avc1/1280x720/BHIYqo6oYD0OEcCq.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026939346239254935",
+    "full_text": "The repo isnt open source (yet?), but this is the approach I took to building Junior, an internal slackbot as Sentry that leverages Skills.\n\nhttps://t.co/NZNsiaj8DP\n\n(I asked Claude to help me write up this one. It did... ok.)",
+    "created_at": "2026-02-26T08:36:13.000Z",
+    "user": {
+      "screen_name": "zeeg",
+      "name": "David Cramer"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://cra.mr/building-a-slack-agent-with-pi-on-vercel"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027058780593123781",
+    "full_text": "https://t.co/3NEUXcgv3u",
+    "created_at": "2026-02-26T16:30:48.000Z",
+    "user": {
+      "screen_name": "lennypruss",
+      "name": "Lenny Pruss"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2027047592593375232"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2027008985581158552",
+    "full_text": "If you are an extremely AI pilled product manager we would love to hire you. \n\nIf you are an AI pilled engineer who wants to move up a layer of abstraction and become an AI pilled PM we would love to hire you.",
+    "created_at": "2026-02-26T13:12:56.000Z",
+    "user": {
+      "screen_name": "thenanyu",
+      "name": "Nan Yu"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2027032974202421336",
+    "full_text": "https://t.co/U0bHvJ72ba",
+    "created_at": "2026-02-26T14:48:16.000Z",
+    "user": {
+      "screen_name": "LLMJunky",
+      "name": "am.will"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2025403807497113600"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026814424044929423",
+    "full_text": "Converts PDFs to Markdown at 100 pages per second on CPUs\n\nhttps://t.co/2XTXTXaHrO https://t.co/9cBLabf9yL",
+    "created_at": "2026-02-26T00:19:49.000Z",
+    "user": {
+      "screen_name": "tom_doerr",
+      "name": "Tom Dörr"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/opendataloader-project/opendataloader-pdf"
+        },
+        {
+          "expanded_url": "https://x.com/tom_doerr/status/2026814424044929423/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCCw-m2XMAEGoGl.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCCw-m2XMAEGoGl.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026823058162417694",
+    "full_text": "If you're not writing your agent skills as statecharts, what are you even doing? https://t.co/rPzT0BEMgY",
+    "created_at": "2026-02-26T00:54:08.000Z",
+    "user": {
+      "screen_name": "nullvoxpopuli",
+      "name": "NullVoxPopuli"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/nullvoxpopuli/status/2026823058162417694/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCC40klXQAAdCRB.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCC40klXQAAdCRB.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026386536368115782",
+    "full_text": "for the last month, every feature in my agent orchestrator has been built by the orchestrator itself. AI agents planning, building, testing, and merging code in parallel, automatically\n\ntoday I'm open-sourcing it. it's called Stoneforge https://t.co/fE7nC9NAlc",
+    "created_at": "2026-02-24T19:59:33.000Z",
+    "user": {
+      "screen_name": "notadamking",
+      "name": "Adam King"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/notadamking/status/2026386536368115782/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026371232820850688/img/xWeAAic48yEWl2S7.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/vid/avc1/1280x720/90IxzUjbeHZ6hTiV.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/vid/avc1/640x360/FHJ42_f7JfYQCDZ_.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/pl/IDAU217WvJeqbBMS.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/vid/avc1/480x270/5kLzI9NKHAx22qaP.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/vid/avc1/1920x1080/tST2pW48MtwpDvYT.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026371232820850688/img/xWeAAic48yEWl2S7.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/vid/avc1/1280x720/90IxzUjbeHZ6hTiV.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/vid/avc1/640x360/FHJ42_f7JfYQCDZ_.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/pl/IDAU217WvJeqbBMS.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/vid/avc1/480x270/5kLzI9NKHAx22qaP.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2026371232820850688/vid/avc1/1920x1080/tST2pW48MtwpDvYT.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026534819858100576",
+    "full_text": "如果你还不知道OpenClaw能干嘛，可以看看这个仓库，里面有30多个OpenClaw实际案例，涵盖了社交媒体、生产效率、研究学习、金融交易等场景。\nhttps://t.co/QIV1UGnzXL",
+    "created_at": "2026-02-25T05:48:46.000Z",
+    "user": {
+      "screen_name": "akokoi1",
+      "name": "WY"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/hesamsheikh/awesome-openclaw-usecases"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026348761501581620",
+    "full_text": "Hello!\n\nToday we're releasing Paper Desktop\n\nPaper is now a canvas for Cursor, Claude Code, Codex. Any agent can read and write html to Paper.\n\n• push or pull from your codebase\n• pull real data from anywhere\n• less work, more design\n\nWhat will you ship? Sound on 🎶 https://t.co/2E6OYWpmeP",
+    "created_at": "2026-02-24T17:29:27.000Z",
+    "user": {
+      "screen_name": "stephenhaney",
+      "name": "Stephen Haney"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/stephenhaney/status/2026348761501581620/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026346707639021568/img/1eI6wHLoT_qY3Df3.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/vid/avc1/590x360/urPsp_yJ82cBxqm1.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/vid/avc1/1180x720/wrIK3zoBDZt7QVer.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/vid/avc1/1770x1080/f4OzvH0oQK55ffiO.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/vid/avc1/442x270/UOyYYJHbkSgeLjjL.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/pl/FfcBtPX1lyMcPZbv.m3u8?v=cfc"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026346707639021568/img/1eI6wHLoT_qY3Df3.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/vid/avc1/590x360/urPsp_yJ82cBxqm1.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/vid/avc1/1180x720/wrIK3zoBDZt7QVer.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/vid/avc1/1770x1080/f4OzvH0oQK55ffiO.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/vid/avc1/442x270/UOyYYJHbkSgeLjjL.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2026346707639021568/pl/FfcBtPX1lyMcPZbv.m3u8?v=cfc"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026638169689436188",
+    "full_text": "Haven't gotten around to writing in a bit, here's a short blog on my thoughts since releasing RLMs on the state of AI research.\n\nA stronger belief I hold is that future LMs will be scaffolds, and that current LMs are already far more capable than we use them for! https://t.co/ZgMTNmBLat",
+    "created_at": "2026-02-25T12:39:27.000Z",
+    "user": {
+      "screen_name": "a1zhang",
+      "name": "alex zhang"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/a1zhang/status/2026638169689436188/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB-spJKWsAABbW8.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB-spJKWsAABbW8.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026749298382430382",
+    "full_text": "I love Karpathy's posts because they're so on point. He's not only a leading expert in his field, but he also manages to capture the zeitgeist with his statements. But this post is particularly impactful.\n\nSince December, (agentic) coding has undergone a significant https://t.co/osL3Gp7zhl",
+    "created_at": "2026-02-25T20:01:02.000Z",
+    "user": {
+      "screen_name": "kimmonismus",
+      "name": "Chubby♨️"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/karpathy/status/2026731645169185220"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026731645169185220",
+    "full_text": "It is hard to communicate how much programming has changed due to AI in the last 2 months: not gradually and over time in the \"progress as usual\" way, but specifically this last December. There are a number of asterisks but imo coding agents basically didn’t work before December",
+    "created_at": "2026-02-25T18:50:53.000Z",
+    "user": {
+      "screen_name": "karpathy",
+      "name": "Andrej Karpathy"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2026696225248956842",
+    "full_text": "Rethinking how we build for the agentic era. Stop writing agent skills like human docs—it wastes tokens and invites hallucinations.\n\nHere's a distilled set of core best practices (&lt;5 min read) to help us write better skills.\n\nGive it a read: https://t.co/6ep4VXg2zJ",
+    "created_at": "2026-02-25T16:30:08.000Z",
+    "user": {
+      "screen_name": "mgechev",
+      "name": "Minko Gechev"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/mgechev/skills-best-practices"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026767489397305503",
+    "full_text": "@juanluisrto It's arguably the biggest feature they implemented of all.\n\nhttps://t.co/pcZzhPyH6U",
+    "created_at": "2026-02-25T21:13:19.000Z",
+    "user": {
+      "screen_name": "LLMJunky",
+      "name": "am.will"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/LLMJunky/status/2024152021436121220?s=20"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026508572847387107",
+    "full_text": "if you’re not having fun with your @openclaw, that’s a skill.md issue https://t.co/RzC6zIVgmz",
+    "created_at": "2026-02-25T04:04:29.000Z",
+    "user": {
+      "screen_name": "jonnym1ller",
+      "name": "Jonny Miller"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/AtlasForgeAI/status/2026380335249002843"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026738994084565137",
+    "full_text": "https://t.co/MzRnLUX47J",
+    "created_at": "2026-02-25T19:20:05.000Z",
+    "user": {
+      "screen_name": "leerob",
+      "name": "Lee Robinson"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2024592249636737024"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026736314272591924",
+    "full_text": "https://t.co/jZKOk8RAsV",
+    "created_at": "2026-02-25T19:09:26.000Z",
+    "user": {
+      "screen_name": "mntruell",
+      "name": "Michael Truell"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2026733459675480064"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026461256677245131",
+    "full_text": "Here's 22 of the commands I am using with Obsidian and Claude Code with descriptions. \n\nI will turn this into something interactive soon so you can click the commands and then see the full prompts. https://t.co/C0y6kN9mNF https://t.co/9oEBMk9gfi",
+    "created_at": "2026-02-25T00:56:28.000Z",
+    "user": {
+      "screen_name": "internetvin",
+      "name": "internetVin"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/internetvin/status/2026461256677245131/photo/1"
+        },
+        {
+          "expanded_url": "https://twitter.com/gregisenberg/status/2026036464287412412"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB9vY85WMAAn0hy.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB9vY85WMAAn0hy.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026628809424781787",
+    "full_text": "https://t.co/qwpV7LscFK",
+    "created_at": "2026-02-25T12:02:15.000Z",
+    "user": {
+      "screen_name": "jameesy",
+      "name": "James Bedford"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2026585600627798016"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026655633357857068",
+    "full_text": "you basically need to be unemployed rn to keep up",
+    "created_at": "2026-02-25T13:48:51.000Z",
+    "user": {
+      "screen_name": "samdape",
+      "name": "sam"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2026657454151598490",
+    "full_text": "If you want to understand frontier model training, read this.\n\n- minimal training playbook\n- architecture decisions\n- optimizers\n- RL\n- safety\n\n\"Frontier training is a systems problem: data mixture, architecture, and stability choices dominate most algorithmic tweaks.\" https://t.co/TQiAD0SrUp",
+    "created_at": "2026-02-25T13:56:05.000Z",
+    "user": {
+      "screen_name": "loganthorneloe",
+      "name": "Logan Thorneloe"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/loganthorneloe/status/2026657454151598490/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCAiNugaMAI2I8K.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCAiNugaMAI2I8K.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026678090815123594",
+    "full_text": "New research from Georgia Tech and Microsoft Research.\n\nGUI agents today are reactive. Every step costs an LLM call, which is why a lot of GUI agents are expensive, slow, and fragile.\n\nThis new research introduces ActionEngine, a framework that shifts GUI agents from reactive https://t.co/0PnJZYYefu",
+    "created_at": "2026-02-25T15:18:05.000Z",
+    "user": {
+      "screen_name": "dair_ai",
+      "name": "DAIR.AI"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/dair_ai/status/2026678090815123594/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCA0-20aMAAIdm6.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HCA0-20aMAAIdm6.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026322683756216423",
+    "full_text": "我发现几乎所有人都想要自己的龙虾🦞有足够强的调研能力，但是手动配置一堆skill/mcp贼麻烦\n\n直接上手干了一个，一句话让你的agent能全网语义搜索、能看小红书、推特、youtube、reddit、b站、RSS...\n\n免费开源（如果是服务器只需要1$硬件钱），装完自动检测哪个通了哪个没通。",
+    "created_at": "2026-02-24T15:45:49.000Z",
+    "user": {
+      "screen_name": "Neo_Reidlab",
+      "name": "Neo Reid"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2026361399190978957",
+    "full_text": "I made an agent skill called 'YOLO Build'\n\nIf I'm leaving my computer for more than an hour, I run /yolo \n\nThe agent scans online, my ideas, finds something worth building, and makes it. \n\nGreat when you go afk and can't think of a specific idea\n\nhttps://t.co/W3RZFS5pe2",
+    "created_at": "2026-02-24T18:19:40.000Z",
+    "user": {
+      "screen_name": "timourxyz",
+      "name": "timour kosters"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/timkosters/agent-yolo-build"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026438688297644503",
+    "full_text": "https://t.co/meTDfn5ZCE",
+    "created_at": "2026-02-24T23:26:47.000Z",
+    "user": {
+      "screen_name": "mernit",
+      "name": "Eli Mernit"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2026424141914796032"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026476903356576212",
+    "full_text": "If you aren't using OpenClaw inside Discord, you're missing out on 99% of its power\n\nIt literally gives you an army of 24/7 synchronized agents\n\nIn this video I cover my ENTIRE Openclaw/Discord workflow as well as how to set it up yourself\n\nThis will 100x your productivity https://t.co/w46uLk734P",
+    "created_at": "2026-02-25T01:58:38.000Z",
+    "user": {
+      "screen_name": "AlexFinn",
+      "name": "Alex Finn"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/AlexFinn/status/2026476903356576212/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026476044186955778/img/beyz-ULyOPimwp-r.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/pl/-Uimw9pSfrEv0OCs.m3u8?v=216"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/vid/avc1/1280x720/u3k6Mo7KXFyD5SMQ.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/vid/avc1/640x360/yr9vKLS_FLxMgMSx.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/vid/avc1/480x270/WRVZtBtI89r6Ed1m.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/vid/avc1/1920x1080/3Ek-XL9RQQU7A2b9.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026476044186955778/img/beyz-ULyOPimwp-r.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/pl/-Uimw9pSfrEv0OCs.m3u8?v=216"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/vid/avc1/1280x720/u3k6Mo7KXFyD5SMQ.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/vid/avc1/640x360/yr9vKLS_FLxMgMSx.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/vid/avc1/480x270/WRVZtBtI89r6Ed1m.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2026476044186955778/vid/avc1/1920x1080/3Ek-XL9RQQU7A2b9.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026350958213787903",
+    "full_text": "https://t.co/oBh3gfnhCw",
+    "created_at": "2026-02-24T17:38:10.000Z",
+    "user": {
+      "screen_name": "ScottWu46",
+      "name": "Scott Wu"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2026345068177829888"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026361900880265513",
+    "full_text": "guys, don’t fight it, @openclaw isn’t designed to be an agent orchestrator\n\njust use tinyclaw &amp; tinyoffice @tinyagicompany \n\nhttps://t.co/jfWvVtwYOl https://t.co/yVnxwjsBMq https://t.co/pj1uniWIud",
+    "created_at": "2026-02-24T18:21:39.000Z",
+    "user": {
+      "screen_name": "jianxliao",
+      "name": "jian"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/TinyAGI/tinyclaw"
+        },
+        {
+          "expanded_url": "https://x.com/jianxliao/status/2026361900880265513/photo/1"
+        },
+        {
+          "expanded_url": "https://twitter.com/elvissun/status/2025920521871716562"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB8VZ2wbUAAkBe7.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB8VZ2wbUAAkBe7.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026224288278429715",
+    "full_text": "1️⃣Context window 是根本瓶颈（代码 vs 业务历史不可兼得）→ 必须两层架构：Orchestrator（持 Obsidian 全部上下文）+ 专用 Coding Agents（只看代码）\n\n2️⃣8步闭环工作流（Zoe scoping → spawn tmux worktree → cron 监控 → 多模型 review → Telegram 通知）+ Ralph Loop https://t.co/nhrMip5epp",
+    "created_at": "2026-02-24T09:14:50.000Z",
+    "user": {
+      "screen_name": "AYi_AInotes",
+      "name": "阿绎 AYi"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/AYi_AInotes/status/2026224288278429715/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB6YP2gagAAEsel.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB6YP2gagAAEsel.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026210410840596652",
+    "full_text": "What you get:\n\n10+ foundational skills covering:\n\n→ Why context matters (attention mechanics, U-shaped curves)\n→ How agents fail (lost-in-middle, poisoning, clash)\n→ Multi-agent patterns (orchestrator, peer-to-peer, hierarchical)\n→ Memory architectures (short-term, long-term,",
+    "created_at": "2026-02-24T08:19:41.000Z",
+    "user": {
+      "screen_name": "ihtesham2005",
+      "name": "Ihtesham Ali"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2026210386740216161",
+    "full_text": "🚨 Anthropic just open-sourced their entire playbook for building production AI agents.\n\nIt's called Agent Skills for Context Engineering and it's what their engineers actually use.\n\n- Context fundamentals &amp; degradation patterns\n- Multi-agent architectures\n- Memory systems design https://t.co/oKNI7PPpQU",
+    "created_at": "2026-02-24T08:19:36.000Z",
+    "user": {
+      "screen_name": "ihtesham2005",
+      "name": "Ihtesham Ali"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/ihtesham2005/status/2026210386740216161/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB6Lm9-bsAAojoo.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB6Lm9-bsAAojoo.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026347142542209187",
+    "full_text": "https://t.co/CiAwmFcpD0",
+    "created_at": "2026-02-24T17:23:01.000Z",
+    "user": {
+      "screen_name": "neural_avb",
+      "name": "AVB"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2025941346956304384"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2016231376509665463",
+    "full_text": "https://t.co/DGobqnfQWY",
+    "created_at": "2026-01-27T19:26:34.000Z",
+    "user": {
+      "screen_name": "liu8in",
+      "name": "Bin Liu"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2016205296411226112"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2025999733865455711",
+    "full_text": "Because links are evil now https://t.co/XyPcTJNEmm",
+    "created_at": "2026-02-23T18:22:32.000Z",
+    "user": {
+      "screen_name": "KrauseFx",
+      "name": "Felix Krause"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://krausefx.com//blog/openclaw-my-automation-setup"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2025701861031121331",
+    "full_text": "unpopular (maybe?) opinion: MCP is dead in the water\n\n@openclaw has shown me that api &amp; cli will win. \n\nevery MCP server you connect loads its tool definitions into your context window. name, description, parameter schema, all of it. connect 10 servers with 5 tools each and https://t.co/jRjXJQBH3X",
+    "created_at": "2026-02-22T22:38:54.000Z",
+    "user": {
+      "screen_name": "chrysb",
+      "name": "Chrys Bader"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/chrysb/status/2025701861031121331/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HBy4Itaa8AAK8Ut.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HBy4Itaa8AAK8Ut.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2025920521871716562",
+    "full_text": "https://t.co/DotZ3V6XhJ",
+    "created_at": "2026-02-23T13:07:46.000Z",
+    "user": {
+      "screen_name": "elvissun",
+      "name": "Elvis"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2025654698590748672"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026096141113479370",
+    "full_text": "The @EntelligenceAI team and I spent the last few days dissecting OpenClaw\n\npersistent AI agents are about to change how engineering teams actually work - \n\nhere's everything we discovered about the process https://t.co/dNrGKlVArl",
+    "created_at": "2026-02-24T00:45:37.000Z",
+    "user": {
+      "screen_name": "Aiswarya_Sankar",
+      "name": "Aiswarya Sankar"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/Aiswarya_Sankar/status/2026096141113479370/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB4jmn2awAECeZA.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB4jmn2awAECeZA.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026037201591787801",
+    "full_text": "https://t.co/WvNskr15cy",
+    "created_at": "2026-02-23T20:51:25.000Z",
+    "user": {
+      "screen_name": "milesdeutscher",
+      "name": "Miles Deutscher"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2024201958412996610"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2025841160464511247",
+    "full_text": "the reason why langchain and retool are on the \"gigafucked\" list is simple: they tried to build a moat out of orchestration.\n\nin 2026, the model is the orchestrator. if your value prop is just chaining prompts, you're dead. i’m seeing this while pushing SGLang Diffusion—the real https://t.co/rR7X2JlPFN",
+    "created_at": "2026-02-23T07:52:25.000Z",
+    "user": {
+      "screen_name": "GenAI_is_real",
+      "name": "Chayenne Zhao"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/tenobrus/status/2025648199898407345"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2025913717494521954",
+    "full_text": "You can now simply run `pip install fast-rlm`\n\n- Simple contract: \ninput string of arbitrary length, works fine with millions of tokens, as long as you append your task instruction at top/bottom.\n\n- Good for quick RLM expts: configure models, limits, and budget. Ships with safe https://t.co/hJLdcpqq3h",
+    "created_at": "2026-02-23T12:40:44.000Z",
+    "user": {
+      "screen_name": "neural_avb",
+      "name": "AVB"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/neural_avb/status/2025913717494521954/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB16NT1bAAAbsBs.jpg"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HB16NT1bAAAbsBs.jpg"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2026036464287412412",
+    "full_text": "how to use obsidian + claude code to build a 24/7 personal operating system and build your startup:\n\n1. write everything in markdown (daily notes, projects, beliefs, people, meetings)\n\n2. link your notes together so they mirror how your brain actually thinks.\n\n3. install obsidian https://t.co/SjvPomOSbU",
+    "created_at": "2026-02-23T20:48:29.000Z",
+    "user": {
+      "screen_name": "gregisenberg",
+      "name": "GREG ISENBERG"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/gregisenberg/status/2026036464287412412/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026031854407622657/img/YGXFRZwyEiyJ0YLf.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/480x270/0c5BuDhg_1fzaCsN.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/640x360/SbSPglAh0e1KHeMp.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/1280x720/hupumaZWEforq4b-.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2026031854407622657/pl/Y-RBHdTLlRtagywp.m3u8?v=790"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026031854407622657/img/YGXFRZwyEiyJ0YLf.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/480x270/0c5BuDhg_1fzaCsN.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/640x360/SbSPglAh0e1KHeMp.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/1280x720/hupumaZWEforq4b-.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2026031854407622657/pl/Y-RBHdTLlRtagywp.m3u8?v=790"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2025988271776383275",
+    "full_text": "https://t.co/82KwBJ9s80",
+    "created_at": "2026-02-23T17:36:59.000Z",
+    "user": {
+      "screen_name": "BHolmesDev",
+      "name": "Ben Holmes"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2025986700158353408"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2025656340488601943",
+    "full_text": "Claude Code agent'larını piksel karakterler haline getiren VS Code eklentisi. Agent'ın o an ne yaptığını animasyonlarla gösteriyor. Ayrıca sanal ofisi istediğiniz gibi düzenleyebiliyorsunuz. Açık kaynaklı.\n\nr/AgentsOfAI/comments/1rbskvm https://t.co/K3T1KYNYTY",
+    "created_at": "2026-02-22T19:38:01.000Z",
+    "user": {
+      "screen_name": "kemal_ersin",
+      "name": "Kemal Ersin"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://x.com/kemal_ersin/status/2025656340488601943/video/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2025655242495340544/img/rovjYn0oNEG4J1Le.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/1920x1080/NbqTQOFfQGQ5D8oN.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/480x270/f97kJMWPDb_meaNh.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/pl/RMdwyrtsi7YWW85B.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/1280x720/EWIVq2afedwH22Nt.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/640x360/-TjP2VPFqifBf0-l.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "video",
+          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2025655242495340544/img/rovjYn0oNEG4J1Le.jpg",
+          "video_info": {
+            "variants": [
+              {
+                "content_type": "video/mp4",
+                "bitrate": 10368000,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/1920x1080/NbqTQOFfQGQ5D8oN.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 256000,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/480x270/f97kJMWPDb_meaNh.mp4"
+              },
+              {
+                "content_type": "application/x-mpegURL",
+                "bitrate": 0,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/pl/RMdwyrtsi7YWW85B.m3u8"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 2176000,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/1280x720/EWIVq2afedwH22Nt.mp4"
+              },
+              {
+                "content_type": "video/mp4",
+                "bitrate": 832000,
+                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/640x360/-TjP2VPFqifBf0-l.mp4"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2025657850391822792",
+    "full_text": "If only there were an agent runtime that provided:\n\n✅ agent isolation\n✅ per-agent file system\n✅ durable memory\n✅ transactional execution\n✅ horizontal scalability\n✅ quota management\n\nIf such a thing existed, it could potentially become the distributed 'OS' of the future. 😉",
+    "created_at": "2026-02-22T19:44:01.000Z",
+    "user": {
+      "screen_name": "jdegoes",
+      "name": "John A De Goes"
     },
     "entities": {
       "hashtags": [],
