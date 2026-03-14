@@ -16,7 +16,8 @@ function resolveDbPath(): string {
     const seedDb = path.join(cwd, 'prisma', 'seed.db')
     if (fs.existsSync(seedDb)) {
       fs.copyFileSync(seedDb, tmpDb)
-      console.log('[db] Copied seed.db to /tmp/siftly.db')
+      fs.chmodSync(tmpDb, 0o666)
+      console.log('[db] Copied seed.db to /tmp/siftly.db (writable)')
     } else {
       throw new Error('No database found: neither prisma/dev.db nor prisma/seed.db exist')
     }
