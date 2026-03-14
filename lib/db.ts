@@ -5,21 +5,27 @@ import path from 'path'
 
 function resolveDbPath(): string {
   const cwd = process.cwd()
-  const devDb = path.join(cwd, 'prisma', 'dev.db')
+  const isVercel = !!process.env.VERCEL
 
   // Local dev: use prisma/dev.db directly
-  if (fs.existsSync(devDb)) return devDb
+  if (!isVercel) {
+    const devDb = path.join(cwd, 'prisma', 'dev.db')
+    if (fs.existsSync(devDb)) return devDb
+  }
 
-  // Vercel/serverless: copy bundled seed.db to /tmp on cold start
+  // Vercel/serverless: always copy to writable /tmp
   const tmpDb = '/tmp/siftly.db'
   if (!fs.existsSync(tmpDb)) {
+    // Try seed.db first, then dev.db
     const seedDb = path.join(cwd, 'prisma', 'seed.db')
-    if (fs.existsSync(seedDb)) {
-      fs.copyFileSync(seedDb, tmpDb)
+    const devDb = path.join(cwd, 'prisma', 'dev.db')
+    const source = fs.existsSync(seedDb) ? seedDb : fs.existsSync(devDb) ? devDb : null
+    if (source) {
+      fs.copyFileSync(source, tmpDb)
       fs.chmodSync(tmpDb, 0o666)
-      console.log('[db] Copied seed.db to /tmp/siftly.db (writable)')
+      console.log(`[db] Copied ${path.basename(source)} to /tmp/siftly.db (writable)`)
     } else {
-      throw new Error('No database found: neither prisma/dev.db nor prisma/seed.db exist')
+      throw new Error('No database found')
     }
   }
   return tmpDb
