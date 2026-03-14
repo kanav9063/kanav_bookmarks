@@ -20,6 +20,7 @@ model Bookmark {
   entities        String?   // JSON: {hashtags[], urls[], mentions[], tools[], tweetType}
   enrichedAt      DateTime? // when AI enrichment last ran — drives incremental processing
   enrichmentMeta  String?   // JSON: {sentiment, people[], companies[]} from batch enrichment
+  seen          Boolean   @default(false)
   mediaItems    MediaItem[]
   categories    BookmarkCategory[]
   insights    Insight[]
@@ -94,6 +95,7 @@ model ReadingItem {
   status      String    @default("want-to-read") // "want-to-read" | "reading" | "finished"
   addedAt     DateTime  @default(now())
   finishedAt  DateTime?
+  seen        Boolean   @default(false)
   insights    Insight[]
 
   @@index([type])

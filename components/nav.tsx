@@ -28,7 +28,8 @@ interface NavItem {
 
 const NAV_ITEMS: NavItem[] = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
-  { href: '/ai-search', label: 'AI Search', icon: Sparkles },
+  { href: '/new', label: "What's New", icon: Sparkles },
+  { href: '/ai-search', label: 'AI Search', icon: Search },
   { href: '/bookmarks', label: 'Bookmarks', icon: Bookmark },
   { href: '/reading', label: 'Reading List', icon: BookOpen },
   { href: '/insights', label: 'Insights', icon: Lightbulb },
@@ -93,6 +94,7 @@ export default function Nav() {
     return localStorage.getItem('nav-collections-open') !== 'false'
   })
   const [pipeline, setPipeline] = useState<PipelineStatus | null>(null)
+  const [unseenCount, setUnseenCount] = useState(0)
 
   function toggleCollections() {
     setCollectionsOpen((v) => {
@@ -116,6 +118,14 @@ export default function Nav() {
   }, [])
 
   useEffect(() => {
+    // Fetch unseen count
+    fetch('/api/unseen')
+      .then((r) => r.json())
+      .then((d: { total?: number }) => {
+        if (d.total !== undefined) setUnseenCount(d.total)
+      })
+      .catch(() => {})
+
     // Fetch stats
     fetch('/api/stats')
       .then((r) => r.json())
@@ -208,6 +218,11 @@ export default function Nav() {
             >
               <Icon size={14} className="shrink-0" />
               {label}
+              {label === "What's New" && unseenCount > 0 && (
+                <span className="ml-auto px-1.5 py-0.5 text-[10px] font-bold bg-red-500 text-white rounded-full min-w-[18px] text-center leading-none">
+                  {unseenCount > 99 ? '99+' : unseenCount}
+                </span>
+              )}
             </Link>
           )
         })}
