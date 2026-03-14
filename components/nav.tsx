@@ -28,7 +28,8 @@ interface NavItem {
 const NAV_ITEMS: NavItem[] = [
   { href: '/', label: 'Dashboard', icon: LayoutDashboard },
   { href: '/ai-search', label: 'AI Search', icon: Sparkles },
-  { href: '/bookmarks', label: 'Bookmarks', icon: BookOpen },
+  { href: '/bookmarks', label: 'Bookmarks', icon: Bookmark },
+  { href: '/reading', label: 'Reading List', icon: BookOpen },
   { href: '/mindmap', label: 'Mindmap', icon: GitBranch },
   { href: '/import', label: 'Import', icon: Upload },
   { href: '/settings', label: 'Settings', icon: Settings },

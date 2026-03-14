@@ -78,3 +78,23 @@ model Setting {
   key   String @id
   value String
 }
+
+model ReadingItem {
+  id          String    @id @default(cuid())
+  type        String    // "article" | "book" | "paper" | "newsletter" | "podcast"
+  title       String
+  author      String?
+  url         String?
+  description String?
+  notes       String?
+  coverImage  String?
+  tags        String?   // JSON array of tags
+  rating      Int?      // 1-5 stars
+  status      String    @default("want-to-read") // "want-to-read" | "reading" | "finished"
+  addedAt     DateTime  @default(now())
+  finishedAt  DateTime?
+
+  @@index([type])
+  @@index([status])
+  @@index([addedAt])
+}
