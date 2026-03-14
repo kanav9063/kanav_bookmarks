@@ -4,7 +4,7 @@ import InsightsPanel from "@/components/insights-panel"
 import { useState, useEffect, useCallback } from 'react'
 import {
   BookOpen, Plus, ExternalLink, Star, Search, X, Check,
-  Book, FileText, Newspaper, Headphones, GraduationCap,
+  Book, FileText, Newspaper, Headphones, GraduationCap, PlayCircle,
   Edit2, Trash2, Link as LinkIcon
 } from 'lucide-react'
 
@@ -39,6 +39,7 @@ const TYPE_OPTIONS = [
   { value: 'paper', label: 'Paper', icon: GraduationCap },
   { value: 'newsletter', label: 'Newsletter', icon: Newspaper },
   { value: 'podcast', label: 'Podcast', icon: Headphones },
+  { value: 'video', label: 'Video', icon: PlayCircle },
 ]
 
 const STATUS_OPTIONS = [

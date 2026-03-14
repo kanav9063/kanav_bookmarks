@@ -1,5 +1,154 @@
 [
   {
+    "id_str": "2032567729560105117",
+    "full_text": "(1/n) Evolutionary frameworks like AlphaEvolve and GEPA use diversity and fitness to select which subset of past experiments to condition the next generation on. Why not let an agent choose instead? To this end, we introduce Coding Agents as Text Optimizers (CATO). We beat",
+    "created_at": "2026-03-13T21:21:24.000Z",
+    "user": {
+      "screen_name": "shreyasnsharma",
+      "name": "Shreyas Sharma"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": []
+    }
+  },
+  {
+    "id_str": "2032738879732883864",
+    "full_text": "Mission Control update:\n\nFull i18n just landed — Mission Control now speaks 10 languages natively.\n\n1,752 translation keys across every panel, the boot sequence, onboarding wizard, and all UI components. \n\nEnglish, Chinese, Japanese, Korean, Spanish, French, German, Portuguese, https://t.co/eTVgnRSe3s",
+    "created_at": "2026-03-14T08:41:30.000Z",
+    "user": {
+      "screen_name": "nyk_builderz",
+      "name": "Nyk 🌱"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/nyk_builderz/status/2028022503319203926"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032772741435371651",
+    "full_text": "https://t.co/Z9L1DfDxqt TIL there's an open source alternative to @screenstudio 🤔",
+    "created_at": "2026-03-14T10:56:03.000Z",
+    "user": {
+      "screen_name": "thekitze",
+      "name": "kitze 🛠️ tinkerer.club"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://recordly.dev/"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032742209305317829",
+    "full_text": "Dashboard for agent orchestration\n\nhttps://t.co/1ol7aBeYGv https://t.co/Sp0x8D73Py",
+    "created_at": "2026-03-14T08:54:43.000Z",
+    "user": {
+      "screen_name": "tom_doerr",
+      "name": "Tom Dörr"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/abhi1693/openclaw-mission-control"
+        },
+        {
+          "expanded_url": "https://x.com/tom_doerr/status/2032742209305317829/photo/1"
+        }
+      ],
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDXARI_XEAAZExx.png"
+        }
+      ]
+    },
+    "extended_entities": {
+      "media": [
+        {
+          "type": "photo",
+          "media_url_https": "https://pbs.twimg.com/media/HDXARI_XEAAZExx.png"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032794346488250577",
+    "full_text": "https://t.co/dQEPyR83ed",
+    "created_at": "2026-03-14T12:21:54.000Z",
+    "user": {
+      "screen_name": "ihtesham2005",
+      "name": "Ihtesham Ali"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://github.com/volcengine/OpenViking"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032508837647826980",
+    "full_text": "Everything exposed over MCP and REST. Any agent framework can plug into the improvement loop.\n\nFeatures CLI, dashboard, MCP server. Anthropic, OpenAI, Ollama, vLLM, local MLX.\n\nIn-depth article to come\n\n https://t.co/BJMxtgWhoX",
+    "created_at": "2026-03-13T17:27:23.000Z",
+    "user": {
+      "screen_name": "JayScambler",
+      "name": "Jay Scambler"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://github.com/greyhaven-ai/autocontext"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032575835073556861",
+    "full_text": "https://t.co/PKxFLPxLbx",
+    "created_at": "2026-03-13T21:53:37.000Z",
+    "user": {
+      "screen_name": "mem0ai",
+      "name": "mem0"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "http://x.com/i/article/2032527835697655810"
+        }
+      ]
+    }
+  },
+  {
+    "id_str": "2032662042738356402",
+    "full_text": "I urge you to make your skills self-improving right now https://t.co/uul1BNjCDt",
+    "created_at": "2026-03-14T03:36:10.000Z",
+    "user": {
+      "screen_name": "aakashgupta",
+      "name": "Aakash Gupta"
+    },
+    "entities": {
+      "hashtags": [],
+      "urls": [
+        {
+          "expanded_url": "https://twitter.com/tricalt/status/2032179887277060476"
+        }
+      ]
+    }
+  },
+  {
     "id_str": "2032527564774977703",
     "full_text": "Atoms. \n\nhttps://t.co/nbCnIkI3RD",
     "created_at": "2026-03-13T18:41:48.000Z",
@@ -5713,300 +5862,6 @@
           "expanded_url": "http://x.com/i/article/2025654698590748672"
         }
       ]
-    }
-  },
-  {
-    "id_str": "2026096141113479370",
-    "full_text": "The @EntelligenceAI team and I spent the last few days dissecting OpenClaw\n\npersistent AI agents are about to change how engineering teams actually work - \n\nhere's everything we discovered about the process https://t.co/dNrGKlVArl",
-    "created_at": "2026-02-24T00:45:37.000Z",
-    "user": {
-      "screen_name": "Aiswarya_Sankar",
-      "name": "Aiswarya Sankar"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "https://x.com/Aiswarya_Sankar/status/2026096141113479370/photo/1"
-        }
-      ],
-      "media": [
-        {
-          "type": "photo",
-          "media_url_https": "https://pbs.twimg.com/media/HB4jmn2awAECeZA.jpg"
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "type": "photo",
-          "media_url_https": "https://pbs.twimg.com/media/HB4jmn2awAECeZA.jpg"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2026037201591787801",
-    "full_text": "https://t.co/WvNskr15cy",
-    "created_at": "2026-02-23T20:51:25.000Z",
-    "user": {
-      "screen_name": "milesdeutscher",
-      "name": "Miles Deutscher"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "http://x.com/i/article/2024201958412996610"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2025841160464511247",
-    "full_text": "the reason why langchain and retool are on the \"gigafucked\" list is simple: they tried to build a moat out of orchestration.\n\nin 2026, the model is the orchestrator. if your value prop is just chaining prompts, you're dead. i’m seeing this while pushing SGLang Diffusion—the real https://t.co/rR7X2JlPFN",
-    "created_at": "2026-02-23T07:52:25.000Z",
-    "user": {
-      "screen_name": "GenAI_is_real",
-      "name": "Chayenne Zhao"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "https://twitter.com/tenobrus/status/2025648199898407345"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2025913717494521954",
-    "full_text": "You can now simply run `pip install fast-rlm`\n\n- Simple contract: \ninput string of arbitrary length, works fine with millions of tokens, as long as you append your task instruction at top/bottom.\n\n- Good for quick RLM expts: configure models, limits, and budget. Ships with safe https://t.co/hJLdcpqq3h",
-    "created_at": "2026-02-23T12:40:44.000Z",
-    "user": {
-      "screen_name": "neural_avb",
-      "name": "AVB"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "https://x.com/neural_avb/status/2025913717494521954/photo/1"
-        }
-      ],
-      "media": [
-        {
-          "type": "photo",
-          "media_url_https": "https://pbs.twimg.com/media/HB16NT1bAAAbsBs.jpg"
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "type": "photo",
-          "media_url_https": "https://pbs.twimg.com/media/HB16NT1bAAAbsBs.jpg"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2026036464287412412",
-    "full_text": "how to use obsidian + claude code to build a 24/7 personal operating system and build your startup:\n\n1. write everything in markdown (daily notes, projects, beliefs, people, meetings)\n\n2. link your notes together so they mirror how your brain actually thinks.\n\n3. install obsidian https://t.co/SjvPomOSbU",
-    "created_at": "2026-02-23T20:48:29.000Z",
-    "user": {
-      "screen_name": "gregisenberg",
-      "name": "GREG ISENBERG"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "https://x.com/gregisenberg/status/2026036464287412412/video/1"
-        }
-      ],
-      "media": [
-        {
-          "type": "video",
-          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026031854407622657/img/YGXFRZwyEiyJ0YLf.jpg",
-          "video_info": {
-            "variants": [
-              {
-                "content_type": "video/mp4",
-                "bitrate": 256000,
-                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/480x270/0c5BuDhg_1fzaCsN.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 832000,
-                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/640x360/SbSPglAh0e1KHeMp.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 2176000,
-                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/1280x720/hupumaZWEforq4b-.mp4"
-              },
-              {
-                "content_type": "application/x-mpegURL",
-                "bitrate": 0,
-                "url": "https://video.twimg.com/amplify_video/2026031854407622657/pl/Y-RBHdTLlRtagywp.m3u8?v=790"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "type": "video",
-          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2026031854407622657/img/YGXFRZwyEiyJ0YLf.jpg",
-          "video_info": {
-            "variants": [
-              {
-                "content_type": "video/mp4",
-                "bitrate": 256000,
-                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/480x270/0c5BuDhg_1fzaCsN.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 832000,
-                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/640x360/SbSPglAh0e1KHeMp.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 2176000,
-                "url": "https://video.twimg.com/amplify_video/2026031854407622657/vid/avc1/1280x720/hupumaZWEforq4b-.mp4"
-              },
-              {
-                "content_type": "application/x-mpegURL",
-                "bitrate": 0,
-                "url": "https://video.twimg.com/amplify_video/2026031854407622657/pl/Y-RBHdTLlRtagywp.m3u8?v=790"
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2025988271776383275",
-    "full_text": "https://t.co/82KwBJ9s80",
-    "created_at": "2026-02-23T17:36:59.000Z",
-    "user": {
-      "screen_name": "BHolmesDev",
-      "name": "Ben Holmes"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "http://x.com/i/article/2025986700158353408"
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2025656340488601943",
-    "full_text": "Claude Code agent'larını piksel karakterler haline getiren VS Code eklentisi. Agent'ın o an ne yaptığını animasyonlarla gösteriyor. Ayrıca sanal ofisi istediğiniz gibi düzenleyebiliyorsunuz. Açık kaynaklı.\n\nr/AgentsOfAI/comments/1rbskvm https://t.co/K3T1KYNYTY",
-    "created_at": "2026-02-22T19:38:01.000Z",
-    "user": {
-      "screen_name": "kemal_ersin",
-      "name": "Kemal Ersin"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": [
-        {
-          "expanded_url": "https://x.com/kemal_ersin/status/2025656340488601943/video/1"
-        }
-      ],
-      "media": [
-        {
-          "type": "video",
-          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2025655242495340544/img/rovjYn0oNEG4J1Le.jpg",
-          "video_info": {
-            "variants": [
-              {
-                "content_type": "video/mp4",
-                "bitrate": 10368000,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/1920x1080/NbqTQOFfQGQ5D8oN.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 256000,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/480x270/f97kJMWPDb_meaNh.mp4"
-              },
-              {
-                "content_type": "application/x-mpegURL",
-                "bitrate": 0,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/pl/RMdwyrtsi7YWW85B.m3u8"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 2176000,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/1280x720/EWIVq2afedwH22Nt.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 832000,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/640x360/-TjP2VPFqifBf0-l.mp4"
-              }
-            ]
-          }
-        }
-      ]
-    },
-    "extended_entities": {
-      "media": [
-        {
-          "type": "video",
-          "media_url_https": "https://pbs.twimg.com/amplify_video_thumb/2025655242495340544/img/rovjYn0oNEG4J1Le.jpg",
-          "video_info": {
-            "variants": [
-              {
-                "content_type": "video/mp4",
-                "bitrate": 10368000,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/1920x1080/NbqTQOFfQGQ5D8oN.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 256000,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/480x270/f97kJMWPDb_meaNh.mp4"
-              },
-              {
-                "content_type": "application/x-mpegURL",
-                "bitrate": 0,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/pl/RMdwyrtsi7YWW85B.m3u8"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 2176000,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/1280x720/EWIVq2afedwH22Nt.mp4"
-              },
-              {
-                "content_type": "video/mp4",
-                "bitrate": 832000,
-                "url": "https://video.twimg.com/amplify_video/2025655242495340544/vid/avc1/640x360/-TjP2VPFqifBf0-l.mp4"
-              }
-            ]
-          }
-        }
-      ]
-    }
-  },
-  {
-    "id_str": "2025657850391822792",
-    "full_text": "If only there were an agent runtime that provided:\n\n✅ agent isolation\n✅ per-agent file system\n✅ durable memory\n✅ transactional execution\n✅ horizontal scalability\n✅ quota management\n\nIf such a thing existed, it could potentially become the distributed 'OS' of the future. 😉",
-    "created_at": "2026-02-22T19:44:01.000Z",
-    "user": {
-      "screen_name": "jdegoes",
-      "name": "John A De Goes"
-    },
-    "entities": {
-      "hashtags": [],
-      "urls": []
     }
   }
 ]

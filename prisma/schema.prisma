@@ -97,6 +97,7 @@ model ReadingItem {
   finishedAt  DateTime?
   seen        Boolean   @default(false)
   insights    Insight[]
+  videoMeta   VideoMeta?
 
   @@index([type])
   @@index([status])
@@ -116,4 +117,19 @@ model Insight {
   @@index([bookmarkId])
   @@index([readingItemId])
   @@index([createdAt])
+}
+
+model VideoMeta {
+  id            String    @id @default(cuid())
+  readingItemId String    @unique
+  readingItem   ReadingItem @relation(fields: [readingItemId], references: [id], onDelete: Cascade)
+  videoId       String    // YouTube video ID
+  thumbnailUrl  String?
+  duration      String?   // "45:23"
+  channelName   String?
+  transcript    String?   // Full transcript text
+  chapters      String?   // JSON array of {time, title, summary}
+  createdAt     DateTime  @default(now())
+
+  @@index([videoId])
 }
