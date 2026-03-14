@@ -1,12 +1,11 @@
 'use client'
 
 import { useState, useEffect } from 'react'
-import { useParams, useRouter } from 'next/navigation'
+import { useParams } from 'next/navigation'
 import Link from 'next/link'
 import {
-  ArrowLeft, ExternalLink, Play, Clock, BookOpen, Star,
-  Lightbulb, Plus, Send, X, MessageSquare, Calendar,
-  User, Hash, ChevronRight
+  ArrowLeft, ExternalLink, Play, BookOpen, Star,
+  Plus, Send, X, Calendar, User, Hash, ChevronRight, Trash2
 } from 'lucide-react'
 
 interface Chapter {
@@ -75,14 +74,171 @@ function StatusBadge({ status }: { status: string }) {
   )
 }
 
+function InsightsSection({ insights, itemId, onRefresh }: {
+  insights: Insight[]
+  itemId: string
+  onRefresh: () => void
+}) {
+  const [adding, setAdding] = useState(false)
+  const [newInsight, setNewInsight] = useState('')
+  const [loading, setLoading] = useState(false)
+
+  const aiInsights = insights.filter(i => i.source === 'ai')
+  const discussionInsights = insights.filter(i => i.source === 'discussion')
+  const manualInsights = insights.filter(i => i.source === 'manual')
+
+  async function addInsight() {
+    if (!newInsight.trim()) return
+    setLoading(true)
+    await fetch('/api/insights', {
+      method: 'POST',
+      headers: { 'Content-Type': 'application/json' },
+      body: JSON.stringify({ content: newInsight.trim(), source: 'manual', readingItemId: itemId }),
+    })
+    setNewInsight('')
+    setAdding(false)
+    setLoading(false)
+    onRefresh()
+  }
+
+  async function deleteInsight(id: string) {
+    await fetch(`/api/insights/${id}`, { method: 'DELETE' })
+    onRefresh()
+  }
+
+  const hasInsights = insights.length > 0
+
+  if (!hasInsights && !adding) {
+    return (
+      <div className="mb-10">
+        <button
+          onClick={() => setAdding(true)}
+          className="text-[12px] text-zinc-600 hover:text-zinc-400 flex items-center gap-1 transition-colors"
+        >
+          <Plus size={12} /> Add a note
+        </button>
+      </div>
+    )
+  }
+
+  return (
+    <div className="mb-10">
+      {/* AI Takeaways — Readwise-style prominent card */}
+      {aiInsights.length > 0 && (
+        <div className="mb-4 rounded-2xl bg-amber-500/[0.04] border border-amber-500/15 p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-base">🤖</span>
+            <h2 className="text-[14px] font-semibold text-amber-300/90">Key Takeaways</h2>
+          </div>
+          <ul className="space-y-2">
+            {aiInsights.map(insight => (
+              <li key={insight.id} className="group flex gap-3 items-start">
+                <span className="mt-1.5 w-1.5 h-1.5 rounded-full bg-amber-500/50 shrink-0" />
+                <div className="flex-1 min-w-0">
+                  <p className="text-[14px] text-zinc-200 leading-relaxed">{insight.content}</p>
+                </div>
+                <button
+                  onClick={() => deleteInsight(insight.id)}
+                  className="opacity-0 group-hover:opacity-100 p-1 text-zinc-700 hover:text-red-400 transition-all shrink-0"
+                >
+                  <Trash2 size={11} />
+                </button>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+
+      {/* Discussion insights */}
+      {discussionInsights.length > 0 && (
+        <div className="mb-4 rounded-2xl bg-blue-500/[0.03] border border-blue-500/10 p-5">
+          <div className="flex items-center gap-2 mb-3">
+            <span className="text-base">💬</span>
+            <h3 className="text-[13px] font-semibold text-blue-300/80">From Discussions</h3>
+          </div>
+          <div className="space-y-2">
+            {discussionInsights.map(insight => (
+              <div key={insight.id} className="group flex gap-3 items-start">
+                <div className="flex-1 min-w-0">
+                  <p className="text-[13px] text-zinc-300 leading-relaxed">{insight.content}</p>
+                </div>
+                <button
+                  onClick={() => deleteInsight(insight.id)}
+                  className="opacity-0 group-hover:opacity-100 p-1 text-zinc-700 hover:text-red-400 transition-all shrink-0"
+                >
+                  <Trash2 size={11} />
+                </button>
+              </div>
+            ))}
+          </div>
+        </div>
+      )}
+
+      {/* Manual notes */}
+      {manualInsights.length > 0 && (
+        <div className="mb-3 space-y-2">
+          <div className="text-[11px] font-semibold text-zinc-500 uppercase tracking-wider">✍️ Notes</div>
+          {manualInsights.map(insight => (
+            <div key={insight.id} className="group flex gap-3 items-start rounded-xl bg-zinc-900/30 border border-zinc-800/30 px-4 py-3">
+              <div className="flex-1 min-w-0">
+                <p className="text-[13px] text-zinc-400 leading-relaxed">{insight.content}</p>
+              </div>
+              <button
+                onClick={() => deleteInsight(insight.id)}
+                className="opacity-0 group-hover:opacity-100 p-1 text-zinc-700 hover:text-red-400 transition-all shrink-0"
+              >
+                <Trash2 size={11} />
+              </button>
+            </div>
+          ))}
+        </div>
+      )}
+
+      {/* Add note input */}
+      {adding ? (
+        <div className="flex gap-2 mt-3">
+          <input
+            value={newInsight}
+            onChange={e => setNewInsight(e.target.value)}
+            onKeyDown={e => e.key === 'Enter' && addInsight()}
+            placeholder="What's the key takeaway?"
+            className="flex-1 px-4 py-2.5 bg-zinc-900/50 border border-zinc-700/40 rounded-xl text-[13px] text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-zinc-500/40"
+            autoFocus
+          />
+          <button
+            onClick={addInsight}
+            disabled={!newInsight.trim() || loading}
+            className="px-3 py-2.5 bg-zinc-700/30 border border-zinc-600/30 text-zinc-300 rounded-xl hover:bg-zinc-700/50 disabled:opacity-40 transition-colors"
+          >
+            <Send size={13} />
+          </button>
+          <button onClick={() => { setAdding(false); setNewInsight('') }} className="px-2 text-zinc-600 hover:text-zinc-300 transition-colors">
+            <X size={15} />
+          </button>
+        </div>
+      ) : (
+        <button
+          onClick={() => setAdding(true)}
+          className="mt-2 text-[12px] text-zinc-600 hover:text-zinc-400 flex items-center gap-1 transition-colors"
+        >
+          <Plus size={12} /> Add a note
+        </button>
+      )}
+    </div>
+  )
+}
+
 export default function ReadingDetailPage() {
   const { id } = useParams()
-  const router = useRouter()
   const [item, setItem] = useState<ReadingDetail | null>(null)
   const [loading, setLoading] = useState(true)
-  const [addingInsight, setAddingInsight] = useState(false)
-  const [newInsight, setNewInsight] = useState('')
   const [showTranscript, setShowTranscript] = useState(false)
+
+  async function fetchItem() {
+    const r = await fetch(`/api/reading/${id}/detail`)
+    setItem(await r.json())
+    setLoading(false)
+  }
 
   useEffect(() => {
     fetch(`/api/reading/${id}/detail`)
@@ -90,24 +246,6 @@ export default function ReadingDetailPage() {
       .then(d => { setItem(d); setLoading(false) })
       .catch(() => setLoading(false))
   }, [id])
-
-  async function addInsight() {
-    if (!newInsight.trim()) return
-    await fetch('/api/insights', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        content: newInsight.trim(),
-        source: 'manual',
-        readingItemId: id,
-      }),
-    })
-    setNewInsight('')
-    setAddingInsight(false)
-    // Refetch
-    const r = await fetch(`/api/reading/${id}/detail`)
-    setItem(await r.json())
-  }
 
   if (loading) {
     return (
@@ -162,7 +300,7 @@ export default function ReadingDetailPage() {
         )}
 
         {/* Title & meta */}
-        <div className="mb-8">
+        <div className="mb-6">
           <h1 className="text-2xl sm:text-3xl font-bold leading-tight tracking-tight mb-3">
             {item.title}
           </h1>
@@ -207,7 +345,10 @@ export default function ReadingDetailPage() {
           )}
         </div>
 
-        {/* Chapters — the Simon Willison style section */}
+        {/* ── INSIGHTS — before chapters ── */}
+        <InsightsSection insights={item.insights} itemId={item.id} onRefresh={fetchItem} />
+
+        {/* Chapters — Simon Willison style */}
         {chapters.length > 0 && (
           <div className="mb-10">
             <h2 className="text-lg font-semibold mb-5 flex items-center gap-2">
@@ -218,14 +359,10 @@ export default function ReadingDetailPage() {
             <div className="space-y-6">
               {chapters.map((chapter, i) => (
                 <div key={i} className="relative">
-                  {/* Section header */}
                   <div className="flex items-center gap-3 mb-2">
-                    <h3 className="text-[15px] font-semibold text-zinc-100">
-                      {chapter.title}
-                    </h3>
+                    <h3 className="text-[15px] font-semibold text-zinc-100">{chapter.title}</h3>
                   </div>
 
-                  {/* Timestamp link */}
                   {videoId && (
                     <a
                       href={`https://www.youtube.com/watch?v=${videoId}&t=${timeToSeconds(chapter.time)}s`}
@@ -238,23 +375,16 @@ export default function ReadingDetailPage() {
                     </a>
                   )}
 
-                  {/* Quote blockquote — the key insight */}
                   {chapter.quote && (
                     <blockquote className="border-l-2 border-blue-500/30 pl-4 py-1 mb-3 bg-blue-500/[0.03] rounded-r-lg">
-                      <p className="text-[14px] text-zinc-300 leading-relaxed italic">
-                        {chapter.quote}
-                      </p>
+                      <p className="text-[14px] text-zinc-300 leading-relaxed italic">{chapter.quote}</p>
                     </blockquote>
                   )}
 
-                  {/* Editorial summary */}
                   {chapter.summary && (
-                    <p className="text-[13px] text-zinc-500 leading-relaxed">
-                      {chapter.summary}
-                    </p>
+                    <p className="text-[13px] text-zinc-500 leading-relaxed">{chapter.summary}</p>
                   )}
 
-                  {/* Divider (except last) */}
                   {i < chapters.length - 1 && (
                     <div className="mt-6 border-b border-zinc-800/30" />
                   )}
@@ -263,78 +393,6 @@ export default function ReadingDetailPage() {
             </div>
           </div>
         )}
-
-        {/* Insights section */}
-        <div className="mb-10">
-          <div className="flex items-center justify-between mb-4">
-            <h2 className="text-lg font-semibold flex items-center gap-2">
-              <Lightbulb size={18} className="text-amber-400" />
-              Insights
-              {item.insights.length > 0 && (
-                <span className="text-[12px] text-zinc-600 bg-zinc-800/50 px-2 py-0.5 rounded-full font-normal">
-                  {item.insights.length}
-                </span>
-              )}
-            </h2>
-            {!addingInsight && (
-              <button
-                onClick={() => setAddingInsight(true)}
-                className="flex items-center gap-1.5 text-[12px] text-amber-400/70 hover:text-amber-400 transition-colors"
-              >
-                <Plus size={13} />
-                Add insight
-              </button>
-            )}
-          </div>
-
-          {/* Add insight input */}
-          {addingInsight && (
-            <div className="flex gap-2 mb-4">
-              <input
-                value={newInsight}
-                onChange={e => setNewInsight(e.target.value)}
-                onKeyDown={e => e.key === 'Enter' && addInsight()}
-                placeholder="What's the key takeaway?"
-                className="flex-1 px-4 py-2.5 bg-zinc-900/50 border border-amber-500/20 rounded-xl text-[13px] text-zinc-100 placeholder:text-zinc-600 focus:outline-none focus:border-amber-500/40"
-                autoFocus
-              />
-              <button
-                onClick={addInsight}
-                disabled={!newInsight.trim()}
-                className="px-3 py-2.5 bg-amber-500/10 border border-amber-500/20 text-amber-400 rounded-xl hover:bg-amber-500/20 disabled:opacity-40 transition-colors"
-              >
-                <Send size={13} />
-              </button>
-              <button onClick={() => { setAddingInsight(false); setNewInsight('') }} className="px-2 text-zinc-600 hover:text-zinc-300">
-                <X size={15} />
-              </button>
-            </div>
-          )}
-
-          {item.insights.length === 0 && !addingInsight ? (
-            <div className="bg-zinc-900/30 border border-zinc-800/30 rounded-xl p-6 text-center">
-              <Lightbulb size={24} className="text-zinc-800 mx-auto mb-2" />
-              <p className="text-[13px] text-zinc-600">No insights yet. Discuss this to capture takeaways.</p>
-            </div>
-          ) : (
-            <div className="space-y-3">
-              {item.insights.map(insight => (
-                <div
-                  key={insight.id}
-                  className="flex gap-3 items-start bg-zinc-900/30 border border-amber-500/10 rounded-xl p-4 border-l-2 border-l-amber-500/30"
-                >
-                  <MessageSquare size={13} className="text-amber-400/60 mt-0.5 shrink-0" />
-                  <div className="flex-1 min-w-0">
-                    <p className="text-[13px] text-zinc-200 leading-relaxed">{insight.content}</p>
-                    <span className="text-[10px] text-zinc-600 mt-1 block">
-                      {new Date(insight.createdAt).toLocaleDateString('en-US', { month: 'short', day: 'numeric' })}
-                    </span>
-                  </div>
-                </div>
-              ))}
-            </div>
-          )}
-        </div>
 
         {/* Transcript toggle */}
         {item.videoMeta?.transcript && (
@@ -361,7 +419,10 @@ export default function ReadingDetailPage() {
         {/* Notes */}
         {item.notes && (
           <div className="mb-10">
-            <h2 className="text-lg font-semibold mb-3">Notes</h2>
+            <h2 className="text-lg font-semibold mb-3 flex items-center gap-2">
+              <BookOpen size={16} className="text-zinc-500" />
+              Notes
+            </h2>
             <div className="bg-zinc-900/30 border border-zinc-800/30 rounded-xl p-5">
               <p className="text-[14px] text-zinc-300 leading-relaxed whitespace-pre-wrap">{item.notes}</p>
             </div>
