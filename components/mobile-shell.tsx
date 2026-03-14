@@ -6,11 +6,20 @@ import { Menu, X } from 'lucide-react'
 
 export function MobileShell({ nav, children }: { nav: ReactNode; children: ReactNode }) {
   const [open, setOpen] = useState(false)
+  const [unseenCount, setUnseenCount] = useState(0)
   const pathname = usePathname()
 
   // Close on route change
   useEffect(() => {
     setOpen(false)
+  }, [pathname])
+
+  // Fetch unseen count
+  useEffect(() => {
+    fetch('/api/unseen')
+      .then(r => r.json())
+      .then(d => { if (d.total !== undefined) setUnseenCount(d.total) })
+      .catch(() => {})
   }, [pathname])
 
   // Lock body scroll when open
@@ -34,6 +43,11 @@ export function MobileShell({ nav, children }: { nav: ReactNode; children: React
         aria-label="Open menu"
       >
         <Menu size={20} />
+            {unseenCount > 0 && (
+              <span className="absolute -top-1 -right-1 w-4.5 h-4.5 flex items-center justify-center text-[9px] font-bold bg-red-500 text-white rounded-full min-w-[18px] leading-none px-1">
+                {unseenCount > 99 ? '99+' : unseenCount}
+              </span>
+            )}
       </button>
 
       {/* Desktop: sidebar always visible */}

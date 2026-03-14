@@ -96,6 +96,7 @@ model ReadingItem {
   addedAt     DateTime  @default(now())
   finishedAt  DateTime?
   seen        Boolean   @default(false)
+  progress    Int?      // 0-100 percentage
   insights    Insight[]
   videoMeta   VideoMeta?
 
