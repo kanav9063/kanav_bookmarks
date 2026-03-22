@@ -1,0 +1,695 @@
+[
+  {
+    "id": "2035533269429612663",
+    "text": "this PhD student in AI built a 10-agent Obsidian crew to manage his entire life\n\nhis brain couldn't keep up. papers, deadlines, meetings, emails, health stuff. \n\nhe kept forgetting what he read, losing track of commitments, falling behind on everything.\n\ntried every Obsidian https://t.co/k98JRBcw9E",
+    "created_at": "2026-03-22T01:45:24.000Z",
+    "authorHandle": "om_patel5",
+    "authorName": "Om Patel"
+  },
+  {
+    "id": "2035531242595135564",
+    "text": "Multi-agent collaboration platform with persistent identity and long-term memory\n\nhttps://t.co/tFJH1TyHvN https://t.co/ao1bvfho8J",
+    "created_at": "2026-03-22T01:37:21.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2035517012647272689",
+    "text": "https://t.co/PII44vkWP7",
+    "created_at": "2026-03-22T00:40:48.000Z",
+    "authorHandle": "DhravyaShah",
+    "authorName": "Dhravya Shah"
+  },
+  {
+    "id": "2035488830145679848",
+    "text": "@thekitze Soon you won’t have to open an IDE ever again either",
+    "created_at": "2026-03-21T22:48:49.000Z",
+    "authorHandle": "rohanvarma",
+    "authorName": "Rohan Varma"
+  },
+  {
+    "id": "2035485339150606763",
+    "text": "Memory layer for LLMs using graph traversal\n\nhttps://t.co/ELaL3S03NR https://t.co/KhXTs4FHoK",
+    "created_at": "2026-03-21T22:34:56.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2035480319420203417",
+    "text": "Someone built a way for Claude Code instances on the same machine to message each other directly.\n\nThat means agents can clarify tasks, coordinate work, and act a lot more like a team.\n\nhttps://t.co/HcDurBipGZ",
+    "created_at": "2026-03-21T22:15:00.000Z",
+    "authorHandle": "RoundtableSpace",
+    "authorName": "0xMarioNawfal"
+  },
+  {
+    "id": "2035465292093046901",
+    "text": "Code repo 👇\nhttps://t.co/AzdMemZFaG",
+    "created_at": "2026-03-21T21:15:17.000Z",
+    "authorHandle": "minchoi",
+    "authorName": "Min Choi"
+  },
+  {
+    "id": "2035435638430880253",
+    "text": "Transparent proxy server over SSH\n\nhttps://t.co/UhUSIscXO0 https://t.co/FlfTw8PEu3",
+    "created_at": "2026-03-21T19:17:27.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2035411263375765753",
+    "text": "小技巧\n ~/.claude/settings.json 里面添加\n{\n  \"attribution\": {\n    \"commit\": \"\",\n    \"pr\": \"\"\n  }\n}\n就可以默认不加 co-author\nhttps://t.co/08j5zFEOVL https://t.co/GlI50UeaQs https://t.co/HaUJtrLRFH",
+    "created_at": "2026-03-21T17:40:35.000Z",
+    "authorHandle": "dotey",
+    "authorName": "宝玉"
+  },
+  {
+    "id": "2035405041108996298",
+    "text": "Remote terminal access for Claude Code\n\nhttps://t.co/JGYWNqir56 https://t.co/PldnceVCcq",
+    "created_at": "2026-03-21T17:15:52.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2035372716820218141",
+    "text": "I put a lot of heart into my technical writing, I hope it's useful to you all. \n\n📌 Here's a pinned thread of everything I've written.\n\n(much of this will be posted on the Claude blog soon as well)",
+    "created_at": "2026-03-21T15:07:25.000Z",
+    "authorHandle": "trq212",
+    "authorName": "Thariq"
+  },
+  {
+    "id": "2035320446124695922",
+    "text": "Black Forest Labs, Cursor, LangChain, Mistral AI, Perplexity, Reflection AI, Sarvam AI and Thinking Machines Lab – what unites these companies?\n\nJust recently NVIDIA announced the Nemotron Coalition, gathering all of them to develop the Nemotron family of models.\n\n→ The idea is https://t.co/FZYlP5yuBh",
+    "created_at": "2026-03-21T11:39:43.000Z",
+    "authorHandle": "TheTuringPost",
+    "authorName": "Ksenia_TuringPost"
+  },
+  {
+    "id": "2035310064098013486",
+    "text": "AGENTSmd is not enough for steering\n\ninstead of writing rules in words we should write them in code. deterministically checked by the linter\n\nwrite your own rules that traverse the AST and return errors\n\nwhen you find something you don't like you can make the agent write a new https://t.co/zec8doyjdB",
+    "created_at": "2026-03-21T10:58:28.000Z",
+    "authorHandle": "__morse",
+    "authorName": "Tommy D. Rossi"
+  },
+  {
+    "id": "2035233207965122943",
+    "text": "This is truly the most alpha I can give people. If you can get this loop going for yourself and your use case, it doesn’t take many iterations before you can start doing really extraordinary things. https://t.co/f7pZzTUcjW",
+    "created_at": "2026-03-21T05:53:04.000Z",
+    "authorHandle": "doodlestein",
+    "authorName": "Jeffrey Emanuel"
+  },
+  {
+    "id": "2035231071869313075",
+    "text": "Understand the universe https://t.co/s5sKMU1nRJ",
+    "created_at": "2026-03-21T05:44:34.000Z",
+    "authorHandle": "rauchg",
+    "authorName": "Guillermo Rauch"
+  },
+  {
+    "id": "2035213183674101947",
+    "text": "Sharing Megaplan, a harness for Claude + Codex to make very robust plans!\n\nIt uses their respective strengths to achieve a level of quality that's far beyond what either alone can manage.\n\nOnce installed, just say 'Megaplan this for me'!\n\nLink: https://t.co/LyVZu96N7e https://t.co/3ISlOrWEnG",
+    "created_at": "2026-03-21T04:33:30.000Z",
+    "authorHandle": "peterom",
+    "authorName": "POM"
+  },
+  {
+    "id": "2035205552394182853",
+    "text": "GitHub dropped a toolkit that kills vibe coding\n\nspec-kit: describe what you want → AI writes specs → plans → builds\n\nworks with every major AI coding agent\n \nLink - https://t.co/0npBT6cKLD https://t.co/EIBz2yCoOJ",
+    "created_at": "2026-03-21T04:03:10.000Z",
+    "authorHandle": "_vmlops",
+    "authorName": "Vaishnavi"
+  },
+  {
+    "id": "2035187106713076117",
+    "text": "Reinforcement learning for product development\n\nhttps://t.co/i8dw402U5q https://t.co/kP7OrIk86o",
+    "created_at": "2026-03-21T02:49:52.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2035173492447224237",
+    "text": "@RhysSullivan I'm not very happy with the code quality and I think agents bloat abstractions, have poor code aesthetics, are very prone to copy pasting code blocks and it's a mess, but at this point I stopped fighting it too hard and just moved on. The agents do not listen to my instructions",
+    "created_at": "2026-03-21T01:55:46.000Z",
+    "authorHandle": "karpathy",
+    "authorName": "Andrej Karpathy"
+  },
+  {
+    "id": "2035074435791655157",
+    "text": "Granola was overkill for my markdown note setup, so I had Claude build a fully local transcription CLI with a skill that works great and composes well with others.\n\nRead more: https://t.co/SbytKfwy54",
+    "created_at": "2026-03-20T19:22:10.000Z",
+    "authorHandle": "mhrescak",
+    "authorName": "Matej"
+  },
+  {
+    "id": "2035072633172074697",
+    "text": "THIS GUY LAUNCHED A FULLY LOCAL DEEP RESEARCH AGENT\n\n- Runs 100% offline with any Ollama model\n- Autonomously searches, finds gaps, and iterates until complete\n- Produces cited markdown reports at zero ongoing cost\n\nhttps://t.co/pEqZ3sWYZP",
+    "created_at": "2026-03-20T19:15:00.000Z",
+    "authorHandle": "RoundtableSpace",
+    "authorName": "0xMarioNawfal"
+  },
+  {
+    "id": "2035053220939104447",
+    "text": "Graph based AI agent workflow\n\nhttps://t.co/T7CoVgniLg https://t.co/CxkXAMV7L4",
+    "created_at": "2026-03-20T17:57:51.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2035012768680878435",
+    "text": "@dejavucoder we made it suuuuuper easy, one-command cli install, one-command agent setup, then just prompt\n\nyou can do it \n\nhttps://t.co/dq25e3ovd4",
+    "created_at": "2026-03-20T15:17:07.000Z",
+    "authorHandle": "willccbb",
+    "authorName": "will brown"
+  },
+  {
+    "id": "2034995792272851006",
+    "text": "I often re-read @natfriedman's personal website (former Github CEO) https://t.co/ixjlktiH5B",
+    "created_at": "2026-03-20T14:09:39.000Z",
+    "authorHandle": "benln",
+    "authorName": "Ben Lang"
+  },
+  {
+    "id": "2034939919001690562",
+    "text": "I have /finalize skill that I'm often using after working on something, to make it shippable.\n\nIt auto-fixes obvious issues, creates branch/PR if needed, simplifies where safe, consider blind spots and alternatives etc.\n\nWorking quite well for me. https://t.co/RuRv2OHmgj",
+    "created_at": "2026-03-20T10:27:38.000Z",
+    "authorHandle": "linuz90",
+    "authorName": "Fabrizio Rinaldi"
+  },
+  {
+    "id": "2034876942474719506",
+    "text": "Clean two-pane file explorer for Obsidian\n\nhttps://t.co/9hvSfHv3Gg https://t.co/6sM37J3O0m",
+    "created_at": "2026-03-20T06:17:23.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2034817268480450713",
+    "text": "@badlogicgames oh~ I only added DC and Telegram support to my fork of pi-mono/mom last week. https://t.co/jddZyT8WR2",
+    "created_at": "2026-03-20T02:20:16.000Z",
+    "authorHandle": "geminixiang",
+    "authorName": "GeminiXiang"
+  },
+  {
+    "id": "2034802359470330249",
+    "text": "to: every single dev that works with a designer\n\nmsg: Give your designer access to your coding agent. It is imperative that you do so. You'll see the most productivity and beauty in your work in a month. And then you'll realize just how much -you- were holding them back this https://t.co/vxEVfCvm0Q",
+    "created_at": "2026-03-20T01:21:01.000Z",
+    "authorHandle": "swyx",
+    "authorName": "swyx"
+  },
+  {
+    "id": "2034802115021840829",
+    "text": "idea for one of these nights: \nauto-research as a multi-player game\n\n- Eval Agent generates a set of evals for user specified goal\n- Optimizer hill climbs evals until threshold reached\n- Optimizer acceptance is gated by “number go up” + Judge that tries to prevent reward hacking",
+    "created_at": "2026-03-20T01:20:03.000Z",
+    "authorHandle": "Vtrivedy10",
+    "authorName": "Viv"
+  },
+  {
+    "id": "2034744821894558181",
+    "text": "Matrix is available to run anywhere, for free. On your device, or on the cloud.\n\nHelp build the distributed search engine for agents. An early look: https://t.co/5BmZXkoHV6\n\nps: changelog v4.3.0 + model will be pushed out to agents shortly. https://t.co/QkY65x97iD",
+    "created_at": "2026-03-19T21:32:23.000Z",
+    "authorHandle": "varun_mathur",
+    "authorName": "Varun"
+  },
+  {
+    "id": "2034731292546539682",
+    "text": "spec != code literally but in a very fuzzy way\ncode ~= spec + executor \n\npreviously the executor was a human, today mostly agents\n\nso maybe what we should care about is “what kind of spec produces code that solves my problem?”\n\nbecause for better or worse, humans are becoming https://t.co/36hJv3HmkF",
+    "created_at": "2026-03-19T20:38:38.000Z",
+    "authorHandle": "Vtrivedy10",
+    "authorName": "Viv"
+  },
+  {
+    "id": "2034724297953223147",
+    "text": "i built an advanced cron inspector for @openclaw \n\nyou can:\n- view your cron schedule as a calendar\n- see avg token use / cost per cron\n- identify token hungry crons\n- save costs!\n\nit's available now in AlphaClaw, among a ton of other useful features https://t.co/W2FG9Arzdi",
+    "created_at": "2026-03-19T20:10:50.000Z",
+    "authorHandle": "chrysb",
+    "authorName": "Chrys Bader"
+  },
+  {
+    "id": "2034723450644840606",
+    "text": "we just published the definitive guide to writing good prose with your AI\n\nread it on @every: https://t.co/N8H3p5doOM https://t.co/SxlqXIJAJ8",
+    "created_at": "2026-03-19T20:07:28.000Z",
+    "authorHandle": "danshipper",
+    "authorName": "Dan Shipper 📧"
+  },
+  {
+    "id": "2034714279098937503",
+    "text": "This is very cool. @cognition just launched an agentic orchestration layer for devins. Will have to check out to see how well it's architected.\n\n@composio was really ahead of the game on this\n\nWe launched @aoagents 1 month ago, and it is completely open source and pluggable\n\nWe https://t.co/4wHrTPodYR",
+    "created_at": "2026-03-19T19:31:01.000Z",
+    "authorHandle": "agent_wrapper",
+    "authorName": "prateek"
+  },
+  {
+    "id": "2034681533051855173",
+    "text": "Karpathy's Autoresearch is bottlenecked by a single GPU. We removed the bottleneck.\n\nWe gave the agent access to our K8s cluster with H100s and H200s and let it provision its own GPUs. Over 8 hours:\n\n• ~910 experiments instead of ~96 sequentially\n• Discovered that scaling model https://t.co/IwgOpxULI3",
+    "created_at": "2026-03-19T17:20:54.000Z",
+    "authorHandle": "skypilot_org",
+    "authorName": "SkyPilot"
+  },
+  {
+    "id": "2034674203400491405",
+    "text": "Got Open Inspect setup by @_colemurray and it's showing a lot of promise.\n\nIt's an OSS version of Ramp's Inspect agent.\n\nCallable from Slack.\n\nSo far the @modal sandboxes are fast and fab.\n\nhttps://t.co/ZmvZeP3tko",
+    "created_at": "2026-03-19T16:51:47.000Z",
+    "authorHandle": "ryancarson",
+    "authorName": "Ryan Carson"
+  },
+  {
+    "id": "2034674030729441362",
+    "text": "Generates ASCII art diagrams from markdown\n\nhttps://t.co/lm9qqnoL3t https://t.co/lgrREutAuO",
+    "created_at": "2026-03-19T16:51:05.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2034649088684069280",
+    "text": "Big update. https://t.co/ejFEi2rYkD",
+    "created_at": "2026-03-19T15:11:59.000Z",
+    "authorHandle": "tobi",
+    "authorName": "tobi lutke"
+  },
+  {
+    "id": "2034647427609751913",
+    "text": "https://t.co/b0QzeuHOqd",
+    "created_at": "2026-03-19T15:05:23.000Z",
+    "authorHandle": "AlphaSignalAI",
+    "authorName": "AlphaSignal AI"
+  },
+  {
+    "id": "2034431949474091140",
+    "text": "I'm going to be doing a skills livestream tomorrow, Thursday March 19th @ 11:30am PT to talk live about skills and how to use them. Come with questions!\n\nSpecial guest @hudaman from Uber to share how Uber is using skills. https://t.co/a0kbhdHdyf",
+    "created_at": "2026-03-19T00:49:09.000Z",
+    "authorHandle": "trq212",
+    "authorName": "Thariq"
+  },
+  {
+    "id": "2034429313177813214",
+    "text": "https://t.co/QPDTOJCi6L",
+    "created_at": "2026-03-19T00:38:40.000Z",
+    "authorHandle": "realmcore_",
+    "authorName": "akira"
+  },
+  {
+    "id": "2034360213512548556",
+    "text": "I tested 5 approaches to guiding AI agent behavior across 3,000 eval runs to see what actually makes agents reliable. Strands steering hooks was the only one that hit 100% accuracy\n\nHere's how it works:\nThe key is just-in-time guidance for the model before tool calls and at the",
+    "created_at": "2026-03-18T20:04:06.000Z",
+    "authorHandle": "clare_liguori",
+    "authorName": "Clare Liguori"
+  },
+  {
+    "id": "2034329261960475086",
+    "text": "I just finished restructuring all my skills based on @AnthropicAI 's latest recommendations for how to build them.\n\nHere's what's different, why it matters, and how you can do it too.\n\nOur #1 AI newsletter (https://t.co/QWwjYyrsCC) skill used to be one long file. Voice rules, https://t.co/VECjvJnqZh",
+    "created_at": "2026-03-18T18:01:06.000Z",
+    "authorHandle": "JJEnglert",
+    "authorName": "JJ Englert"
+  },
+  {
+    "id": "2034302848805241282",
+    "text": "Introducing the Readwise CLI. \n\nAnything you've saved in Readwise (highlights, articles, PDFs, books, youtube, newsletters) is now instantly accessible from the terminal.\n\nFor you, and your AI agents.\n\nnpm install -g @readwise/cli https://t.co/JAJsN3mE60",
+    "created_at": "2026-03-18T16:16:09.000Z",
+    "authorHandle": "readwise",
+    "authorName": "Readwise"
+  },
+  {
+    "id": "2034083746010280104",
+    "text": "Conditional Attention Steering\n\n&lt;important if=\"condition\"&gt; pattern adds a relevance filter and the if attribute tells the model \"only care about this block when you're doing X.\" \n\nModels are taught to respect XML tags in system prompts. The if attribute states a condition, which https://t.co/UlLvLuP8bS",
+    "created_at": "2026-03-18T01:45:31.000Z",
+    "authorHandle": "koylanai",
+    "authorName": "Muratcan Koylan"
+  },
+  {
+    "id": "2034055256318026155",
+    "text": "Introducing Lenny's Roundtable 🔥\n\n@lennysan published all his content (videos + newsletters) as a repo.\n\nSo, I built a website where you can ask it a question and it pulls in relevant people who debate each other - grounded in that content. \n\nLive at lennysroundtable dot com 🎉 https://t.co/tqE7MTHpY4",
+    "created_at": "2026-03-17T23:52:18.000Z",
+    "authorHandle": "nikunj",
+    "authorName": "Nikunj Kothari"
+  },
+  {
+    "id": "2033977192053612621",
+    "text": "a lot of engineering orgs (Stripe, Ramp, Coinbase) are building internal cloud coding agents\n\nwe're releasing a fully OSS one today - every company should have the  power of cloud agents at their fingertips https://t.co/3f5WSqnVNT",
+    "created_at": "2026-03-17T18:42:06.000Z",
+    "authorHandle": "hwchase17",
+    "authorName": "Harrison Chase"
+  },
+  {
+    "id": "2033966713394372682",
+    "text": "This is probably the best article I’ve read on Skills.\n\nA few points from the article:\n- The best skills are narrow. When a skill tries to span multiple jobs, reliability drops.\n- The highest-signal part is the gotchas section. That is where real tacit knowledge gets encoded.\n- https://t.co/fSia2ZLq2i",
+    "created_at": "2026-03-17T18:00:28.000Z",
+    "authorHandle": "koylanai",
+    "authorName": "Muratcan Koylan"
+  },
+  {
+    "id": "2033949937936085378",
+    "text": "https://t.co/45C3gKydTK",
+    "created_at": "2026-03-17T16:53:48.000Z",
+    "authorHandle": "trq212",
+    "authorName": "Thariq"
+  },
+  {
+    "id": "2033918274631606473",
+    "text": "@jeffzwang See here:\n\nhttps://t.co/LgjqZBqRq7",
+    "created_at": "2026-03-17T14:47:59.000Z",
+    "authorHandle": "doodlestein",
+    "authorName": "Jeffrey Emanuel"
+  },
+  {
+    "id": "2033910008992444873",
+    "text": "New blog post: \"A sufficiently detailed spec is code\"\n\nI wrote this because I was tired of people claiming that the future of agentic coding is thoughtful specification work.  As I show in the post, the reality devolves into slop pseudocode\n\nhttps://t.co/V86V7cjWpS",
+    "created_at": "2026-03-17T14:15:09.000Z",
+    "authorHandle": "GabriellaG439",
+    "authorName": "gabby"
+  },
+  {
+    "id": "2033908925733736831",
+    "text": "Introducing: OpenGranola 🔥\n\nI built an open source meeting copilot for macOS.\n\nIt transcribes both sides of your call on-device, searches your own notes in real time, and hands you talking points right when the conversation needs them. No audio leaves your Mac.\n\nPoint it at a https://t.co/N2edypUNBU",
+    "created_at": "2026-03-17T14:10:50.000Z",
+    "authorHandle": "yazins",
+    "authorName": "yazin"
+  },
+  {
+    "id": "2033860465760030923",
+    "text": "someone just open-sourced a tool that converts pdfs to markdown at 100 pages per second.\n\n100% free. runs entirely on cpu. no expensive gpus needed. https://t.co/OB3hQiDxRF",
+    "created_at": "2026-03-17T10:58:16.000Z",
+    "authorHandle": "oliviscusAI",
+    "authorName": "Oliver Prompts"
+  },
+  {
+    "id": "2033838659959468334",
+    "text": "Removes AI writing patterns from prose\n\nhttps://t.co/7nEXW5ie0e https://t.co/NhlKtmqJ9m",
+    "created_at": "2026-03-17T09:31:38.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2033818517254864977",
+    "text": "Mistral just launched Leanstral, an open source model that beats Sonnet on a formal proof engineering benchmark at 3% of the cost \n\n$18 vs $549. same result.\n\nhonestly Europe will be fine https://t.co/bwEAZz3ShE",
+    "created_at": "2026-03-17T08:11:35.000Z",
+    "authorHandle": "enjojoyy",
+    "authorName": "albina"
+  },
+  {
+    "id": "2033670953956479223",
+    "text": "https://t.co/INIdOeB1c9",
+    "created_at": "2026-03-16T22:25:13.000Z",
+    "authorHandle": "Letta_AI",
+    "authorName": "Letta"
+  },
+  {
+    "id": "2033551725244698890",
+    "text": "Automates poster generation from papers\n\nhttps://t.co/wnfcurLyFN https://t.co/AufyapFgcG",
+    "created_at": "2026-03-16T14:31:27.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2033547151410671690",
+    "text": "LOCK TF IN\n\nbuild your own \"JARVIS\" just by using Obsidian + Claude Code in 1 hour: https://t.co/7VVJmu1kQB",
+    "created_at": "2026-03-16T14:13:17.000Z",
+    "authorHandle": "DeRonin_",
+    "authorName": "Ronin"
+  },
+  {
+    "id": "2033518072724705437",
+    "text": "https://t.co/br90QMVLjI",
+    "created_at": "2026-03-16T12:17:44.000Z",
+    "authorHandle": "NickSpisak_",
+    "authorName": "Nick Spisak"
+  },
+  {
+    "id": "2033331605801222281",
+    "text": "@trq212 @DennwsLee some of the code the agents wrote is genuinely surprising. like the sft agent decided on its own to upweight the answer tokens 3x during training, so the model learns to prioritize getting the final answer right over just mimicking reasoning patterns. would not have been one of",
+    "created_at": "2026-03-15T23:56:46.000Z",
+    "authorHandle": "hamostaf04",
+    "authorName": "hamza mostafa"
+  },
+  {
+    "id": "2033272824001904915",
+    "text": "Open sourced the whole thing if you want to fork it and make it your own.\n\nJust use Claude to make any changes based on your own data / goals / trackers you use, etc. \n\nhttps://t.co/28IzWOkpEK",
+    "created_at": "2026-03-15T20:03:12.000Z",
+    "authorHandle": "anothercohen",
+    "authorName": "Alex Cohen"
+  },
+  {
+    "id": "2033253722512556521",
+    "text": "Obsidian CLI. One setting that gives your AI agent hands.\n\nGo to Settings -&gt; General -&gt; scroll to the bottom -&gt; find Command line -&gt; enable it.\nThat's the entire setup.\n\n&gt; Two ways to use it:\n\nFor manual control: open your terminal, type Obsidian Help. You'll see every available https://t.co/BsYSLzzq3V https://t.co/soMIgucBEq",
+    "created_at": "2026-03-15T18:47:18.000Z",
+    "authorHandle": "Atenov_D",
+    "authorName": "Atenov int."
+  },
+  {
+    "id": "2033211356879441966",
+    "text": "Meta-learns and evolves AI agents without GPU\n\nhttps://t.co/7gbdjCzZZ4 https://t.co/IqMbE2O6BW",
+    "created_at": "2026-03-15T15:58:57.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2033198345045336559",
+    "text": "https://t.co/4tchgZa4oC",
+    "created_at": "2026-03-15T15:07:15.000Z",
+    "authorHandle": "hooeem",
+    "authorName": "hoeem"
+  },
+  {
+    "id": "2033162393648513108",
+    "text": "Wrote about how I built a text-to-speech system for 25K daily users without melting a server.\n\nLots of lessons around caching, concurrency, and audio processing.\n\nlink in the comments. https://t.co/l3hzjBBOZB",
+    "created_at": "2026-03-15T12:44:23.000Z",
+    "authorHandle": "code_kartik",
+    "authorName": "Kartik"
+  },
+  {
+    "id": "2033100017884438583",
+    "text": "Figma for the terminal 🤯\n\n🛠️ TUIStudio — Visual editor for building TUIs\n\n💯 Drag-and-drop components, live ANSI preview &amp; export to multiple TUI frameworks\n\n🦀 @ratatui_rs support WIP 🐁\n\n⭐ GitHub: https://t.co/dY6UgbGeQe\n\n#tui #ratatui #terminal #devtools #ui #design #cli https://t.co/RpN8xXyiTE",
+    "created_at": "2026-03-15T08:36:32.000Z",
+    "authorHandle": "orhundev",
+    "authorName": "Orhun Parmaksız 👾"
+  },
+  {
+    "id": "2033091187536703532",
+    "text": "get it while it's hot https://t.co/Nhhm5e2TGP",
+    "created_at": "2026-03-15T08:01:26.000Z",
+    "authorHandle": "yiliush",
+    "authorName": "Yiliu"
+  },
+  {
+    "id": "2033084912182706316",
+    "text": "Whipped up a side chat extension for Pi.\n \nPop open a chat overlay while the main agent keeps working uninterrupted. \n\nIt forks the conversation so the side agent already knows what you're working on or you can start a blank convo. Can toggle focus between the main agent and the https://t.co/GsNExx2IKL https://t.co/h3wMQtvKig",
+    "created_at": "2026-03-15T07:36:30.000Z",
+    "authorHandle": "nicopreme",
+    "authorName": "Nico Bailon"
+  },
+  {
+    "id": "2032907259098051048",
+    "text": "Introducing OpenWork Share\n\nA dead-simple way to share skills online.\n\nFree. Simple. No signup needed. https://t.co/IZmybGrlqv",
+    "created_at": "2026-03-14T19:50:34.000Z",
+    "authorHandle": "benjaminshafii",
+    "authorName": "Benjamin Shafii | OpenWork (YC P26)"
+  },
+  {
+    "id": "2032799978310025474",
+    "text": "Someone sent me a post titled \"enthusiast built a setup for 10x learning speed\"\n\nI wanted to laugh. Then I watched the video and couldn't stop thinking about it.\n\nThe guy understood something real. He just put it behind a paid course. So I spent a weekend reverse-engineering it https://t.co/WzQsdCddRm https://t.co/soMIguc3OS",
+    "created_at": "2026-03-14T12:44:17.000Z",
+    "authorHandle": "Atenov_D",
+    "authorName": "Atenov int."
+  },
+  {
+    "id": "2032794346488250577",
+    "text": "https://t.co/dQEPyR83ed",
+    "created_at": "2026-03-14T12:21:54.000Z",
+    "authorHandle": "ihtesham2005",
+    "authorName": "Ihtesham Ali"
+  },
+  {
+    "id": "2032772741435371651",
+    "text": "https://t.co/Z9L1DfDxqt TIL there's an open source alternative to @screenstudio 🤔",
+    "created_at": "2026-03-14T10:56:03.000Z",
+    "authorHandle": "thekitze",
+    "authorName": "kitze 🛠️ tinkerer.club"
+  },
+  {
+    "id": "2032742209305317829",
+    "text": "Dashboard for agent orchestration\n\nhttps://t.co/1ol7aBeYGv https://t.co/Sp0x8D73Py",
+    "created_at": "2026-03-14T08:54:43.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2032738879732883864",
+    "text": "Mission Control update:\n\nFull i18n just landed — Mission Control now speaks 10 languages natively.\n\n1,752 translation keys across every panel, the boot sequence, onboarding wizard, and all UI components. \n\nEnglish, Chinese, Japanese, Korean, Spanish, French, German, Portuguese, https://t.co/eTVgnRSe3s",
+    "created_at": "2026-03-14T08:41:30.000Z",
+    "authorHandle": "nyk_builderz",
+    "authorName": "Nyk 🌱"
+  },
+  {
+    "id": "2032686376932491363",
+    "text": "New @openclaw beta is up: it comes with the new live browser control that Google added in latest Chrome! enable via chrome://inspect#remote-debugging\n\nYour clanker will know when to use what, or you can ast it. new \"user\" profile session is there!\n\nhttps://t.co/c84JT7dxBy",
+    "created_at": "2026-03-14T05:12:52.000Z",
+    "authorHandle": "steipete",
+    "authorName": "Peter Steinberger 🦞"
+  },
+  {
+    "id": "2032662042738356402",
+    "text": "I urge you to make your skills self-improving right now https://t.co/uul1BNjCDt",
+    "created_at": "2026-03-14T03:36:10.000Z",
+    "authorHandle": "aakashgupta",
+    "authorName": "Aakash Gupta"
+  },
+  {
+    "id": "2032575835073556861",
+    "text": "https://t.co/PKxFLPxLbx",
+    "created_at": "2026-03-13T21:53:37.000Z",
+    "authorHandle": "mem0ai",
+    "authorName": "mem0"
+  },
+  {
+    "id": "2032567729560105117",
+    "text": "(1/n) Evolutionary frameworks like AlphaEvolve and GEPA use diversity and fitness to select which subset of past experiments to condition the next generation on. Why not let an agent choose instead? To this end, we introduce Coding Agents as Text Optimizers (CATO). We beat",
+    "created_at": "2026-03-13T21:21:24.000Z",
+    "authorHandle": "shreyasnsharma",
+    "authorName": "Shreyas Sharma"
+  },
+  {
+    "id": "2032528386745315553",
+    "text": "https://t.co/iCY5hMqxgI",
+    "created_at": "2026-03-13T18:45:04.000Z",
+    "authorHandle": "Atenov_D",
+    "authorName": "Atenov int."
+  },
+  {
+    "id": "2032527564774977703",
+    "text": "Atoms. \n\nhttps://t.co/nbCnIkI3RD",
+    "created_at": "2026-03-13T18:41:48.000Z",
+    "authorHandle": "travisk",
+    "authorName": "travis kalanick"
+  },
+  {
+    "id": "2032524875978650075",
+    "text": "in closing \n\n1) the tokens going into your harness (skill.md, claude.md, hook prompts) are SUPER HIGH LEVERAGE - they are worth painstaking over and writing by hand, or iterating on a lot w/ a model\n\n2) the best harness engineers are minimalists, start w/ defaults, work on real",
+    "created_at": "2026-03-13T18:31:07.000Z",
+    "authorHandle": "dexhorthy",
+    "authorName": "dex"
+  },
+  {
+    "id": "2032524855409873072",
+    "text": "harness engineering, coined by @Vtrivedy10 is about the things you build around the model to create a good agent - as @mitchellh puts it \n\n&gt; [it] is the idea that anytime you find an agent makes a mistake, you take the time to engineer a solution such that the agent never makes https://t.co/Qt3oLKSZhh",
+    "created_at": "2026-03-13T18:31:02.000Z",
+    "authorHandle": "dexhorthy",
+    "authorName": "dex"
+  },
+  {
+    "id": "2032508837647826980",
+    "text": "Everything exposed over MCP and REST. Any agent framework can plug into the improvement loop.\n\nFeatures CLI, dashboard, MCP server. Anthropic, OpenAI, Ollama, vLLM, local MLX.\n\nIn-depth article to come\n\n https://t.co/BJMxtgWhoX",
+    "created_at": "2026-03-13T17:27:23.000Z",
+    "authorHandle": "JayScambler",
+    "authorName": "Jay Scambler"
+  },
+  {
+    "id": "2032487512694997357",
+    "text": "Built a full streaming AI chat UI 🤔 with reasoning tokens, live tool calls, and shimmer loading states 🤯 in under 50 lines of React‼️\n\n@langchain/react + AI Elements (https://t.co/GocoHoZvsT by @vercel) is the combo you didn't know you needed. 🧵 https://t.co/amSxXR686U",
+    "created_at": "2026-03-13T16:02:39.000Z",
+    "authorHandle": "LangChain_JS",
+    "authorName": "LangChain JS"
+  },
+  {
+    "id": "2032464949952598152",
+    "text": "https://t.co/LeaTneJ9f5",
+    "created_at": "2026-03-13T14:33:00.000Z",
+    "authorHandle": "manthanguptaa",
+    "authorName": "Manthan Gupta"
+  },
+  {
+    "id": "2032431974703632754",
+    "text": "If You’re a Developer, Master These 15 Things\n\n1. Data Structures &amp; Algorithms\nArrays, HashMaps, Trees, Graphs, Recursion, Big-O.\n\n2. Git &amp; Version Control\nBranching, pull requests, rebasing, resolving conflicts.\n\n3. Debugging Skills\nReading logs &gt; guessing fixes.\n\n4. Clean Code",
+    "created_at": "2026-03-13T12:21:58.000Z",
+    "authorHandle": "ajay_2512x",
+    "authorName": "Ajay Bhakar"
+  },
+  {
+    "id": "2032260150564696171",
+    "text": "Claude Code interface in Obsidian sidebar\n\nhttps://t.co/XL1UBcV3bj https://t.co/bIcCr0UdEn",
+    "created_at": "2026-03-13T00:59:12.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2032234293775216860",
+    "text": "https://t.co/5YVaksPvXD is open for PRs - Check us out!\nhttps://t.co/5fPEzvulcv",
+    "created_at": "2026-03-12T23:16:27.000Z",
+    "authorHandle": "invisiblebags",
+    "authorName": "invisible"
+  },
+  {
+    "id": "2032232358561075631",
+    "text": "Agentic development of Power BI reports? You can do that with pbir-cli, yes. Here's an example; nothing fancy, just a simple report in a few minutes.\n\nThe tool also comes with a bunch of Power BI report skills to help with various practical tasks if you use agents. https://t.co/VYeZDfT5t2",
+    "created_at": "2026-03-12T23:08:45.000Z",
+    "authorHandle": "kurtbuhler",
+    "authorName": "Kurt Buhler"
+  },
+  {
+    "id": "2032229604618842257",
+    "text": "Markdown editor using an invisible textarea overlay\n\nhttps://t.co/oIg31u4mmQ https://t.co/kLiyQrDlqh",
+    "created_at": "2026-03-12T22:57:49.000Z",
+    "authorHandle": "tom_doerr",
+    "authorName": "Tom Dörr"
+  },
+  {
+    "id": "2032224933837684932",
+    "text": "Autoskill: a distributed skill factory | v.2.6.5                                                                                                        \n                                                   \nWe're now applying the same @karpathy autoresearch pattern to an even https://t.co/8tEXz6RIi4 https://t.co/gEmL8R3jT3",
+    "created_at": "2026-03-12T22:39:15.000Z",
+    "authorHandle": "varun_mathur",
+    "authorName": "Varun"
+  },
+  {
+    "id": "2032212536716578932",
+    "text": "And the most important part: we open sourced the /autoresearch plugin for pi. Just tell it what you want, it will do the rest.  \n\nhttps://t.co/C2H6kxR7jG",
+    "created_at": "2026-03-12T21:50:00.000Z",
+    "authorHandle": "tobi",
+    "authorName": "tobi lutke"
+  },
+  {
+    "id": "2032179887277060476",
+    "text": "https://t.co/BBIva1uPHn",
+    "created_at": "2026-03-12T19:40:15.000Z",
+    "authorHandle": "tricalt",
+    "authorName": "Vasilije"
+  },
+  {
+    "id": "2032130868290953283",
+    "text": "A map of SF investors by stage.\nCurated from recommendations by SF founders, investors, and operators.\n\nTalent-first / pre-idea / pre-company\n&gt;Entrepreneurs First\n&gt;1517 Fund\n&gt;Bloomberg Beta\n&gt;Human Capital\n\nPre-seed / pre-product / first believers\n&gt;Afore Capital\n&gt;Abstract Ventures",
+    "created_at": "2026-03-12T16:25:28.000Z",
+    "authorHandle": "Tancrededib",
+    "authorName": "Tancrede"
+  },
+  {
+    "id": "2032123160536236461",
+    "text": "Defuddle now returns Youtube transcripts!\n\nPaste a YouTube link into defuddle.md to get a markdown transcript with timestamps, chapters, and pretty good diarization!\n\n...or if you just want to read it, try the new Reader mode in Obsidian Web Clipper powered by Defuddle. https://t.co/bOuPONj6yu",
+    "created_at": "2026-03-12T15:54:51.000Z",
+    "authorHandle": "kepano",
+    "authorName": "kepano"
+  },
+  {
+    "id": "2031938863577645102",
+    "text": "The vibes at OpenAI are different than anything I’ve experience in my career.\n\nIf you like building things, this is where you want to be.\n\nWe are working on every important problem you could think of, because AI has the potential to transform every industry.\n\nWe are operating at",
+    "created_at": "2026-03-12T03:42:31.000Z",
+    "authorHandle": "rohanvarma",
+    "authorName": "Rohan Varma"
+  },
+  {
+    "id": "2031838984813297748",
+    "text": "https://t.co/VldVH2APRu",
+    "created_at": "2026-03-11T21:05:38.000Z",
+    "authorHandle": "djfarrelly",
+    "authorName": "Dan Farrelly | Inngest.com"
+  },
+  {
+    "id": "2027980784754102726",
+    "text": "Early preview of ObsidianOS, Agentic Operating System for Thinkers: https://t.co/lt2xEXge66",
+    "created_at": "2026-03-01T05:34:31.000Z",
+    "authorHandle": "benoror",
+    "authorName": "Ben Orozco"
+  },
+  {
+    "id": "2015801049429196975",
+    "text": "This one is for couples who’ve been entangled in blanket wars for years. For women whose bodies spike and shift with cycles, pregnancy, and menopause. \n\nThis one’s about so much more than the science, the metrics, and the engineering. \n\nThis one’s about waking up and loving how https://t.co/rTcmq4Stn2",
+    "created_at": "2026-01-26T14:56:36.000Z",
+    "authorHandle": "eightsleep",
+    "authorName": "Eight Sleep"
+  }
+]
